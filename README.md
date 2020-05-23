@@ -1,0 +1,24 @@
+# NodeMCU-based home climate monitoring
+
+The setup consists of the following modules:
+
+1. NodeMCU (ESP8266)
+2. BME280 Temperature Humidity Barometric Pressure Sensor (I2C Breakout)
+3. CCS811 VOC/eCO2 Sensor (I2C Breakout)
+4. SSD1306 0.96" Serial 128X64 OLED LCD Display (SPI Breakout)
+
+## Useful links and Credits
+
+I heavily relied on all these resources and re-used much of the code from many of them. So the special thank you goes to the authors of the follosing pages:
+
+1. NodeMCU: https://www.instructables.com/id/NodeMCU-ESP8266-Details-and-Pinout/
+2. Screen info
+    * Interfacing with NodeMCU: https://circuitdigest.com/microcontroller-projects/interfacing-ssd1306-oled-display-with-esp8266-nodemcu 
+    * Info: https://components101.com/oled-display-ssd1306
+    * Specification: https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
+3. BME280: https://www.instructables.com/id/ESP8266-NodeMCU-With-BME280-Gauges-Chart/
+4. NodeMCU I2C/SPI pins: https://steve.fi/hardware/nodemcu/default-pins/
+5. Screen code sample: https://github.com/jandelgado/arduino/blob/master/ssd1306_sample_adafruit/ssd1306_sample_adafruit.ino
+6. Lots of helpful I2C info (and a nice I2S scanner): http://www.gammon.com.au/forum/?id=10896
+8. Similar projects:
+    * https://simple-circuit.com/esp8266-nodemcu-bme280-weather-station/
