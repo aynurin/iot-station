@@ -17,8 +17,10 @@ I heavily relied on all these resources and re-used much of the code from many o
     * Info: https://components101.com/oled-display-ssd1306
     * Specification: https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
 3. BME280: https://www.instructables.com/id/ESP8266-NodeMCU-With-BME280-Gauges-Chart/
-4. NodeMCU I2C/SPI pins: https://steve.fi/hardware/nodemcu/default-pins/
-5. Screen code sample: https://github.com/jandelgado/arduino/blob/master/ssd1306_sample_adafruit/ssd1306_sample_adafruit.ino
-6. Lots of helpful I2C info (and a nice I2S scanner): http://www.gammon.com.au/forum/?id=10896
+4. CCS811: https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/
+5. NodeMCU I2C/SPI pins: https://steve.fi/hardware/nodemcu/default-pins/
+6. Screen code sample: https://github.com/jandelgado/arduino/blob/master/ssd1306_sample_adafruit/ssd1306_sample_adafruit.ino
+7. Lots of helpful I2C info (and a nice I2S scanner): http://www.gammon.com.au/forum/?id=10896
 8. Similar projects:
     * https://simple-circuit.com/esp8266-nodemcu-bme280-weather-station/
+
