@@ -25,7 +25,8 @@ I heavily relied on all these resources and re-used much of the code from many o
     * https://simple-circuit.com/esp8266-nodemcu-bme280-weather-station/
 9. Good read on power consumption: https://tinker.yeoman.com.au/2016/05/29/running-nodemcu-on-a-battery-esp8266-low-power-consumption-revisited/
 10. Azure IoT hub: 
-    * Learn: https://docs.microsoft.com/en-us/learn/modules/manage-iot-devices/ 
+    * IoT Hub setup: https://docs.microsoft.com/en-us/learn/modules/manage-iot-devices/ 
+    * Time Series Insights setup: https://docs.microsoft.com/en-us/learn/modules/explore-analyze-time-series-insights/ 
     * This doc describes auto-provisioning: https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-x509
         * But the code won't compile in Arduino IDE. I should try a custom compiled Azure IoT SDK.
         * Here is one guy trying to do that: https://github.com/Azure/azure-iot-sdk-c/issues/1229
