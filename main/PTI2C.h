@@ -1,9 +1,11 @@
 #ifndef PTI2C_H
 #define PTI2C_H
     
-// #include <Arduino.h>
+#include <Arduino.h>
 #include <stdlib.h>
 #include <Wire.h>
+
+#include "nmcu.h"
 
 #define PT_CCS811_I2C_ADDRESS 0x5A
 #define PT_BME280_I2C_ADDRESS 0x76

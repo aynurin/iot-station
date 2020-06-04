@@ -30,3 +30,4 @@ I heavily relied on all these resources and re-used much of the code from many o
     * This doc describes auto-provisioning: https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-x509
         * But the code won't compile in Arduino IDE. I should try a custom compiled Azure IoT SDK.
         * Here is one guy trying to do that: https://github.com/Azure/azure-iot-sdk-c/issues/1229
+11. Soil moisture sensor FC-28: http://www.circuitstoday.com/arduino-soil-moisture-sensor
