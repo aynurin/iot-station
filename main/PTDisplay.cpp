@@ -1,7 +1,7 @@
 
 #include "PTDisplay.h"
 
-int __text_lns[]{TEXT_LN_1, TEXT_LN_2, TEXT_LN_3, TEXT_LN_4, TEXT_LN_5, TEXT_LN_6};
+int __text_lns[]{TP_SCR_LINE_1, TP_SCR_LINE_2, TP_SCR_LINE_3, TP_SCR_LINE_4, TP_SCR_LINE_5, TP_SCR_LINE_6};
 
 char * ftostr(float num) {
   char outstr[15];
@@ -11,7 +11,7 @@ char * ftostr(float num) {
 
 char buff[15];
 
-Adafruit_SSD1306 __display(SCREEN_WIDTH, SCREEN_HEIGHT,
+Adafruit_SSD1306 __display(TP_SCR_WIDTH, TP_SCR_HEIGHT,
                          OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 PTDisplay::PTDisplay(){/*nothing to construct*/}
@@ -40,10 +40,12 @@ bool PTDisplay::begin(){
   return false;
 }
 
-void PTDisplay::println(int line, const char * left, const char * right) {
-  __display.setCursor(13, line);
+void PTDisplay::println(unsigned int line, unsigned int col, const char * left, const char * right) {
+  unsigned int col_start = col == TP_SCR_COL_1 || col == TP_SCR_COL_SPAN ? TP_SCR_COL_1_START : TP_SCR_COL_2_START;
+  unsigned int col_end = col == TP_SCR_COL_1 ? TP_SCR_COL_1_END : TP_SCR_COL_2_END;
+  __display.setCursor(col_start, line);
   __display.print(left);
-  __display.setCursor(SCREEN_WIDTH - strlen(right) * CHAR_WIDTH, line);
+  __display.setCursor(col_end - strlen(right) * CHAR_WIDTH, line);
   __display.print(right);
   this->update();
 }
@@ -68,7 +70,9 @@ int PTDisplay::readings(PTSensorData * readings, unsigned int length)
 {
   for( unsigned int a = 0; a < length; a = a + 1 ) {
     dtostrf(readings[a].value, 7, 2, buff);
-    this->println(__text_lns[a], SENSOR_NAMES_U[a], buff);
+    unsigned int line = __text_lns[a % 5];
+    unsigned int col = a / 5;
+    this->println(line, col, SENSOR_NAMES_U[a], buff);
   }
   this->update();
 }

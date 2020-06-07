@@ -6,6 +6,7 @@ The setup consists of the following modules:
 2. BME280 Temperature Humidity Barometric Pressure Sensor (I2C Breakout)
 3. CCS811 VOC/eCO2 Sensor (I2C Breakout)
 4. SSD1306 0.96" Serial 128X64 OLED LCD Display (SPI Breakout)
+5. FC-28 Soil Moisture Sensor
 
 ## Useful links and Credits
 

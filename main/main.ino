@@ -13,6 +13,7 @@
 #include "PTI2C.h"
 #include "PTTime.h"
 #include "PTDisplay.h"
+#include "PTFC28.h"
 
 /*
  * Display is probably https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
@@ -33,6 +34,7 @@ PTI2C i2c;
 PTTime ptTime;
 PTDisplay display;
 PTIoT iot;
+PTFC28 fc28(D2);
 
 bool __wifi_on = false;
 bool __bme280_on = false;
@@ -90,7 +92,7 @@ void init_peripherals()
   if (conn_status == PTWIFI_CONNECTED)
   {
     String ipAddr = wifi.ESPWIFI.localIP().toString();
-    display.println(TEXT_LN_6, "IP:", ipAddr.c_str());
+    display.println(TP_SCR_LINE_6, TP_SCR_COL_SPAN, "IP:", ipAddr.c_str());
     __wifi_on = true;
   }
   else
@@ -147,9 +149,19 @@ void read_sensors() {
     }
   }
   else {
+    sensors[CCS811_TVOC].value = -1;
+    sensors[CCS811_ECO2].value = -1;
     Serial.println("CCS811 is not available");
   }
+
+  if (fc28.available()) {
+    sensors[FC28SL_WATR].value = fc28.read();
+  }
+  else {
+    sensors[FC28SL_WATR].value = -1;
+  }
 }
+
 
 /**********************************   STARTUP    **********************************/
 /**********************************   STARTUP    **********************************/
@@ -165,6 +177,7 @@ void setup()
   sensors[BME280_PRES].sensor_id = BME280_PRES;
   sensors[CCS811_TVOC].sensor_id = CCS811_TVOC;
   sensors[CCS811_ECO2].sensor_id = CCS811_ECO2;
+  sensors[FC28SL_WATR].sensor_id = FC28SL_WATR;
 } // end of setup
 
 /**********************************  MAIN LOOP   **********************************/
@@ -173,7 +186,20 @@ void setup()
 void loop()
 {
   process_loop();
+  // debug_loop();
   delay(PT_BATCH_DELAY_SEC * 1000);
+}
+
+int output_value;
+int sensor_pin = D2;
+
+void debug_loop() {
+  Serial.println("DEBUG LOOP...");
+  while (true) {
+    read_sensors();
+    display.readings(sensors, KNOWN_SENSORS_COUNT);
+    iot.wait(5000);
+  }
 }
 
 void process_loop() {

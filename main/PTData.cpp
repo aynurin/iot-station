@@ -7,12 +7,14 @@ const char *SENSOR_NAMES[] = {
     [BME280_PRES] = "pressure",
     [CCS811_TVOC] = "tvoc",
     [CCS811_ECO2] = "eco2",
+    [FC28SL_WATR] = "soilMoisture",
 };
 
 const char *SENSOR_NAMES_U[] = {
-    [BME280_TEMP] = "TEMPERATURE",
-    [BME280_HUMI] = "HUMIDITY",
-    [BME280_PRES] = "PRESSURE",
-    [CCS811_TVOC] = "tVOC",
-    [CCS811_ECO2] = "eCO2",
+    [BME280_TEMP] = "T:",
+    [BME280_HUMI] = "H:",
+    [BME280_PRES] = "P:",
+    [CCS811_TVOC] = "V:",
+    [CCS811_ECO2] = "C:",
+    [FC28SL_WATR] = "S:",
 };
