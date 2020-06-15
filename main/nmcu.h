@@ -28,5 +28,8 @@
 #ifndef D8
 #define D8 15
 #endif
+#ifndef A0
+#define A0 17
+#endif
     
 #endif

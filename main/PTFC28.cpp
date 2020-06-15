@@ -10,9 +10,9 @@ PTFC28::~PTFC28(){/*nothing to destruct*/}
  
 int PTFC28::read(){
   Serial.print("Reading FC-28... ");
-  int val = analogRead(dPin);
+  int val = analogRead(A0);
   Serial.print(val);
-  val = map(val,1023,0,0,100);
+  val = map(val,1024,0,0,100);
   Serial.print(", mapped: ");
   Serial.println(val);
   // if (val < 0) {
