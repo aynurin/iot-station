@@ -1,4 +1,4 @@
-update=Mon 15 Jun 2020 11:51:15 PM PDT
+update=Tue 16 Jun 2020 05:46:46 PM PDT
 version=1
 last_client=kicad
 [general]
@@ -46,6 +46,9 @@ ViaDrill1=0.4
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
+dPairWidth2=0.2
+dPairGap2=0.1
+dPairViaGap2=0.1
 SilkLineWidth=0.12
 SilkTextSizeV=1
 SilkTextSizeH=1
@@ -250,7 +253,7 @@ dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=IC_LD_OUT
-Clearance=0.1
+Clearance=0.2
 TrackWidth=0.2
 ViaDiameter=0.8
 ViaDrill=0.4
