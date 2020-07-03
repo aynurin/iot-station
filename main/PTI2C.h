@@ -24,6 +24,7 @@ public:
     ~PTI2C();
     void scan();
     TKnownDevices devices;
+    void Write(uint8_t DeviceI2C_Address, uint8_t *RawData, uint8_t Length);
 };
     
 #endif

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name cap-soil-sensor-rescue)(type Legacy)(uri ${KIPRJMOD}/cap-soil-sensor-rescue.lib)(options "")(descr ""))
+)

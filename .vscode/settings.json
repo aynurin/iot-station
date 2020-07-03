@@ -19,6 +19,7 @@
         "tuple": "cpp",
         "chrono": "cpp",
         "system_error": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "ranges": "cpp"
     }
 }

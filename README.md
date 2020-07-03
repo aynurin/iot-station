@@ -23,6 +23,7 @@ I heavily relied on all these resources and re-used much of the code from many o
 6. Screen code sample: https://github.com/jandelgado/arduino/blob/master/ssd1306_sample_adafruit/ssd1306_sample_adafruit.ino
 7. Lots of helpful I2C info (and a nice I2S scanner): http://www.gammon.com.au/forum/?id=10896
 8. Similar projects:
+    * https://wemakethings.net/chirp/
     * https://simple-circuit.com/esp8266-nodemcu-bme280-weather-station/
 9. Good read on power consumption: https://tinker.yeoman.com.au/2016/05/29/running-nodemcu-on-a-battery-esp8266-low-power-consumption-revisited/
 10. Azure IoT hub: 
@@ -32,3 +33,6 @@ I heavily relied on all these resources and re-used much of the code from many o
         * But the code won't compile in Arduino IDE. I should try a custom compiled Azure IoT SDK.
         * Here is one guy trying to do that: https://github.com/Azure/azure-iot-sdk-c/issues/1229
 11. Soil moisture sensor FC-28: http://www.circuitstoday.com/arduino-soil-moisture-sensor
+12. Power management: 
+    * https://www.youtube.com/watch?v=wf_msvWv1jk
+    * https://www.youtube.com/watch?v=oC2JlYIqQUk

@@ -5,6 +5,16 @@
 #include <Esp.h>
 #include <Adafruit_BME280.h>  // include Adafruit BME280 sensor library
 #include <Adafruit_CCS811.h>  // include Adafruit CCS811 sensor library
+#include <Adafruit_ADS1015.h>  // include Adafruit ADS1115 sensor library
+
+#define WIFI_EN
+#define DEBUG_LOOP
+
+#ifndef DEBUG_LOOP
+#ifdef WIFI_EN
+#define ENABLE_CLOUD
+#endif
+#endif
 
 #include "PTIoT.h"
 #include "st_config.h"
@@ -14,6 +24,7 @@
 #include "PTTime.h"
 #include "PTDisplay.h"
 #include "PTFC28.h"
+#include "PTLP5018.h"
 
 /*
  * Display is probably https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
@@ -28,6 +39,7 @@ PTSensorData sensors[KNOWN_SENSORS_COUNT];
 
 Adafruit_CCS811 ccs;
 Adafruit_BME280 bme280;
+Adafruit_ADS1115 ads1115(0x48);
 
 PTWiFi wifi;
 PTI2C i2c;
@@ -35,6 +47,7 @@ PTTime ptTime;
 PTDisplay display;
 PTIoT iot;
 PTFC28 fc28(D2);
+PTLP5018 leds;
 
 bool __wifi_on = false;
 bool __bme280_on = false;
@@ -43,6 +56,8 @@ bool __screen_on = false;
 
 void init_peripherals()
 {
+  ads1115.begin();
+
   if (display.begin())
   {
     __screen_on = true;
@@ -87,6 +102,8 @@ void init_peripherals()
     alert_error("Failed to init CCS811", "0x5A");
   }
 
+#ifdef WIFI_EN
+
   // WiFi
   int conn_status = wifi.init();
   if (conn_status == PTWIFI_CONNECTED)
@@ -104,6 +121,8 @@ void init_peripherals()
   Serial.print("Fetching time... ");
   time_t epochTime = ptTime.init();
   Serial.println(epochTime);
+
+#endif
 }
 
 void alert_error(const char *message_line_1, const char *message_line_2)
@@ -155,7 +174,7 @@ void read_sensors() {
   }
 
   if (fc28.available()) {
-    sensors[FC28SL_WATR].value = fc28.read();
+    sensors[FC28SL_WATR].value = ads1115.readADC_SingleEnded(3);
   }
   else {
     sensors[FC28SL_WATR].value = -1;
@@ -169,8 +188,17 @@ void read_sensors() {
 void setup()
 {
   Serial.begin(115200);
+#ifdef DEBUG_LOOP
+  delay(2000);
+#endif
+
   init_peripherals();
   wdt_enable(5000);
+
+#ifdef DEBUG_LOOP
+  Serial.println("Setup complete, running in 5s...");
+  delay(5000);
+#endif
 
   sensors[BME280_TEMP].sensor_id = BME280_TEMP;
   sensors[BME280_HUMI].sensor_id = BME280_HUMI;
@@ -185,8 +213,13 @@ void setup()
 /**********************************  MAIN LOOP   **********************************/
 void loop()
 {
+
+#ifndef DEBUG_LOOP
   process_loop();
-  // debug_loop();
+#else
+  debug_loop();
+  // debug_leds_loop();
+#endif
   delay(PT_BATCH_DELAY_SEC * 1000);
 }
 
@@ -202,8 +235,44 @@ void debug_loop() {
   }
 }
 
+void debug_leds_loop() {
+  Serial.println("DEBUG LEDS LOOP...");
+
+  while (true) {
+    uint8_t ledsStatus = leds.init();
+    if (ledsStatus != 0) {
+      Serial.print("Error messaging with leds: ");
+      Serial.println(ledsStatus);
+      delay(2000);
+    }
+    else {
+      for (uint8_t led = 0; led < 6; led++) {
+        leds.brightness(led, 0x40);
+      }
+      leds.color(0, 0xff, 0, 0);
+      leds.color(1, 0, 0xff, 0);
+      leds.color(2, 0, 0, 0xff);
+      leds.color(3, 0xff, 0xff, 0);
+      leds.color(4, 0, 0xff, 0xff);
+      leds.color(5, 0xff, 0, 0xff);
+
+      delay(2000);
+
+      leds.color(0, 0xff, 0x80, 0);
+      leds.color(1, 0, 0xff, 0x80);
+      leds.color(2, 0x80, 0, 0xff);
+      leds.color(3, 0x80, 0xff, 0);
+      leds.color(4, 0, 0x80, 0xff);
+      leds.color(5, 0xff, 0, 0x80);
+
+      delay(2000);
+    }
+  }
+}
+
 void process_loop() {
   Serial.println("PROCESSING...");
+#ifdef ENABLE_CLOUD
   if (iot.begin_batch()) {
     while (iot.get_messages_sent() < PT_MESSAGES_PER_BATCH) {
       read_sensors();
@@ -214,9 +283,12 @@ void process_loop() {
     Serial.print("Messages sent: ");
     Serial.println(iot.get_messages_sent());
     iot.end_batch();
-  }
+  } 
   else {
-    read_sensors();
-    display.readings(sensors, KNOWN_SENSORS_COUNT);
+    Serial.println("iot.begin_batch is FALSE");
   }
+#else
+  read_sensors();
+  display.readings(sensors, KNOWN_SENSORS_COUNT);
+#endif
 }
