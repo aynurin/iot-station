@@ -1,4 +1,4 @@
-18644780934586685
+18647969033829630
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -56077,12 +56077,26 @@ Yellow 5381 Series LED
 2
 2
 LocalsLib
+BGA6C100X50P2X3_146X146X67
+
+
+0
+6
+6
+LocalsLib
 CAP1293-1-AC3-TR
 8-PIN TDFN
 Integrated Circuit
 0
 9
 9
+LocalsLib
+CUI_UJ31-CH-3-SMT-TR
+
+
+0
+30
+30
 LocalsLib
 NodeMCU
 

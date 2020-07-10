@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name LocalsLib)(type Legacy)(uri ${KIPRJMOD}/LocalsLib.lib)(options "")(descr ""))
+  (lib (name HDC2010YPAT)(type Legacy)(uri ${KIPRJMOD}/HDC2010YPAT.lib)(options "")(descr ""))
 )
