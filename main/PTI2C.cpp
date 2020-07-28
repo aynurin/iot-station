@@ -27,7 +27,6 @@ void PTI2C::scan(){
     devices.BME280 = PT_BME280_I2C_ADDRESS;
     Serial.println("Found BME280");
   }
-
   // I2C Scanner
   // Written by Nick Gammon
   // Date: 20th April 2011

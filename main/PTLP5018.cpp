@@ -10,8 +10,6 @@ PTLP5018::~PTLP5018()
 { /*nothing to destruct*/
 }
 
-uint8_t __available = -1;
-
 uint8_t PTLP5018::init()
 {
   Wire.beginTransmission(PT_LP5018_I2CADDR);

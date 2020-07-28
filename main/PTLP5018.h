@@ -19,6 +19,9 @@ public:
     uint8_t color(uint8_t led, uint8_t r, uint8_t g, uint8_t b);
     uint8_t set_led(PT_LP50XX_LED l);
     bool available();
+
+private:
+    uint8_t __available;
 };
 
 PT_LP50XX_LED get_led_regs(uint8_t led_number);

@@ -7,7 +7,7 @@
 #include <Adafruit_CCS811.h>  // include Adafruit CCS811 sensor library
 #include <Adafruit_ADS1015.h>  // include Adafruit ADS1115 sensor library
 
-#define WIFI_EN
+// #define WIFI_EN
 #define DEBUG_LOOP
 
 #ifndef DEBUG_LOOP
@@ -25,6 +25,7 @@
 #include "PTDisplay.h"
 #include "PTFC28.h"
 #include "PTLP5018.h"
+#include "PTADC081.h"
 
 /*
  * Display is probably https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
@@ -48,6 +49,7 @@ PTDisplay display;
 PTIoT iot;
 PTFC28 fc28(D2);
 PTLP5018 leds;
+PTADC081 adc;
 
 bool __wifi_on = false;
 bool __bme280_on = false;
@@ -57,6 +59,9 @@ bool __screen_on = false;
 void init_peripherals()
 {
   ads1115.begin();
+  adc.init();
+  Serial.print("Found ADC: ");
+  Serial.println(adc.available());
 
   if (display.begin())
   {
@@ -68,6 +73,14 @@ void init_peripherals()
   }
   
   i2c.scan();
+  
+  while (1) {
+    i2c.scan();
+    uint8_t val = adc.read();
+    Serial.print("conv: ");
+    Serial.println(val);
+    delay(1000);
+  }
 
   // BME280
   if (i2c.devices.BME280 != PT_NO_DEVICE && bme280.begin(i2c.devices.BME280) != 0)
