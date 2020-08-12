@@ -134,7 +134,8 @@ void init_peripherals()
   Serial.print("Fetching time... ");
   time_t epochTime = ptTime.init();
   Serial.println(epochTime);
-
+#else
+  WiFi.forceSleepBegin();
 #endif
 }
 
@@ -201,8 +202,10 @@ void read_sensors() {
 void setup()
 {
   Serial.begin(115200);
+  Serial.setTimeout(2000);
 #ifdef DEBUG_LOOP
-  delay(2000);
+  while(!Serial) { }
+  delay(1000);
 #endif
 
   init_peripherals();
@@ -235,6 +238,17 @@ void loop()
 #endif
   delay(PT_BATCH_DELAY_SEC * 1000);
 }
+
+// deep sleep whereabouts:
+// Save power by sleeping WiFi?
+// WiFi.forceSleepBegin();
+// WiFi.forceSleepWake();
+// deep sleep:
+// ESP.deepSleep(PT_BATCH_DELAY_SEC + 1e6, WAKE_RF_DEFAULT);
+// delay(100); 
+// wiring with external interrupt: https://www.youtube.com/watch?v=pPd362tRx5o, https://www.esp8266.com/viewtopic.php?f=11&t=4458
+// FET brief: https://www.youtube.com/watch?v=nbMfb0dIvYc
+
 
 int output_value;
 int sensor_pin = D2;
