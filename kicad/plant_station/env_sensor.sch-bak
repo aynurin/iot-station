@@ -105,19 +105,6 @@ Text Label 4300 3150 2    50   ~ 0
 SCL
 Text Label 4300 3250 2    50   ~ 0
 SDA
-$Comp
-L power:GND #PWR?
-U 1 1 605F5D87
-P 4300 2950
-AR Path="/605F5D87" Ref="#PWR?"  Part="1" 
-AR Path="/605E9160/605F5D87" Ref="#PWR032"  Part="1" 
-F 0 "#PWR032" H 4300 2700 50  0001 C CNN
-F 1 "GND" V 4150 3000 50  0000 R CNN
-F 2 "" H 4300 2950 50  0001 C CNN
-F 3 "" H 4300 2950 50  0001 C CNN
-	1    4300 2950
-	0    1    1    0   
-$EndComp
 Text Notes 4700 2800 0    50   ~ 0
 I2C ADDR 0x40
 $Comp
@@ -255,4 +242,6 @@ F 3 "~" H 6200 3100 50  0001 C CNN
 	1    6200 3100
 	1    0    0    -1  
 $EndComp
+Text Label 4300 2950 2    50   ~ 0
+GNDA
 $EndSCHEMATC

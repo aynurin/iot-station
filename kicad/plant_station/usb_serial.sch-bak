@@ -17,9 +17,9 @@ Text Notes 7850 7500 0    50   ~ 0
 USB Breakout Board
 Text Label 8500 4000 2    50   ~ 0
 USB_CTS
-Text Label 8500 3800 2    50   ~ 0
-USB_RTS
 Text Label 8500 3900 2    50   ~ 0
+USB_RTS
+Text Label 8500 3800 2    50   ~ 0
 USB_DSR
 Text Label 8500 3700 2    50   ~ 0
 USB_DTR

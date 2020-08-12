@@ -250,18 +250,10 @@ Text Label 3500 3350 0    50   ~ 0
 LED_3_B
 Text Label 3500 4000 0    50   ~ 0
 LED_4_B
-Text Label 4900 3550 2    50   ~ 0
-LED_5_R
-Text Label 4900 2700 2    50   ~ 0
-LED_6_R
 Text Label 4900 3450 2    50   ~ 0
 LED_5_G
-Text Label 4900 3350 2    50   ~ 0
-LED_5_B
 Text Label 4900 2600 2    50   ~ 0
 LED_6_G
-Text Label 4900 2500 2    50   ~ 0
-LED_6_B
 $Comp
 L power:VDD #PWR059
 U 1 1 5FA8DCCA
@@ -427,4 +419,12 @@ F 3 "" H 3200 5000 50  0001 C CNN
 	1    3200 5000
 	1    0    0    -1  
 $EndComp
+Text Label 4900 2500 2    50   ~ 0
+LED_6_B
+Text Label 4900 2700 2    50   ~ 0
+LED_6_R
+Text Label 4900 3350 2    50   ~ 0
+LED_5_B
+Text Label 4900 3550 2    50   ~ 0
+LED_5_R
 $EndSCHEMATC

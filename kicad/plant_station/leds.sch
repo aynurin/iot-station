@@ -137,28 +137,6 @@ F 3 "" H 3100 5000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR054
-U 1 1 6022AA92
-P 3200 6000
-F 0 "#PWR054" H 3200 5750 50  0001 C CNN
-F 1 "GND" H 3205 5827 50  0000 C CNN
-F 2 "" H 3200 6000 50  0001 C CNN
-F 3 "" H 3200 6000 50  0001 C CNN
-	1    3200 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR052
-U 1 1 6022AF44
-P 3100 6000
-F 0 "#PWR052" H 3100 5750 50  0001 C CNN
-F 1 "GND" H 3105 5827 50  0000 C CNN
-F 2 "" H 3100 6000 50  0001 C CNN
-F 3 "" H 3100 6000 50  0001 C CNN
-	1    3100 6000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Parts:505567-0471 J14
 U 1 1 604DDC7A
 P 4900 2500
@@ -196,10 +174,6 @@ F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0471?qs=gt1LBUVyoHnKtp
 	1    4900 3350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5700 3350
-NoConn ~ 5700 3450
-NoConn ~ 5700 2500
-NoConn ~ 5700 2600
 $Comp
 L SamaSys:KRTBLSLPS1.32-VUVX-EQ+BTBV-D8+TWTZ-L1-B LED?
 U 1 1 6053070F
@@ -250,18 +224,10 @@ Text Label 3500 3350 0    50   ~ 0
 LED_3_B
 Text Label 3500 4000 0    50   ~ 0
 LED_4_B
-Text Label 4900 3550 2    50   ~ 0
-LED_5_R
-Text Label 4900 2700 2    50   ~ 0
-LED_6_R
 Text Label 4900 3450 2    50   ~ 0
 LED_5_G
-Text Label 4900 3350 2    50   ~ 0
-LED_5_B
 Text Label 4900 2600 2    50   ~ 0
 LED_6_G
-Text Label 4900 2500 2    50   ~ 0
-LED_6_B
 $Comp
 L power:VDD #PWR059
 U 1 1 5FA8DCCA
@@ -427,4 +393,28 @@ F 3 "" H 3200 5000 50  0001 C CNN
 	1    3200 5000
 	1    0    0    -1  
 $EndComp
+Text Label 4900 2500 2    50   ~ 0
+LED_6_B
+Text Label 4900 2700 2    50   ~ 0
+LED_6_R
+Text Label 4900 3350 2    50   ~ 0
+LED_5_B
+Text Label 4900 3550 2    50   ~ 0
+LED_5_R
+Wire Wire Line
+	3100 6000 3200 6000
+Wire Wire Line
+	5700 6000 5700 3450
+Connection ~ 3200 6000
+Wire Wire Line
+	3200 6000 5700 6000
+Connection ~ 5700 2600
+Wire Wire Line
+	5700 2600 5700 2500
+Connection ~ 5700 3350
+Wire Wire Line
+	5700 3350 5700 2600
+Connection ~ 5700 3450
+Wire Wire Line
+	5700 3450 5700 3350
 $EndSCHEMATC
