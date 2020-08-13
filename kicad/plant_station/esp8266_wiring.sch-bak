@@ -47,15 +47,15 @@ F 3 "" H 4550 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 4050 2050
-Text HLabel 5400 1850 2    50   BiDi ~ 0
+Text HLabel 9350 3150 2    50   BiDi ~ 0
 SDA
-Text HLabel 5400 1950 2    50   BiDi ~ 0
+Text HLabel 9350 3450 2    50   BiDi ~ 0
 ALL_EN
 Text Label 4050 1850 2    50   ~ 0
 ESP_RST
 Text Label 4050 1750 2    50   ~ 0
 ESP_EN
-Text HLabel 5400 2350 2    50   Output ~ 0
+Text HLabel 9350 3250 2    50   Output ~ 0
 SCL
 Text Label 5050 1750 0    50   ~ 0
 GPIO0
@@ -75,12 +75,6 @@ Text Label 4050 2250 2    50   ~ 0
 USB_TXD
 Text Label 4050 2350 2    50   ~ 0
 USB_RXD
-Wire Wire Line
-	5050 1850 5400 1850
-Wire Wire Line
-	5050 1950 5400 1950
-Wire Wire Line
-	5050 2350 5400 2350
 $Comp
 L power:GND #PWR026
 U 1 1 5FC8A458
@@ -182,48 +176,9 @@ Text Label 9150 2250 2    50   ~ 0
 SDA
 Text Label 9150 2550 2    50   ~ 0
 SCL
-$Comp
-L power:GND #PWR?
-U 1 1 5F59F761
-P 9300 4850
-AR Path="/60DE59F5/5F59F761" Ref="#PWR?"  Part="1" 
-AR Path="/5F59F761" Ref="#PWR?"  Part="1" 
-AR Path="/5F564838/5F59F761" Ref="#PWR0147"  Part="1" 
-F 0 "#PWR0147" H 9300 4600 50  0001 C CNN
-F 1 "GND" V 9300 4650 50  0000 C CNN
-F 2 "" H 9300 4850 50  0001 C CNN
-F 3 "" H 9300 4850 50  0001 C CNN
-	1    9300 4850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C Cdec?
-U 1 1 5F5944DB
-P 9150 4850
-AR Path="/60DE59F5/5F5944DB" Ref="Cdec?"  Part="1" 
-AR Path="/5F5944DB" Ref="Cdec?"  Part="1" 
-AR Path="/5F564838/5F5944DB" Ref="C9"  Part="1" 
-F 0 "C9" V 9250 4900 50  0000 L CNN
-F 1 "0.1μF" V 9050 4900 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9188 4700 50  0001 C CNN
-F 3 "~" H 9150 4850 50  0001 C CNN
-	1    9150 4850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R17
-U 1 1 5F58F54F
-P 8650 4850
-F 0 "R17" V 8550 4800 50  0000 L CNN
-F 1 "10K" V 8650 4800 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8580 4850 50  0001 C CNN
-F 3 "~" H 8650 4850 50  0001 C CNN
-	1    8650 4850
-	0    1    1    0   
-$EndComp
 Text Label 5050 1950 0    50   ~ 0
-GPIO4
-Text HLabel 9100 1650 0    50   Input ~ 0
+ALL_EN
+Text HLabel 9350 3350 2    50   Input ~ 0
 HOST_WAKE_UP
 $Comp
 L Device:R R?
@@ -310,12 +265,12 @@ Wire Wire Line
 $Comp
 L Device:R R7
 U 1 1 5F53A6CA
-P 9700 1650
-F 0 "R7" V 9600 1600 50  0000 L CNN
-F 1 "10K" V 9700 1600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9630 1650 50  0001 C CNN
-F 3 "~" H 9700 1650 50  0001 C CNN
-	1    9700 1650
+P 9300 1650
+F 0 "R7" V 9200 1600 50  0000 L CNN
+F 1 "10K" V 9300 1600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9230 1650 50  0001 C CNN
+F 3 "~" H 9300 1650 50  0001 C CNN
+	1    9300 1650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -329,36 +284,32 @@ F 3 "" H 7600 2500 50  0001 C CNN
 	1    7600 2500
 	0    1    1    0   
 $EndComp
-Text Label 9500 1650 2    50   ~ 0
+Text Label 9150 1650 2    50   ~ 0
 WAKE_UP
-Wire Wire Line
-	9100 1650 9550 1650
 Text Notes 8750 1900 0    50   ~ 0
 Host Wake Up (active high)
 $Comp
 L Connector_Generic:Conn_01x06 J8
 U 1 1 5FE42DD1
 P 2100 2400
-F 0 "J8" H 2050 2850 50  0000 L CNN
-F 1 "Conn_01x06" H 1700 2750 50  0000 L CNN
+F 0 "J8" H 1900 2750 50  0000 L CNN
+F 1 "UART" H 2000 2750 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2100 2400 50  0001 C CNN
 F 3 "~" H 2100 2400 50  0001 C CNN
 	1    2100 2400
 	1    0    0    -1  
 $EndComp
-Text Notes 1400 2900 0    50   ~ 0
-External USB-UART
-Text Label 1900 3700 2    50   ~ 0
+Text Label 1900 3900 2    50   ~ 0
 ESP_RST
 $Comp
 L power:GND #PWR049
 U 1 1 5F730FED
-P 9850 1650
-F 0 "#PWR049" H 9850 1400 50  0001 C CNN
-F 1 "GND" V 9855 1522 50  0000 R CNN
-F 2 "" H 9850 1650 50  0001 C CNN
-F 3 "" H 9850 1650 50  0001 C CNN
-	1    9850 1650
+P 9450 1650
+F 0 "#PWR049" H 9450 1400 50  0001 C CNN
+F 1 "GND" V 9455 1522 50  0000 R CNN
+F 2 "" H 9450 1650 50  0001 C CNN
+F 3 "" H 9450 1650 50  0001 C CNN
+	1    9450 1650
 	0    -1   -1   0   
 $EndComp
 Text Notes 9050 2800 0    50   ~ 0
@@ -481,10 +432,10 @@ F 3 "" H 6100 4450 50  0001 C CNN
 	1    6100 4450
 	1    0    0    -1  
 $EndComp
-Text Label 5050 2550 0    50   ~ 0
+Text Label 8050 4700 0    50   ~ 0
 WAKE_UP
-Text Notes 3750 3700 0    50   ~ 0
-GPIO16 is connected to WAKE_UP line.\nIf uC wants to stay awake - it pulls it down \nso the TPL timer keeps driving power.\nUseful for e.g. setting up or OTA.
+Text Notes 7950 6050 0    50   ~ 0
+GPIO16 can be connected to WAKE_UP line using a jumper.\nIf uC wants to stay awake - it pulls it down \nso the TPL timer keeps driving power.\nUseful for e.g. setting up or OTA.
 Wire Wire Line
 	5350 4700 5350 5350
 Wire Wire Line
@@ -525,86 +476,15 @@ F 3 "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf" H 7150 5100 50  0001
 	1    7150 5100
 	1    0    0    -1  
 $EndComp
-Text Label 8050 5300 0    50   ~ 0
-GPIO5
-Text Label 8050 5200 0    50   ~ 0
-GPIO4
-Wire Wire Line
-	7550 5200 7550 5300
-$Comp
-L power:+3V3 #PWR042
-U 1 1 5F7D8743
-P 8050 4600
-F 0 "#PWR042" H 8050 4450 50  0001 C CNN
-F 1 "+3V3" V 8065 4728 50  0000 L CNN
-F 2 "" H 8050 4600 50  0001 C CNN
-F 3 "" H 8050 4600 50  0001 C CNN
-	1    8050 4600
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR043
-U 1 1 5F863AFE
-P 8050 4900
-F 0 "#PWR043" H 8050 4750 50  0001 C CNN
-F 1 "+3V3" V 8065 5028 50  0000 L CNN
-F 2 "" H 8050 4900 50  0001 C CNN
-F 3 "" H 8050 4900 50  0001 C CNN
-	1    8050 4900
-	0    1    1    0   
-$EndComp
-Text Label 8800 4850 0    50   ~ 0
-ESP_EN
-$Comp
-L power:VDD #PWR041
-U 1 1 5F89065C
-P 7550 4700
-F 0 "#PWR041" H 7550 4550 50  0001 C CNN
-F 1 "VDD" V 7565 4827 50  0000 L CNN
-F 2 "" H 7550 4700 50  0001 C CNN
-F 3 "" H 7550 4700 50  0001 C CNN
-	1    7550 4700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VDD #PWR040
-U 1 1 5F88FAB9
-P 7550 4600
-F 0 "#PWR040" H 7550 4450 50  0001 C CNN
-F 1 "VDD" V 7565 4727 50  0000 L CNN
-F 2 "" H 7550 4600 50  0001 C CNN
-F 3 "" H 7550 4600 50  0001 C CNN
-	1    7550 4600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7550 4900 7550 5000
-Connection ~ 7550 5000
-Wire Wire Line
-	7550 5000 7550 5100
-Wire Wire Line
-	7250 4900 7550 4900
-Connection ~ 7550 4900
-Wire Wire Line
-	6600 5450 7550 5450
-Wire Wire Line
-	7550 5450 7550 5300
-Connection ~ 7550 5300
 Wire Wire Line
 	6950 5100 6700 5100
 Wire Wire Line
 	6700 5100 6700 5350
 Wire Wire Line
-	6700 5350 6600 5350
-Wire Wire Line
 	4950 5450 4850 5450
 Wire Wire Line
 	6700 5100 6700 4800
-Wire Wire Line
-	6700 4800 7550 4800
 Connection ~ 6700 5100
-NoConn ~ 8050 4800
-NoConn ~ 8050 5100
 $Comp
 L power:VDD #PWR033
 U 1 1 5F9EDF20
@@ -638,117 +518,221 @@ F 3 "" H 9450 2550 50  0001 C CNN
 	1    9450 2550
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x08 J17
-U 1 1 5FAE03AE
-P 2100 3800
-F 0 "J17" H 2000 4350 50  0000 L CNN
-F 1 "Conn_01x08" H 1700 4250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2100 3800 50  0001 C CNN
-F 3 "~" H 2100 3800 50  0001 C CNN
-	1    2100 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x08 J18
-U 1 1 5FAE550D
-P 2100 5350
-F 0 "J18" H 2000 5900 50  0000 L CNN
-F 1 "Conn_01x08" H 1700 5800 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2100 5350 50  0001 C CNN
-F 3 "~" H 2100 5350 50  0001 C CNN
-	1    2100 5350
-	1    0    0    -1  
-$EndComp
-Text Label 1900 3800 2    50   ~ 0
-ESP_EN
-Text Label 1900 5250 2    50   ~ 0
-GPIO0
-Text Label 1900 5350 2    50   ~ 0
-GPIO4
-Text Label 1900 5450 2    50   ~ 0
-GPIO5
-Text Label 1900 5550 2    50   ~ 0
-GPIO12
-Text Label 1900 5650 2    50   ~ 0
-GPIO13
-Text Label 1900 5750 2    50   ~ 0
-GPIO15
-Text Label 1900 3900 2    50   ~ 0
-WAKE_UP
 Text Label 1900 4000 2    50   ~ 0
+ESP_EN
+Text Label 1900 4200 2    50   ~ 0
+GPIO0
+Text Label 1900 4300 2    50   ~ 0
+GPIO5
+Text Label 1900 4400 2    50   ~ 0
+GPIO12
+Text Label 1900 4500 2    50   ~ 0
+GPIO13
+Text Label 1900 4600 2    50   ~ 0
+GPIO15
+Text Label 1900 3700 2    50   ~ 0
+WAKE_UP
+Text Label 1900 3500 2    50   ~ 0
 SDA
-Text Label 1900 4100 2    50   ~ 0
+Text Label 1900 3600 2    50   ~ 0
 SCL
 $Comp
 L power:GND #PWR0101
 U 1 1 5FAF47F5
-P 1900 3500
-F 0 "#PWR0101" H 1900 3250 50  0001 C CNN
-F 1 "GND" V 1905 3372 50  0000 R CNN
-F 2 "" H 1900 3500 50  0001 C CNN
-F 3 "" H 1900 3500 50  0001 C CNN
-	1    1900 3500
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0102
-U 1 1 5FAF4FC5
-P 1900 5050
-F 0 "#PWR0102" H 1900 4800 50  0001 C CNN
-F 1 "GND" V 1905 4922 50  0000 R CNN
-F 2 "" H 1900 5050 50  0001 C CNN
-F 3 "" H 1900 5050 50  0001 C CNN
-	1    1900 5050
+P 1900 3300
+F 0 "#PWR0101" H 1900 3050 50  0001 C CNN
+F 1 "GND" V 1905 3172 50  0000 R CNN
+F 2 "" H 1900 3300 50  0001 C CNN
+F 3 "" H 1900 3300 50  0001 C CNN
+	1    1900 3300
 	0    1    1    0   
 $EndComp
 $Comp
 L power:VDD #PWR0103
 U 1 1 5FAF61A2
-P 1900 3600
-F 0 "#PWR0103" H 1900 3450 50  0001 C CNN
-F 1 "VDD" V 1915 3727 50  0000 L CNN
-F 2 "" H 1900 3600 50  0001 C CNN
-F 3 "" H 1900 3600 50  0001 C CNN
-	1    1900 3600
+P 1900 3400
+F 0 "#PWR0103" H 1900 3250 50  0001 C CNN
+F 1 "VDD" V 1915 3527 50  0000 L CNN
+F 2 "" H 1900 3400 50  0001 C CNN
+F 3 "" H 1900 3400 50  0001 C CNN
+	1    1900 3400
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x16 J17
+U 1 1 5F3F86A0
+P 2100 4000
+F 0 "J17" H 1900 4850 50  0000 L CNN
+F 1 "GPIO" H 2000 4850 50  0000 L CNN
+F 2 "" H 2100 4000 50  0001 C CNN
+F 3 "~" H 2100 4000 50  0001 C CNN
+	1    2100 4000
+	1    0    0    -1  
+$EndComp
+Text Label 1900 3800 2    50   ~ 0
+ALL_EN
 $Comp
 L power:+3V3 #PWR0104
 U 1 1 5FAF7387
-P 1900 5150
-F 0 "#PWR0104" H 1900 5000 50  0001 C CNN
-F 1 "+3V3" V 1915 5278 50  0000 L CNN
-F 2 "" H 1900 5150 50  0001 C CNN
-F 3 "" H 1900 5150 50  0001 C CNN
-	1    1900 5150
+P 1900 4100
+F 0 "#PWR0104" H 1900 3950 50  0001 C CNN
+F 1 "+3V3" V 1915 4228 50  0000 L CNN
+F 2 "" H 1900 4100 50  0001 C CNN
+F 3 "" H 1900 4100 50  0001 C CNN
+	1    1900 4100
 	0    -1   -1   0   
 $EndComp
-Text Notes 1850 4400 0    50   ~ 0
-Logic IO
-Text Notes 1950 5950 0    50   ~ 0
-GPIO
-NoConn ~ 1900 4200
 Wire Wire Line
-	8050 4700 8500 4700
-Wire Wire Line
-	8500 4700 8500 4850
-Wire Wire Line
-	8050 5000 8500 5000
-Connection ~ 8500 4850
-Wire Wire Line
-	8500 4850 8500 5000
-Wire Wire Line
-	9000 4850 8800 4850
+	6700 5350 6600 5350
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J1
 U 1 1 5FCFF381
-P 7750 4900
-F 0 "J1" H 7800 5417 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 7800 5326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 7750 4900 50  0001 C CNN
-F 3 "~" H 7750 4900 50  0001 C CNN
-	1    7750 4900
+P 7750 4800
+F 0 "J1" H 7800 5317 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 7800 5226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 7750 4800 50  0001 C CNN
+F 3 "~" H 7750 4800 50  0001 C CNN
+	1    7750 4800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9000 4750 8800 4750
+Wire Wire Line
+	8500 4750 8500 4900
+Connection ~ 8500 4750
+Wire Wire Line
+	8050 4900 8500 4900
+Wire Wire Line
+	8500 4600 8500 4750
+Wire Wire Line
+	8050 4600 8500 4600
+NoConn ~ 8050 5000
+Wire Wire Line
+	6700 4800 7550 4800
+Wire Wire Line
+	6600 5450 7550 5450
+Wire Wire Line
+	7250 4900 7550 4900
+$Comp
+L power:VDD #PWR040
+U 1 1 5F88FAB9
+P 7550 4500
+F 0 "#PWR040" H 7550 4350 50  0001 C CNN
+F 1 "VDD" V 7565 4627 50  0000 L CNN
+F 2 "" H 7550 4500 50  0001 C CNN
+F 3 "" H 7550 4500 50  0001 C CNN
+	1    7550 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR041
+U 1 1 5F89065C
+P 7550 4600
+F 0 "#PWR041" H 7550 4450 50  0001 C CNN
+F 1 "VDD" V 7565 4727 50  0000 L CNN
+F 2 "" H 7550 4600 50  0001 C CNN
+F 3 "" H 7550 4600 50  0001 C CNN
+	1    7550 4600
+	0    -1   -1   0   
+$EndComp
+Text Label 8800 4750 0    50   ~ 0
+ESP_EN
+$Comp
+L power:+3V3 #PWR043
+U 1 1 5F863AFE
+P 8050 4800
+F 0 "#PWR043" H 8050 4650 50  0001 C CNN
+F 1 "+3V3" V 8065 4928 50  0000 L CNN
+F 2 "" H 8050 4800 50  0001 C CNN
+F 3 "" H 8050 4800 50  0001 C CNN
+	1    8050 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR042
+U 1 1 5F7D8743
+P 8050 4500
+F 0 "#PWR042" H 8050 4350 50  0001 C CNN
+F 1 "+3V3" V 8065 4628 50  0000 L CNN
+F 2 "" H 8050 4500 50  0001 C CNN
+F 3 "" H 8050 4500 50  0001 C CNN
+	1    8050 4500
+	0    1    1    0   
+$EndComp
+Text Label 8050 5100 0    50   ~ 0
+ALL_EN
+Text Label 8050 5200 0    50   ~ 0
+GPIO5
+$Comp
+L Device:R R17
+U 1 1 5F58F54F
+P 8650 4750
+F 0 "R17" V 8550 4700 50  0000 L CNN
+F 1 "10K" V 8650 4700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8580 4750 50  0001 C CNN
+F 3 "~" H 8650 4750 50  0001 C CNN
+	1    8650 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C Cdec?
+U 1 1 5F5944DB
+P 9150 4750
+AR Path="/60DE59F5/5F5944DB" Ref="Cdec?"  Part="1" 
+AR Path="/5F5944DB" Ref="Cdec?"  Part="1" 
+AR Path="/5F564838/5F5944DB" Ref="C9"  Part="1" 
+F 0 "C9" V 9250 4800 50  0000 L CNN
+F 1 "0.1μF" V 9050 4800 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 9188 4600 50  0001 C CNN
+F 3 "~" H 9150 4750 50  0001 C CNN
+	1    9150 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F59F761
+P 9300 4750
+AR Path="/60DE59F5/5F59F761" Ref="#PWR?"  Part="1" 
+AR Path="/5F59F761" Ref="#PWR?"  Part="1" 
+AR Path="/5F564838/5F59F761" Ref="#PWR0147"  Part="1" 
+F 0 "#PWR0147" H 9300 4500 50  0001 C CNN
+F 1 "GND" V 9300 4550 50  0000 C CNN
+F 2 "" H 9300 4750 50  0001 C CNN
+F 3 "" H 9300 4750 50  0001 C CNN
+	1    9300 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7550 4900 7550 5000
+Wire Wire Line
+	7550 5200 7550 5450
+Connection ~ 7550 4900
+Wire Wire Line
+	7550 5100 7550 5200
+Connection ~ 7550 5200
+Text Label 1900 4700 2    50   ~ 0
+GPIO16
+Text Label 5050 2550 0    50   ~ 0
+GPIO16
+Text Label 7550 4700 2    50   ~ 0
+GPIO16
+$Comp
+L power:GND #PWR?
+U 1 1 5F51053F
+P 1900 4800
+F 0 "#PWR?" H 1900 4550 50  0001 C CNN
+F 1 "GND" V 1905 4672 50  0000 R CNN
+F 2 "" H 1900 4800 50  0001 C CNN
+F 3 "" H 1900 4800 50  0001 C CNN
+	1    1900 4800
+	0    1    1    0   
+$EndComp
+Text Label 9350 3150 2    50   ~ 0
+SDA
+Text Label 9350 3250 2    50   ~ 0
+SCL
+Text Label 9350 3450 2    50   ~ 0
+ALL_EN
+Text Label 9350 3350 2    50   ~ 0
+WAKE_UP
 $EndSCHEMATC

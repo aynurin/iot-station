@@ -59,10 +59,6 @@ F 3 "" H 10550 800 50  0001 C CNN
 $EndComp
 Text Notes 2200 1650 0    50   ~ 0
 usb breakout\n+tantalum decouplers\n+fix the probe\nleds board + ambient leds\nsensor board\noscillator???\n-look for a different humidity sensor\nstack boards\n+power schematics\n+analog VCC on ADC\n+sleep/wake bus
-Text Label 9250 4850 0    50   ~ 0
-SDA
-Text Label 9250 4750 0    50   ~ 0
-SCL
 Text Label 7700 2350 2    50   ~ 0
 HOST_WAKE
 $Sheet
@@ -160,27 +156,6 @@ $EndComp
 Text Label 1500 2750 2    50   ~ 0
 HOST_WAKE
 $Comp
-L Parts:505567-0671 J2
-U 1 1 6045DC89
-P 1500 2350
-F 0 "J2" H 1950 2615 50  0000 C CNN
-F 1 "MB_I2C" H 1950 2524 50  0000 C CNN
-F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 2450 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 2350 50  0001 L CNN
-F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 2250 50  0001 L CNN "Description"
-F 5 "4.2" H 2250 2150 50  0001 L CNN "Height"
-F 6 "Molex" H 2250 2050 50  0001 L CNN "Manufacturer_Name"
-F 7 "505567-0671" H 2250 1950 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "505567-0671" H 2250 1850 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 2250 1750 50  0001 L CNN "Arrow Price/Stock"
-F 10 "538-505567-0671" H 2250 1650 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 1550 50  0001 L CNN "Mouser Price/Stock"
-	1    1500 2350
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2400 2350
-NoConn ~ 2400 2450
-$Comp
 L power:GND #PWR09
 U 1 1 60493E6F
 P 3050 2350
@@ -229,8 +204,6 @@ F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQui
 	1    3050 2350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3950 2350
-NoConn ~ 3950 2450
 $Comp
 L power:GND #PWR03
 U 1 1 6049521E
@@ -261,27 +234,6 @@ F 3 "~" V 1400 3800 50  0001 C CNN
 $EndComp
 Text Label 1500 3700 2    50   ~ 0
 HOST_WAKE
-$Comp
-L Parts:505567-0671 J3
-U 1 1 6049523C
-P 1500 3300
-F 0 "J3" H 1950 3565 50  0000 C CNN
-F 1 "MB_I2C" H 1950 3474 50  0000 C CNN
-F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 3400 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 3300 50  0001 L CNN
-F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 3200 50  0001 L CNN "Description"
-F 5 "4.2" H 2250 3100 50  0001 L CNN "Height"
-F 6 "Molex" H 2250 3000 50  0001 L CNN "Manufacturer_Name"
-F 7 "505567-0671" H 2250 2900 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "505567-0671" H 2250 2800 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 2250 2700 50  0001 L CNN "Arrow Price/Stock"
-F 10 "538-505567-0671" H 2250 2600 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 2500 50  0001 L CNN "Mouser Price/Stock"
-	1    1500 3300
-	1    0    0    -1  
-$EndComp
-NoConn ~ 2400 3300
-NoConn ~ 2400 3400
 $Comp
 L power:GND #PWR011
 U 1 1 60496837
@@ -331,303 +283,6 @@ F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQui
 	1    3050 3300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3950 3300
-NoConn ~ 3950 3400
-$Comp
-L power:GND #PWR016
-U 1 1 6056E056
-P 9650 4000
-AR Path="/6056E056" Ref="#PWR016"  Part="1" 
-AR Path="/601A2964/6056E056" Ref="#PWR?"  Part="1" 
-F 0 "#PWR016" H 9650 3750 50  0001 C CNN
-F 1 "GND" H 9650 3850 50  0000 C CNN
-F 2 "" H 9650 4000 50  0001 C CNN
-F 3 "" H 9650 4000 50  0001 C CNN
-	1    9650 4000
-	-1   0    0    1   
-$EndComp
-Text Notes 7950 4600 0    50   ~ 0
-I2C ADDR 0x28
-$Comp
-L power:GND #PWR014
-U 1 1 6056E05D
-P 9250 5150
-AR Path="/6056E05D" Ref="#PWR014"  Part="1" 
-AR Path="/601A2964/6056E05D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR014" H 9250 4900 50  0001 C CNN
-F 1 "GND" H 9250 5000 50  0000 C CNN
-F 2 "" H 9250 5150 50  0001 C CNN
-F 3 "" H 9250 5150 50  0001 C CNN
-	1    9250 5150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 6056E063
-P 9400 5050
-AR Path="/6056E063" Ref="#PWR015"  Part="1" 
-AR Path="/601A2964/6056E063" Ref="#PWR?"  Part="1" 
-F 0 "#PWR015" H 9400 4800 50  0001 C CNN
-F 1 "GND" H 9400 4900 50  0000 C CNN
-F 2 "" H 9400 5050 50  0001 C CNN
-F 3 "" H 9400 5050 50  0001 C CNN
-	1    9400 5050
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C1
-U 1 1 6056E069
-P 9650 4150
-AR Path="/6056E069" Ref="C1"  Part="1" 
-AR Path="/601A2964/6056E069" Ref="C?"  Part="1" 
-F 0 "C1" V 9550 4000 50  0000 L CNN
-F 1 "1μF" V 9550 4200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9650 4150 50  0001 C CNN
-F 3 "~" H 9650 4150 50  0001 C CNN
-	1    9650 4150
-	-1   0    0    1   
-$EndComp
-NoConn ~ 8550 5450
-NoConn ~ 8450 5450
-NoConn ~ 8350 5450
-NoConn ~ 8250 5450
-NoConn ~ 8150 5450
-NoConn ~ 8050 5450
-$Comp
-L Device:R R1
-U 1 1 6056E075
-P 9900 4150
-AR Path="/6056E075" Ref="R1"  Part="1" 
-AR Path="/601A2964/6056E075" Ref="R?"  Part="1" 
-F 0 "R1" V 10000 4200 50  0000 L CNN
-F 1 "4K9" V 9900 4050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9830 4150 50  0001 C CNN
-F 3 "~" H 9900 4150 50  0001 C CNN
-	1    9900 4150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR013
-U 1 1 6056E07B
-P 9250 4350
-AR Path="/6056E07B" Ref="#PWR013"  Part="1" 
-AR Path="/601A2964/6056E07B" Ref="#PWR?"  Part="1" 
-F 0 "#PWR013" H 9250 4100 50  0001 C CNN
-F 1 "GND" H 9250 4200 50  0000 C CNN
-F 2 "" H 9250 4350 50  0001 C CNN
-F 3 "" H 9250 4350 50  0001 C CNN
-	1    9250 4350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	9900 4300 9900 4550
-Wire Wire Line
-	9650 4250 9650 4450
-Wire Wire Line
-	9900 5150 9900 5200
-Wire Wire Line
-	9900 4900 9900 4950
-$Comp
-L Device:C_Small C2
-U 1 1 6056E088
-P 9900 5050
-AR Path="/6056E088" Ref="C2"  Part="1" 
-AR Path="/601A2964/6056E088" Ref="C?"  Part="1" 
-F 0 "C2" V 9800 4900 50  0000 L CNN
-F 1 "1μF" V 9800 5100 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9900 5050 50  0001 C CNN
-F 3 "~" H 9900 5050 50  0001 C CNN
-	1    9900 5050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR019
-U 1 1 6056E094
-P 9900 5200
-AR Path="/6056E094" Ref="#PWR019"  Part="1" 
-AR Path="/601A2964/6056E094" Ref="#PWR?"  Part="1" 
-F 0 "#PWR019" H 9900 4950 50  0001 C CNN
-F 1 "GND" H 9900 5050 50  0000 C CNN
-F 2 "" H 9900 5200 50  0001 C CNN
-F 3 "" H 9900 5200 50  0001 C CNN
-	1    9900 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR017
-U 1 1 6056E09A
-P 9900 4000
-AR Path="/6056E09A" Ref="#PWR017"  Part="1" 
-AR Path="/601A2964/6056E09A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR017" H 9900 3750 50  0001 C CNN
-F 1 "GND" H 9900 3850 50  0000 C CNN
-F 2 "" H 9900 4000 50  0001 C CNN
-F 3 "" H 9900 4000 50  0001 C CNN
-	1    9900 4000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9650 4050 9650 4000
-Text Notes 8400 5800 0    50   ~ 0
-Lights Driver
-Text Label 7950 4050 1    50   ~ 0
-LED_3_R
-Text Label 7150 4450 2    50   ~ 0
-LED_4_R
-Text Label 7150 4750 2    50   ~ 0
-LED_5_R
-Text Label 7150 5050 2    50   ~ 0
-LED_6_R
-Text Label 8550 4050 1    50   ~ 0
-LED_1_R
-Text Label 8250 4050 1    50   ~ 0
-LED_2_R
-Text Label 7850 4050 1    50   ~ 0
-LED_3_G
-Text Label 7150 4550 2    50   ~ 0
-LED_4_G
-Text Label 7150 4850 2    50   ~ 0
-LED_5_G
-Text Label 7850 5450 3    50   ~ 0
-LED_6_G
-Text Label 8450 4050 1    50   ~ 0
-LED_1_G
-Text Label 8150 4050 1    50   ~ 0
-LED_2_G
-Text Label 7150 4350 2    50   ~ 0
-LED_3_B
-Text Label 7150 4950 2    50   ~ 0
-LED_5_B
-Text Label 7950 5450 3    50   ~ 0
-LED_6_B
-Text Label 8350 4050 1    50   ~ 0
-LED_1_B
-Text Label 8050 4050 1    50   ~ 0
-LED_2_B
-Wire Wire Line
-	9400 5050 9250 5050
-Wire Wire Line
-	9900 4550 9250 4550
-Wire Wire Line
-	9650 4450 9250 4450
-$Comp
-L SamaSys:LP5024RSMR LEDDRV1
-U 1 1 6056E0BD
-P 8550 4050
-AR Path="/6056E0BD" Ref="LEDDRV1"  Part="1" 
-AR Path="/601A2964/6056E0BD" Ref="LEDDRV?"  Part="1" 
-F 0 "LEDDRV1" V 9200 3700 50  0000 C CNN
-F 1 "LP5024RSMR" V 9350 3700 50  0000 C CNN
-F 2 "SamacSys:QFN40P400X400X100-33N-D" H 9800 4550 50  0001 L CNN
-F 3 "http://www.ti.com/lit/gpn/lp5024" H 9800 4450 50  0001 L CNN
-F 4 "24-Channel I2C Constant-Current RGB LED Driver " H 9800 4350 50  0001 L CNN "Description"
-F 5 "1" H 9800 4250 50  0001 L CNN "Height"
-F 6 "595-LP5024RSMR" H 9800 4150 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LP5024RSMR?qs=55YtniHzbhDVcrbfuIdigg%3D%3D" H 9800 4050 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Texas Instruments" H 9800 3950 50  0001 L CNN "Manufacturer_Name"
-F 9 "LP5024RSMR" H 9800 3850 50  0001 L CNN "Manufacturer_Part_Number"
-	1    8550 4050
-	0    1    1    0   
-$EndComp
-Text Label 7150 4650 2    50   ~ 0
-LED_4_B
-$Comp
-L Parts:ZF5S-20-01-T-WT-TR J4
-U 1 1 6056E0CB
-P 1500 5900
-AR Path="/6056E0CB" Ref="J4"  Part="1" 
-AR Path="/601A2964/6056E0CB" Ref="J?"  Part="1" 
-F 0 "J4" H 2000 6165 50  0000 C CNN
-F 1 "ZF5S-20-01-T-WT-TR" H 2000 6074 50  0000 C CNN
-F 2 "Parts:ZF5S2001TWTTR" H 2350 6000 50  0001 L CNN
-F 3 "http://suddendocs.samtec.com/prints/zf5s-xx-xx-x-wt-x-xx-mkt.pdf" H 2350 5900 50  0001 L CNN
-F 4 "FFC & FPC Connectors 0.50 mm Zero Insertion Force FFC Connector" H 2350 5800 50  0001 L CNN "Description"
-F 5 "2.1" H 2350 5700 50  0001 L CNN "Height"
-F 6 "SAMTEC" H 2350 5600 50  0001 L CNN "Manufacturer_Name"
-F 7 "ZF5S-20-01-T-WT-TR" H 2350 5500 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "ZF5S-20-01-T-WT-TR" H 2350 5400 50  0001 L CNN "Arrow Part Number"
-F 9 "200-ZF5S2001TWTTR" H 2350 5200 50  0001 L CNN "Mouser Part Number"
-F 10 "https://www.mouser.co.uk/ProductDetail/Samtec/ZF5S-20-01-T-WT-TR?qs=%252BZP6%2F%252BtExtCkFHwqnl54nQ%3D%3D" H 2350 5100 50  0001 L CNN "Mouser Price/Stock"
-	1    1500 5900
-	0    -1   -1   0   
-$EndComp
-Text Label 2300 4900 1    50   ~ 0
-LED_3_R
-Text Label 1700 4900 1    50   ~ 0
-LED_1_R
-Text Label 2000 4900 1    50   ~ 0
-LED_2_R
-Text Label 2400 4900 1    50   ~ 0
-LED_3_G
-Text Label 1800 4900 1    50   ~ 0
-LED_1_G
-Text Label 2100 4900 1    50   ~ 0
-LED_2_G
-Text Label 1900 4900 1    50   ~ 0
-LED_1_B
-Text Label 2200 4900 1    50   ~ 0
-LED_2_B
-Text Label 2600 4900 1    50   ~ 0
-LED_4_R
-Text Label 2900 4900 1    50   ~ 0
-LED_5_R
-Text Label 3200 4900 1    50   ~ 0
-LED_6_R
-Text Label 2700 4900 1    50   ~ 0
-LED_4_G
-Text Label 3000 4900 1    50   ~ 0
-LED_5_G
-Text Label 2500 4900 1    50   ~ 0
-LED_3_B
-Text Label 3100 4900 1    50   ~ 0
-LED_5_B
-Text Label 2800 4900 1    50   ~ 0
-LED_4_B
-Text Label 3300 4900 1    50   ~ 0
-LED_6_G
-Text Label 3400 4900 1    50   ~ 0
-LED_6_B
-$Comp
-L power:GND #PWR05
-U 1 1 6056E0E3
-P 1500 4900
-AR Path="/6056E0E3" Ref="#PWR05"  Part="1" 
-AR Path="/601A2964/6056E0E3" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 1500 4650 50  0001 C CNN
-F 1 "GND" V 1505 4772 50  0000 R CNN
-F 2 "" H 1500 4900 50  0001 C CNN
-F 3 "" H 1500 4900 50  0001 C CNN
-	1    1500 4900
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6056E0F2
-P 1500 5900
-AR Path="/601A2964/6056E0F2" Ref="#PWR?"  Part="1" 
-AR Path="/6056E0F2" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 1500 5650 50  0001 C CNN
-F 1 "GND" H 1505 5727 50  0000 C CNN
-F 2 "" H 1500 5900 50  0001 C CNN
-F 3 "" H 1500 5900 50  0001 C CNN
-	1    1500 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6056E0F8
-P 1600 5900
-AR Path="/601A2964/6056E0F8" Ref="#PWR?"  Part="1" 
-AR Path="/6056E0F8" Ref="#PWR08"  Part="1" 
-F 0 "#PWR08" H 1600 5650 50  0001 C CNN
-F 1 "GND" H 1605 5727 50  0000 C CNN
-F 2 "" H 1600 5900 50  0001 C CNN
-F 3 "" H 1600 5900 50  0001 C CNN
-	1    1600 5900
-	1    0    0    -1  
-$EndComp
-Text Label 9250 4650 0    50   ~ 0
-ALL_EN
 $Sheet
 S 3550 6850 900  550 
 U 605E9160
@@ -691,17 +346,6 @@ F 3 "" H 3050 3400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VDD #PWR010
-U 1 1 5FA05840
-P 1600 4900
-F 0 "#PWR010" H 1600 4750 50  0001 C CNN
-F 1 "VDD" V 1600 5100 50  0000 C CNN
-F 2 "" H 1600 4900 50  0001 C CNN
-F 3 "" H 1600 4900 50  0001 C CNN
-	1    1600 4900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VDD #PWR012
 U 1 1 5FA09D29
 P 1600 7050
@@ -735,17 +379,6 @@ F 3 "" H 10150 800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VDD #PWR022
-U 1 1 5FAB16FE
-P 9900 4900
-F 0 "#PWR022" H 9900 4750 50  0001 C CNN
-F 1 "VDD" H 9915 5073 50  0000 C CNN
-F 2 "" H 9900 4900 50  0001 C CNN
-F 3 "" H 9900 4900 50  0001 C CNN
-	1    9900 4900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x04 J9
 U 1 1 5FCFC63C
 P 1050 7250
@@ -768,7 +401,198 @@ F 3 "" H 1050 7050 50  0001 C CNN
 	1    1050 7050
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F3DEF4D
+P 1500 4250
+F 0 "#PWR05" H 1500 4000 50  0001 C CNN
+F 1 "GND" V 1505 4122 50  0000 R CNN
+F 2 "" H 1500 4250 50  0001 C CNN
+F 3 "" H 1500 4250 50  0001 C CNN
+	1    1500 4250
+	0    1    1    0   
+$EndComp
+Text Label 1500 4450 2    50   ~ 0
+SDA
+Text Label 1500 4550 2    50   ~ 0
+SCL
+Text Label 1300 4750 2    50   ~ 0
+ALL_EN
+$Comp
+L Device:D_Small D12
+U 1 1 5F3DEF56
+P 1400 4750
+F 0 "D12" H 1300 4700 50  0000 C CNN
+F 1 "LS4148" H 1400 4866 50  0001 C CNN
+F 2 "Parts:MELF_SOD_80_3_BZT55B13GS08" V 1400 4750 50  0001 C CNN
+F 3 "~" V 1400 4750 50  0001 C CNN
+	1    1400 4750
+	-1   0    0    1   
+$EndComp
+Text Label 1500 4650 2    50   ~ 0
+HOST_WAKE
+$Comp
+L Parts:505567-0671 J4
+U 1 1 5F3DEF65
+P 1500 4250
+F 0 "J4" H 1950 4515 50  0000 C CNN
+F 1 "MB_I2C" H 1950 4424 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 4350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 4250 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 4150 50  0001 L CNN "Description"
+F 5 "4.2" H 2250 4050 50  0001 L CNN "Height"
+F 6 "Molex" H 2250 3950 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 2250 3850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 2250 3750 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 2250 3650 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 2250 3550 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 3450 50  0001 L CNN "Mouser Price/Stock"
+	1    1500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5F3DEF6D
+P 3050 4250
+F 0 "#PWR08" H 3050 4000 50  0001 C CNN
+F 1 "GND" V 3055 4122 50  0000 R CNN
+F 2 "" H 3050 4250 50  0001 C CNN
+F 3 "" H 3050 4250 50  0001 C CNN
+	1    3050 4250
+	0    1    1    0   
+$EndComp
+Text Label 3050 4450 2    50   ~ 0
+SDA
+Text Label 3050 4550 2    50   ~ 0
+SCL
+Text Label 2850 4750 2    50   ~ 0
+ALL_EN
+$Comp
+L Device:D_Small D13
+U 1 1 5F3DEF76
+P 2950 4750
+F 0 "D13" H 2850 4700 50  0000 C CNN
+F 1 "LS4148" H 2950 4866 50  0001 C CNN
+F 2 "Parts:MELF_SOD_80_3_BZT55B13GS08" V 2950 4750 50  0001 C CNN
+F 3 "~" V 2950 4750 50  0001 C CNN
+	1    2950 4750
+	-1   0    0    1   
+$EndComp
+Text Label 3050 4650 2    50   ~ 0
+HOST_WAKE
+$Comp
+L Parts:505567-0671 J13
+U 1 1 5F3DEF85
+P 3050 4250
+F 0 "J13" H 3500 4515 50  0000 C CNN
+F 1 "MB_I2C" H 3500 4424 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 3800 4350 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 3800 4250 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 3800 4150 50  0001 L CNN "Description"
+F 5 "4.2" H 3800 4050 50  0001 L CNN "Height"
+F 6 "Molex" H 3800 3950 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 3800 3850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 3800 3750 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 3800 3650 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 3800 3550 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 3800 3450 50  0001 L CNN "Mouser Price/Stock"
+	1    3050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR06
+U 1 1 5F3DEF8D
+P 1500 4350
+F 0 "#PWR06" H 1500 4200 50  0001 C CNN
+F 1 "VDD" V 1515 4477 50  0000 L CNN
+F 2 "" H 1500 4350 50  0001 C CNN
+F 3 "" H 1500 4350 50  0001 C CNN
+	1    1500 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VDD #PWR010
+U 1 1 5F3DEF93
+P 3050 4350
+F 0 "#PWR010" H 3050 4200 50  0001 C CNN
+F 1 "VDD" V 3065 4477 50  0000 L CNN
+F 2 "" H 3050 4350 50  0001 C CNN
+F 3 "" H 3050 4350 50  0001 C CNN
+	1    3050 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Parts:505567-0671 J2
+U 1 1 6045DC89
+P 1500 2350
+F 0 "J2" H 1950 2615 50  0000 C CNN
+F 1 "MB_I2C" H 1950 2524 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 2450 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 2350 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 2250 50  0001 L CNN "Description"
+F 5 "4.2" H 2250 2150 50  0001 L CNN "Height"
+F 6 "Molex" H 2250 2050 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 2250 1950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 2250 1850 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 2250 1750 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 2250 1650 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 1550 50  0001 L CNN "Mouser Price/Stock"
+	1    1500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:505567-0671 J3
+U 1 1 6049523C
+P 1500 3300
+F 0 "J3" H 1950 3565 50  0000 C CNN
+F 1 "MB_I2C" H 1950 3474 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 3400 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 3300 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 3200 50  0001 L CNN "Description"
+F 5 "4.2" H 2250 3100 50  0001 L CNN "Height"
+F 6 "Molex" H 2250 3000 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 2250 2900 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 2250 2800 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 2250 2700 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 2250 2600 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 2500 50  0001 L CNN "Mouser Price/Stock"
+	1    1500 3300
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	9250 4950 9900 4950
-Connection ~ 9900 4950
+	2400 2350 2400 2450
+Wire Wire Line
+	2400 5000 3950 5000
+Wire Wire Line
+	3950 5000 3950 4350
+Connection ~ 2400 2450
+Wire Wire Line
+	2400 2450 2400 3300
+Connection ~ 2400 3300
+Wire Wire Line
+	2400 3300 2400 3400
+Connection ~ 2400 3400
+Wire Wire Line
+	2400 3400 2400 4250
+Connection ~ 2400 4250
+Wire Wire Line
+	2400 4250 2400 4350
+Connection ~ 2400 4350
+Wire Wire Line
+	2400 4350 2400 5000
+Connection ~ 3950 2450
+Wire Wire Line
+	3950 2450 3950 2350
+Connection ~ 3950 3300
+Wire Wire Line
+	3950 3300 3950 2450
+Connection ~ 3950 3400
+Wire Wire Line
+	3950 3400 3950 3300
+Connection ~ 3950 4250
+Wire Wire Line
+	3950 4250 3950 3400
+Connection ~ 3950 4350
+Wire Wire Line
+	3950 4350 3950 4250
 $EndSCHEMATC

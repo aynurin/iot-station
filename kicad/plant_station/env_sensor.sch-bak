@@ -149,8 +149,6 @@ Text Label 8700 3500 2    50   ~ 0
 SCL
 Text Label 8700 3700 2    50   ~ 0
 ALL_EN
-Text Label 8700 3600 2    50   ~ 0
-HOST_WAKE
 $Comp
 L Parts:505567-0671 J?
 U 1 1 605F5DC5
