@@ -186,55 +186,6 @@ $EndComp
 Text Label 3050 2750 2    50   ~ 0
 HOST_WAKE
 $Comp
-L Parts:505567-0671 J5
-U 1 1 60493E8D
-P 3050 2350
-F 0 "J5" H 3500 2615 50  0000 C CNN
-F 1 "MB_I2C" H 3500 2524 50  0000 C CNN
-F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 3800 2450 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 3800 2350 50  0001 L CNN
-F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 3800 2250 50  0001 L CNN "Description"
-F 5 "4.2" H 3800 2150 50  0001 L CNN "Height"
-F 6 "Molex" H 3800 2050 50  0001 L CNN "Manufacturer_Name"
-F 7 "505567-0671" H 3800 1950 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "505567-0671" H 3800 1850 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 3800 1750 50  0001 L CNN "Arrow Price/Stock"
-F 10 "538-505567-0671" H 3800 1650 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 3800 1550 50  0001 L CNN "Mouser Price/Stock"
-	1    3050 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 6049521E
-P 1500 3300
-F 0 "#PWR03" H 1500 3050 50  0001 C CNN
-F 1 "GND" V 1505 3172 50  0000 R CNN
-F 2 "" H 1500 3300 50  0001 C CNN
-F 3 "" H 1500 3300 50  0001 C CNN
-	1    1500 3300
-	0    1    1    0   
-$EndComp
-Text Label 1500 3500 2    50   ~ 0
-SDA
-Text Label 1500 3600 2    50   ~ 0
-SCL
-Text Label 1300 3800 2    50   ~ 0
-ALL_EN
-$Comp
-L Device:D_Small D7
-U 1 1 6049522D
-P 1400 3800
-F 0 "D7" H 1300 3750 50  0000 C CNN
-F 1 "LS4148" H 1400 3916 50  0001 C CNN
-F 2 "Parts:MELF_SOD_80_3_BZT55B13GS08" V 1400 3800 50  0001 C CNN
-F 3 "~" V 1400 3800 50  0001 C CNN
-	1    1400 3800
-	-1   0    0    1   
-$EndComp
-Text Label 1500 3700 2    50   ~ 0
-HOST_WAKE
-$Comp
 L power:GND #PWR011
 U 1 1 60496837
 P 3050 3300
@@ -264,25 +215,6 @@ F 3 "~" V 2950 3800 50  0001 C CNN
 $EndComp
 Text Label 3050 3700 2    50   ~ 0
 HOST_WAKE
-$Comp
-L Parts:505567-0671 J6
-U 1 1 60496855
-P 3050 3300
-F 0 "J6" H 3500 3565 50  0000 C CNN
-F 1 "MB_I2C" H 3500 3474 50  0000 C CNN
-F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 3800 3400 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 3800 3300 50  0001 L CNN
-F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 3800 3200 50  0001 L CNN "Description"
-F 5 "4.2" H 3800 3100 50  0001 L CNN "Height"
-F 6 "Molex" H 3800 3000 50  0001 L CNN "Manufacturer_Name"
-F 7 "505567-0671" H 3800 2900 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "505567-0671" H 3800 2800 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 3800 2700 50  0001 L CNN "Arrow Price/Stock"
-F 10 "538-505567-0671" H 3800 2600 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 3800 2500 50  0001 L CNN "Mouser Price/Stock"
-	1    3050 3300
-	1    0    0    -1  
-$EndComp
 $Sheet
 S 3550 6850 900  550 
 U 605E9160
@@ -321,17 +253,6 @@ F 1 "VDD" V 3065 2577 50  0000 L CNN
 F 2 "" H 3050 2450 50  0001 C CNN
 F 3 "" H 3050 2450 50  0001 C CNN
 	1    3050 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VDD #PWR07
-U 1 1 5F9FC28C
-P 1500 3400
-F 0 "#PWR07" H 1500 3250 50  0001 C CNN
-F 1 "VDD" V 1515 3527 50  0000 L CNN
-F 2 "" H 1500 3400 50  0001 C CNN
-F 3 "" H 1500 3400 50  0001 C CNN
-	1    1500 3400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -541,58 +462,51 @@ F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQui
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:505567-0671 J3
-U 1 1 6049523C
-P 1500 3300
-F 0 "J3" H 1950 3565 50  0000 C CNN
-F 1 "MB_I2C" H 1950 3474 50  0000 C CNN
-F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 2250 3400 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 2250 3300 50  0001 L CNN
-F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 2250 3200 50  0001 L CNN "Description"
-F 5 "4.2" H 2250 3100 50  0001 L CNN "Height"
-F 6 "Molex" H 2250 3000 50  0001 L CNN "Manufacturer_Name"
-F 7 "505567-0671" H 2250 2900 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "505567-0671" H 2250 2800 50  0001 L CNN "Arrow Part Number"
-F 9 "" H 2250 2700 50  0001 L CNN "Arrow Price/Stock"
-F 10 "538-505567-0671" H 2250 2600 50  0001 L CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 2250 2500 50  0001 L CNN "Mouser Price/Stock"
-	1    1500 3300
+L Parts:505567-0671 J5
+U 1 1 60493E8D
+P 3050 2350
+F 0 "J5" H 3500 2615 50  0000 C CNN
+F 1 "MB_I2C" H 3500 2524 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 3800 2450 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 3800 2350 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 3800 2250 50  0001 L CNN "Description"
+F 5 "4.2" H 3800 2150 50  0001 L CNN "Height"
+F 6 "Molex" H 3800 2050 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 3800 1950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 3800 1850 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 3800 1750 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 3800 1650 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 3800 1550 50  0001 L CNN "Mouser Price/Stock"
+	1    3050 2350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2400 2350 2400 2450
-Wire Wire Line
-	2400 5000 3950 5000
-Wire Wire Line
-	3950 5000 3950 4350
-Connection ~ 2400 2450
-Wire Wire Line
-	2400 2450 2400 3300
-Connection ~ 2400 3300
-Wire Wire Line
-	2400 3300 2400 3400
-Connection ~ 2400 3400
-Wire Wire Line
-	2400 3400 2400 4250
-Connection ~ 2400 4250
-Wire Wire Line
-	2400 4250 2400 4350
-Connection ~ 2400 4350
-Wire Wire Line
-	2400 4350 2400 5000
-Connection ~ 3950 2450
-Wire Wire Line
-	3950 2450 3950 2350
-Connection ~ 3950 3300
-Wire Wire Line
-	3950 3300 3950 2450
-Connection ~ 3950 3400
-Wire Wire Line
-	3950 3400 3950 3300
-Connection ~ 3950 4250
-Wire Wire Line
-	3950 4250 3950 3400
-Connection ~ 3950 4350
-Wire Wire Line
-	3950 4350 3950 4250
+$Comp
+L Parts:505567-0671 J6
+U 1 1 60496855
+P 3050 3300
+F 0 "J6" H 3500 3565 50  0000 C CNN
+F 1 "MB_I2C" H 3500 3474 50  0000 C CNN
+F 2 "Parts:Molex_Conn_SMD_01x06_505567_0671" H 3800 3400 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/505567-0671.pdf" H 3800 3300 50  0001 L CNN
+F 4 "Molex Micro-Lock PLUS 505567, 1.25mm Pitch, 6 Way, 1 Row, Right Angle PCB Header, Surface Mount" H 3800 3200 50  0001 L CNN "Description"
+F 5 "4.2" H 3800 3100 50  0001 L CNN "Height"
+F 6 "Molex" H 3800 3000 50  0001 L CNN "Manufacturer_Name"
+F 7 "505567-0671" H 3800 2900 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "505567-0671" H 3800 2800 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 3800 2700 50  0001 L CNN "Arrow Price/Stock"
+F 10 "538-505567-0671" H 3800 2600 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Molex/505567-0671?qs=gt1LBUVyoHmQuimOt9l14w%3D%3D" H 3800 2500 50  0001 L CNN "Mouser Price/Stock"
+	1    3050 3300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3950 2350
+NoConn ~ 3950 2450
+NoConn ~ 3950 3300
+NoConn ~ 3950 3400
+NoConn ~ 3950 4250
+NoConn ~ 3950 4350
+NoConn ~ 2400 4350
+NoConn ~ 2400 4250
+NoConn ~ 2400 2450
+NoConn ~ 2400 2350
 $EndSCHEMATC
