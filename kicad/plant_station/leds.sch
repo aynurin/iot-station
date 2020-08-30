@@ -53,11 +53,11 @@ F 9 "KRTBLSLPS1.32-VUVX-EQ+BTBV-D8+TWTZ-L1-B" H 3350 1900 50  0001 L CNN "Manufa
 	1    2600 2500
 	1    0    0    -1  
 $EndComp
-Text Label 3500 1850 0    50   ~ 0
+Text Label 3500 2500 0    50   ~ 0
 LED_2_R
-Text Label 3500 1950 0    50   ~ 0
+Text Label 3500 2600 0    50   ~ 0
 LED_2_G
-Text Label 3500 2050 0    50   ~ 0
+Text Label 3500 2700 0    50   ~ 0
 LED_2_B
 $Comp
 L Parts:505567-0471 J14
@@ -135,19 +135,19 @@ F 9 "KRTBLSLPS1.32-VUVX-EQ+BTBV-D8+TWTZ-L1-B" H 3350 3200 50  0001 L CNN "Manufa
 	1    2600 3800
 	1    0    0    -1  
 $EndComp
-Text Label 3500 2500 0    50   ~ 0
+Text Label 4900 2700 2    50   ~ 0
 LED_3_R
-Text Label 3500 2600 0    50   ~ 0
+Text Label 4900 2600 2    50   ~ 0
 LED_3_G
-Text Label 3500 3150 0    50   ~ 0
+Text Label 4900 3550 2    50   ~ 0
 LED_4_R
-Text Label 3500 3250 0    50   ~ 0
+Text Label 4900 3450 2    50   ~ 0
 LED_4_G
-Text Label 3500 2700 0    50   ~ 0
+Text Label 4900 2500 2    50   ~ 0
 LED_3_B
-Text Label 3500 3350 0    50   ~ 0
+Text Label 4900 3350 2    50   ~ 0
 LED_4_B
-Text Label 3500 3900 0    50   ~ 0
+Text Label 3500 3250 0    50   ~ 0
 LED_5_G
 $Comp
 L power:VDD #PWR059
@@ -292,18 +292,10 @@ F 3 "" H 4900 3650 50  0001 C CNN
 	1    4900 3650
 	0    -1   -1   0   
 $EndComp
-Text Label 3500 4000 0    50   ~ 0
+Text Label 3500 3350 0    50   ~ 0
 LED_5_B
-Text Label 3500 3800 0    50   ~ 0
+Text Label 3500 3150 0    50   ~ 0
 LED_5_R
-Connection ~ 5700 2600
-Wire Wire Line
-	5700 2600 5700 2500
-Connection ~ 5700 3350
-Wire Wire Line
-	5700 3350 5700 2600
-Wire Wire Line
-	5700 3450 5700 3350
 Text Label 9450 3600 0    50   ~ 0
 SDA
 Text Label 9450 3500 0    50   ~ 0
@@ -579,12 +571,6 @@ F 3 "" H 4800 4750 50  0001 C CNN
 	1    4800 4750
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5700 3450 5700 4650
-Connection ~ 5700 3450
-Connection ~ 5700 4650
-Wire Wire Line
-	5700 4650 5700 4750
 NoConn ~ 4800 5050
 $Comp
 L power:VDD #PWR072
@@ -597,16 +583,22 @@ F 3 "" H 4900 2800 50  0001 C CNN
 	1    4900 2800
 	0    -1   -1   0   
 $EndComp
-Text Label 4900 3350 2    50   ~ 0
+Text Label 3500 2050 0    50   ~ 0
 LED_1_B
-Text Label 4900 3450 2    50   ~ 0
+Text Label 3500 1950 0    50   ~ 0
 LED_1_G
-Text Label 4900 3550 2    50   ~ 0
+Text Label 3500 1850 0    50   ~ 0
 LED_1_R
-Text Label 4900 2600 2    50   ~ 0
+Text Label 3500 3900 0    50   ~ 0
 LED_6_G
-Text Label 4900 2500 2    50   ~ 0
+Text Label 3500 4000 0    50   ~ 0
 LED_6_B
-Text Label 4900 2700 2    50   ~ 0
+Text Label 3500 3800 0    50   ~ 0
 LED_6_R
+NoConn ~ 5700 2500
+NoConn ~ 5700 2600
+NoConn ~ 5700 3350
+NoConn ~ 5700 3450
+NoConn ~ 5700 4650
+NoConn ~ 5700 4750
 $EndSCHEMATC
