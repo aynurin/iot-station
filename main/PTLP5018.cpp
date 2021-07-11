@@ -35,10 +35,25 @@ uint8_t PTLP5018::color(uint8_t led_number, uint8_t r, uint8_t g, uint8_t b)
 {
   PT_LP50XX_LED l = get_led_regs(led_number);
   Wire.beginTransmission(PT_LP5018_I2CADDR);
+  Serial.print("Led ");
+  Serial.print(led_number, DEC);
+  Serial.print(" reg ");
+  Serial.println(l.color_reg, HEX);
   Wire.write(l.color_reg);
-  Wire.write(g);
   Wire.write(r);
+  Wire.write(g);
   Wire.write(b);
+  __available = Wire.endTransmission();
+  return __available;
+}
+
+uint8_t PTLP5018::color_reg(uint8_t reg, uint8_t c)
+{
+  Wire.beginTransmission(PT_LP5018_I2CADDR);
+  Serial.print("Reg ");
+  Serial.println(reg, HEX);
+  Wire.write(reg);
+  Wire.write(c);
   __available = Wire.endTransmission();
   return __available;
 }

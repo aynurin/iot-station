@@ -12,11 +12,17 @@ PTADC081::~PTADC081()
 
 uint8_t PTADC081::init()
 {
+  Serial.print("ADC081_CONFIG: ");
+  Serial.println(ADC081_CONFIG);
+  Serial.print("PT_PTADC081_CONFIG: ");
+  Serial.println(PT_PTADC081_CONFIG);
+
+  uint8_t buffer[2];
+  buffer[0] = ADC081_CONFIG;
+  buffer[1] = PT_PTADC081_CONFIG;
+
   Wire.beginTransmission(PT_PTADC081_I2CADDR);
-  Wire.write(ADC081_CONFIG);
-  Wire.write(PT_PTADC081_CONFIG);
-  // Wire.write(LP50XX_DEV_CFG1);
-  // Wire.write(LP50XX_LOG_SCALE_EN | LP50XX_POWERSAVE_EN);
+  Wire.write(buffer, 2);
   __available = Wire.endTransmission();
   return __available;
 }

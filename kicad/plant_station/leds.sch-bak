@@ -296,14 +296,6 @@ Text Label 3500 3350 0    50   ~ 0
 LED_5_B
 Text Label 3500 3150 0    50   ~ 0
 LED_5_R
-Connection ~ 5700 2600
-Wire Wire Line
-	5700 2600 5700 2500
-Connection ~ 5700 3350
-Wire Wire Line
-	5700 3350 5700 2600
-Wire Wire Line
-	5700 3450 5700 3350
 Text Label 9450 3600 0    50   ~ 0
 SDA
 Text Label 9450 3500 0    50   ~ 0
@@ -579,12 +571,6 @@ F 3 "" H 4800 4750 50  0001 C CNN
 	1    4800 4750
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5700 3450 5700 4650
-Connection ~ 5700 3450
-Connection ~ 5700 4650
-Wire Wire Line
-	5700 4650 5700 4750
 NoConn ~ 4800 5050
 $Comp
 L power:VDD #PWR072
@@ -609,4 +595,10 @@ Text Label 3500 4000 0    50   ~ 0
 LED_6_B
 Text Label 3500 3800 0    50   ~ 0
 LED_6_R
+NoConn ~ 5700 2500
+NoConn ~ 5700 2600
+NoConn ~ 5700 3350
+NoConn ~ 5700 3450
+NoConn ~ 5700 4650
+NoConn ~ 5700 4750
 $EndSCHEMATC

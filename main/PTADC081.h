@@ -5,12 +5,11 @@
 #include <stdlib.h>
 #include <Wire.h>
 
-#include "nmcu.h"
 #include "PTADC081REGS.h"
 
 #define PT_PTADC081_I2CADDR 0x54
 #define PT_PTADC081_CONFIG \
-    ADC081_CFG_CONV_INT_OFF | \
+    ADC081_CFG_CONV_INT_2048 | \
     ADC081_CFG_ALERT_SELF_CLEAR | \
     ADC081_CFG_ALERT_FLAG_OFF | \
     ADC081_CFG_ALERT_PIN_OFF | \

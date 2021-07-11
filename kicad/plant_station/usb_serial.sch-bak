@@ -347,14 +347,14 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F4882C8
-P 2250 4350
+P 1800 4350
 AR Path="/5F564838/5F4882C8" Ref="#PWR?"  Part="1" 
 AR Path="/5F48275C/5F4882C8" Ref="#PWR074"  Part="1" 
-F 0 "#PWR074" H 2250 4100 50  0001 C CNN
-F 1 "GND" H 2255 4177 50  0000 C CNN
-F 2 "" H 2250 4350 50  0001 C CNN
-F 3 "" H 2250 4350 50  0001 C CNN
-	1    2250 4350
+F 0 "#PWR074" H 1800 4100 50  0001 C CNN
+F 1 "GND" H 1805 4177 50  0000 C CNN
+F 2 "" H 1800 4350 50  0001 C CNN
+F 3 "" H 1800 4350 50  0001 C CNN
+	1    1800 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -370,11 +370,7 @@ F 3 "" H 3200 3850 50  0001 C CNN
 	1    3200 3850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2950 2850 2850 2850
 Connection ~ 2950 2850
-Wire Wire Line
-	2950 3550 2850 3550
 $Comp
 L Device:R R?
 U 1 1 5F4882B8
@@ -525,9 +521,7 @@ Wire Wire Line
 Connection ~ 3700 3150
 Wire Wire Line
 	3600 3150 3700 3150
-NoConn ~ 1950 4350
-NoConn ~ 2850 3150
-NoConn ~ 2850 3050
+NoConn ~ 1500 4350
 Wire Wire Line
 	2950 3250 2950 3550
 Wire Wire Line
@@ -570,19 +564,6 @@ F 2 "Resistor_SMD:R_0805_2012Metric" V 3380 3150 50  0001 C CNN
 F 3 "~" H 3450 3150 50  0001 C CNN
 	1    3450 3150
 	0    1    1    0   
-$EndComp
-$Comp
-L Connector:USB_C_Plug_USB2.0 P?
-U 1 1 5F488251
-P 2250 3450
-AR Path="/5F564838/5F488251" Ref="P?"  Part="1" 
-AR Path="/5F48275C/5F488251" Ref="P1"  Part="1" 
-F 0 "P1" H 2357 4317 50  0000 C CNN
-F 1 "USB_C_Plug_USB2.0" H 2357 4226 50  0000 C CNN
-F 2 "Connector_USB:USB_C_Receptacle_Amphenol_12401610E4-2A" H 2400 3450 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2400 3450 50  0001 C CNN
-	1    2250 3450
-	1    0    0    -1  
 $EndComp
 $Comp
 L Interface_USB:CP2102N-A01-GQFN28 U?
@@ -636,34 +617,6 @@ F 3 "~" H 5350 2050 50  0001 C CNN
 	1    5350 2050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 3650 5250 3650
-$Comp
-L power:GND #PWR?
-U 1 1 5FD65815
-P 5800 3650
-AR Path="/5F564838/5FD65815" Ref="#PWR?"  Part="1" 
-AR Path="/5F48275C/5FD65815" Ref="#PWR024"  Part="1" 
-F 0 "#PWR024" H 5800 3400 50  0001 C CNN
-F 1 "GND" H 5805 3477 50  0000 C CNN
-F 2 "" H 5800 3650 50  0001 C CNN
-F 3 "" H 5800 3650 50  0001 C CNN
-	1    5800 3650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5FD6581B
-P 5650 3650
-AR Path="/5F564838/5FD6581B" Ref="R?"  Part="1" 
-AR Path="/5F48275C/5FD6581B" Ref="R11"  Part="1" 
-F 0 "R11" V 5750 3700 50  0000 R CNN
-F 1 "10K" V 5650 3750 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5580 3650 50  0001 C CNN
-F 3 "~" H 5650 3650 50  0001 C CNN
-	1    5650 3650
-	0    -1   -1   0   
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x08 J7
 U 1 1 5FDAEE9A
@@ -682,8 +635,6 @@ Connection ~ 3300 3250
 Wire Wire Line
 	3300 3250 4250 3250
 Wire Wire Line
-	2850 3350 3200 3350
-Wire Wire Line
 	3300 3250 3300 3450
 Wire Wire Line
 	2950 3250 3300 3250
@@ -692,4 +643,83 @@ Wire Wire Line
 	3200 3350 3200 3450
 Wire Wire Line
 	3200 3350 4250 3350
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J?
+U 1 1 60B76444
+P 1800 3450
+F 0 "J?" H 1907 4317 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 1907 4226 50  0000 C CNN
+F 2 "" H 1950 3450 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1950 3450 50  0001 C CNN
+	1    1800 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 3350 2600 3350
+Wire Wire Line
+	2400 3450 2600 3450
+Wire Wire Line
+	2600 3450 2600 3350
+Connection ~ 2600 3350
+Wire Wire Line
+	2600 3350 3200 3350
+Wire Wire Line
+	2400 3550 2600 3550
+Wire Wire Line
+	2400 3650 2600 3650
+Wire Wire Line
+	2600 3650 2600 3550
+Connection ~ 2600 3550
+Wire Wire Line
+	2600 3550 2950 3550
+Wire Wire Line
+	2400 2850 2950 2850
+NoConn ~ 2400 3950
+NoConn ~ 2400 4050
+$Comp
+L Device:R R?
+U 1 1 60B97C17
+P 2550 3050
+AR Path="/5F564838/60B97C17" Ref="R?"  Part="1" 
+AR Path="/5F48275C/60B97C17" Ref="R?"  Part="1" 
+F 0 "R?" V 2450 3100 50  0000 R CNN
+F 1 "5K1" V 2550 3150 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2480 3050 50  0001 C CNN
+F 3 "~" H 2550 3050 50  0001 C CNN
+	1    2550 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B9D080
+P 2550 3150
+AR Path="/5F564838/60B9D080" Ref="R?"  Part="1" 
+AR Path="/5F48275C/60B9D080" Ref="R?"  Part="1" 
+F 0 "R?" V 2650 3200 50  0000 R CNN
+F 1 "5K1" V 2550 3250 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2480 3150 50  0001 C CNN
+F 3 "~" H 2550 3150 50  0001 C CNN
+	1    2550 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60BABA43
+P 2800 3150
+AR Path="/5F564838/60BABA43" Ref="#PWR?"  Part="1" 
+AR Path="/5F48275C/60BABA43" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2800 2900 50  0001 C CNN
+F 1 "GND" H 2805 2977 50  0000 C CNN
+F 2 "" H 2800 3150 50  0001 C CNN
+F 3 "" H 2800 3150 50  0001 C CNN
+	1    2800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3150 2700 3150
+Wire Wire Line
+	2700 3050 2800 3050
+Wire Wire Line
+	2800 3050 2800 3150
+Connection ~ 2800 3150
 $EndSCHEMATC

@@ -6,15 +6,15 @@
 #include <Adafruit_SSD1306.h> // include Adafruit SSD1306 OLED display driver
 
 #include "PTData.h"
-#include "nmcu.h"
+#include "pins.h"
 
 #define TP_SCR_WIDTH 128 // OLED display width, in pixels
 #define TP_SCR_HEIGHT 64 // OLED display height, in pixels
-#define OLED_MOSI D7
-#define OLED_CLK D5
-#define OLED_DC D4
-#define OLED_CS D8
-#define OLED_RESET D6
+#define OLED_MOSI WROOM_IO12
+#define OLED_CLK WROOM_IO14
+#define OLED_DC WROOM_IO2
+#define OLED_CS WROOM_IO15
+#define OLED_RESET WROOM_IO12
 
 #define TP_SCR_LINE_H 11
 #define TP_SCR_LINE_1 0

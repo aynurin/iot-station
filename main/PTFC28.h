@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <Wire.h>
 
-#include "nmcu.h"
-
 class PTFC28 {
 public:
     PTFC28(unsigned int pin);

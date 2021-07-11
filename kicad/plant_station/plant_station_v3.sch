@@ -509,4 +509,6 @@ NoConn ~ 2400 4350
 NoConn ~ 2400 4250
 NoConn ~ 2400 2450
 NoConn ~ 2400 2350
+Text Notes 4700 950  0    50   ~ 0
+VDD - Always powered 3v3\n3v3 - Timer-backed power source, this should be used to make sure the component is not powered when the device is sleeping\nVA - Only used in Soil Moisture Sensor for power filtered by Ferrite Beads
 $EndSCHEMATC

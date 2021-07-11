@@ -36,3 +36,12 @@ I heavily relied on all these resources and re-used much of the code from many o
 12. Power management: 
     * https://www.youtube.com/watch?v=wf_msvWv1jk
     * https://www.youtube.com/watch?v=oC2JlYIqQUk
+
+## State
+
+Uploading seems OK
+After uploading goes crazy - probably ESP is flooding CP2102 with errors and it resets.
+Todo: Compare schematics to
+* NodeMCU: https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF
+* CP2102-MINIEK: https://www.silabs.com/documents/public/user-guides/ug254-cp2102n-miniek.pdf
+* Tinker board: https://vivonomicon.com/2019/10/25/simple-usb-serial-communication-with-the-cp2102n/

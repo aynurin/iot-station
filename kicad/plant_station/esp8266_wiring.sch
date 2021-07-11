@@ -297,8 +297,6 @@ F 3 "~" H 2100 2400 50  0001 C CNN
 	1    2100 2400
 	1    0    0    -1  
 $EndComp
-Text Label 1900 3900 2    50   ~ 0
-ESP_RST
 $Comp
 L power:GND #PWR049
 U 1 1 5F730FED
@@ -360,65 +358,51 @@ Wire Wire Line
 $Comp
 L power:GND #PWR031
 U 1 1 5F7FBED9
-P 4850 5450
-F 0 "#PWR031" H 4850 5200 50  0001 C CNN
-F 1 "GND" V 4855 5322 50  0000 R CNN
-F 2 "" H 4850 5450 50  0001 C CNN
-F 3 "" H 4850 5450 50  0001 C CNN
-	1    4850 5450
+P 4850 5900
+F 0 "#PWR031" H 4850 5650 50  0001 C CNN
+F 1 "GND" V 4855 5772 50  0000 R CNN
+F 2 "" H 4850 5900 50  0001 C CNN
+F 3 "" H 4850 5900 50  0001 C CNN
+	1    4850 5900
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F800035
-P 5100 5350
-F 0 "R2" V 5000 5350 50  0000 C CNN
-F 1 "16.9K" V 5100 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5350 50  0001 C CNN
-F 3 "~" H 5100 5350 50  0001 C CNN
-F 4 "Short Traces" V 4900 5350 50  0000 C CNN "Note"
-	1    5100 5350
+P 5100 5800
+F 0 "R2" V 5000 5800 50  0000 C CNN
+F 1 "16.9K" V 5100 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5800 50  0001 C CNN
+F 3 "~" H 5100 5800 50  0001 C CNN
+F 4 "Short Traces" V 4900 5800 50  0000 C CNN "Note"
+	1    5100 5800
 	0    1    1    0   
 $EndComp
-Text Label 5150 5800 2    50   ~ 0
+Text Label 4800 5100 2    50   ~ 0
 WAKE_UP
-$Comp
-L Device:D D2
-U 1 1 5F80D3D3
-P 5300 5800
-F 0 "D2" H 5200 5850 50  0000 C CNN
-F 1 "LS4148" H 5200 5750 50  0001 C CNN
-F 2 "Parts:MELF_SOD_80_3_BZT55B13GS08" H 5300 5800 50  0001 C CNN
-F 3 "~" H 5300 5800 50  0001 C CNN
-	1    5300 5800
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	5250 5450 5450 5450
-Connection ~ 5450 5450
+	5250 5900 5450 5900
 Wire Wire Line
 	5450 5450 5500 5450
-Text Notes 5850 6100 2    50   ~ 0
-Tip=20s, Rext=14.41K (16.9 / 97.6)\nTip=20m, Rext=77.57K (140.0 / 174.0)
+Text Notes 4800 6900 0    50   ~ 0
+Tip=20s, Rext=14.41K (16.9 / 97.6)\nTip=20m, Rext=77.57K (140.0 / 174.0)\n\nWAKE_UP - a single shot from \nperipherals to wake the uC\n\nuC must drive GPIO5 UP when it finishes \nand ready to go to sleep (DS 8.3.2)
 $Comp
 L Device:R R6
 U 1 1 5F850A50
-P 5100 5550
-F 0 "R6" V 5000 5550 50  0000 C CNN
-F 1 "97.6K" V 5100 5550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5550 50  0001 C CNN
-F 3 "~" H 5100 5550 50  0001 C CNN
-F 4 "Short Traces" V 5200 5550 50  0000 C CNN "Note"
-	1    5100 5550
+P 5100 6000
+F 0 "R6" V 5000 6000 50  0000 C CNN
+F 1 "97.6K" V 5100 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 6000 50  0001 C CNN
+F 3 "~" H 5100 6000 50  0001 C CNN
+F 4 "Short Traces" V 5200 6000 50  0000 C CNN "Note"
+	1    5100 6000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5250 5350 5250 5450
-Connection ~ 5250 5450
+	5250 5800 5250 5900
+Connection ~ 5250 5900
 Wire Wire Line
-	5250 5450 5250 5550
-Wire Wire Line
-	5450 5450 5450 5800
+	5250 5900 5250 6000
 $Comp
 L power:VDD #PWR034
 U 1 1 5F880E88
@@ -437,10 +421,10 @@ GPIO16 can be connected to WAKE_UP line using a jumper.\nIf uC wants to stay awa
 Wire Wire Line
 	5350 4700 5350 5350
 Wire Wire Line
-	4950 5350 4950 5450
-Connection ~ 4950 5450
+	4950 5800 4950 5900
+Connection ~ 4950 5900
 Wire Wire Line
-	4950 5450 4950 5550
+	4950 5900 4950 6000
 $Comp
 L Timer:TPL5110 U5
 U 1 1 5F7D3440
@@ -475,7 +459,7 @@ F 3 "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf" H 7150 5000 50  0001
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 5450 4850 5450
+	4950 5900 4850 5900
 $Comp
 L power:VDD #PWR033
 U 1 1 5F9EDF20
@@ -509,57 +493,6 @@ F 3 "" H 9450 2550 50  0001 C CNN
 	1    9450 2550
 	0    1    1    0   
 $EndComp
-Text Label 1900 4000 2    50   ~ 0
-ESP_EN
-Text Label 1900 4200 2    50   ~ 0
-GPIO0
-Text Label 1900 4300 2    50   ~ 0
-GPIO5
-Text Label 1900 4600 2    50   ~ 0
-GPIO12
-Text Label 1900 4500 2    50   ~ 0
-GPIO13
-Text Label 1900 4400 2    50   ~ 0
-GPIO15
-Text Label 1900 3500 2    50   ~ 0
-SDA
-Text Label 1900 3600 2    50   ~ 0
-SCL
-$Comp
-L power:GND #PWR0101
-U 1 1 5FAF47F5
-P 1900 3300
-F 0 "#PWR0101" H 1900 3050 50  0001 C CNN
-F 1 "GND" V 1905 3172 50  0000 R CNN
-F 2 "" H 1900 3300 50  0001 C CNN
-F 3 "" H 1900 3300 50  0001 C CNN
-	1    1900 3300
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VDD #PWR0103
-U 1 1 5FAF61A2
-P 1900 3400
-F 0 "#PWR0103" H 1900 3250 50  0001 C CNN
-F 1 "VDD" V 1915 3527 50  0000 L CNN
-F 2 "" H 1900 3400 50  0001 C CNN
-F 3 "" H 1900 3400 50  0001 C CNN
-	1    1900 3400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x16 J17
-U 1 1 5F3F86A0
-P 2100 4000
-F 0 "J17" H 1900 4850 50  0000 L CNN
-F 1 "GPIO" H 2000 4850 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical" H 2100 4000 50  0001 C CNN
-F 3 "~" H 2100 4000 50  0001 C CNN
-	1    2100 4000
-	1    0    0    -1  
-$EndComp
-Text Label 1900 3800 2    50   ~ 0
-ALL_EN
 Wire Wire Line
 	6700 5350 6600 5350
 $Comp
@@ -675,23 +608,10 @@ Wire Wire Line
 Wire Wire Line
 	7550 5100 7550 5200
 Connection ~ 7550 5200
-Text Label 1900 4700 2    50   ~ 0
-GPIO16
 Text Label 5050 2550 0    50   ~ 0
 GPIO16
 Text Label 8050 4500 0    50   ~ 0
 GPIO16
-$Comp
-L power:GND #PWR032
-U 1 1 5F51053F
-P 1900 4800
-F 0 "#PWR032" H 1900 4550 50  0001 C CNN
-F 1 "GND" V 1905 4672 50  0000 R CNN
-F 2 "" H 1900 4800 50  0001 C CNN
-F 3 "" H 1900 4800 50  0001 C CNN
-	1    1900 4800
-	0    1    1    0   
-$EndComp
 Text Label 9350 3150 2    50   ~ 0
 SDA
 Text Label 9350 3250 2    50   ~ 0
@@ -724,17 +644,29 @@ Wire Wire Line
 	8500 4850 8500 5000
 Wire Wire Line
 	8500 4700 8500 4850
-Text Label 1900 4100 2    50   ~ 0
-WAKE_UP
+Wire Wire Line
+	5450 5450 5450 5900
+Connection ~ 5450 5450
 $Comp
-L power:+3V3 #PWR0104
-U 1 1 5FAF7387
-P 1900 3700
-F 0 "#PWR0104" H 1900 3550 50  0001 C CNN
-F 1 "+3V3" V 1915 3828 50  0000 L CNN
-F 2 "" H 1900 3700 50  0001 C CNN
-F 3 "" H 1900 3700 50  0001 C CNN
-	1    1900 3700
-	0    -1   -1   0   
+L Transistor_BJT:DTC113Z Q?
+U 1 1 60F12921
+P 5050 5100
+F 0 "Q?" H 4750 5400 50  0000 L CNN
+F 1 "DTC113Z" H 4750 5300 50  0000 L CNN
+F 2 "" H 5050 5100 50  0001 L CNN
+F 3 "" H 5050 5100 50  0001 L CNN
+	1    5050 5100
+	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5150 5300 5150 5450
+Wire Wire Line
+	5150 5450 5450 5450
+Wire Wire Line
+	5150 4900 5150 4700
+Wire Wire Line
+	5150 4700 5350 4700
+Connection ~ 5350 4700
+Text Notes 4500 4600 0    50   ~ 0
+TODO: Figure out how to do that.\nMaybe replace with MOSFET?\nAlso, can the DELAY/M_DRV be \nconnected to both VDD and Rext? \nDS 7.5.2.2
 $EndSCHEMATC

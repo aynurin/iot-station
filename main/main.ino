@@ -6,8 +6,10 @@
 #include <Adafruit_BME280.h>  // include Adafruit BME280 sensor library
 #include <Adafruit_CCS811.h>  // include Adafruit CCS811 sensor library
 #include <Adafruit_ADS1015.h>  // include Adafruit ADS1115 sensor library
+#include <Wire.h>
 
 // #define WIFI_EN
+#define DEBUG
 #define DEBUG_LOOP
 
 #ifndef DEBUG_LOOP
@@ -47,7 +49,7 @@ PTI2C i2c;
 PTTime ptTime;
 PTDisplay display;
 PTIoT iot;
-PTFC28 fc28(D2);
+//PTFC28 fc28(WROOM_IO4);
 PTLP5018 leds;
 PTADC081 adc;
 
@@ -58,11 +60,13 @@ bool __screen_on = false;
 
 void init_peripherals()
 {
-  ads1115.begin();
-  adc.init();
+  pinMode(WROOM_IO4, OUTPUT);
+  digitalWrite(WROOM_IO4, HIGH);
+  //ads1115.begin();
+  int adc_res = adc.init();
   Serial.print("Found ADC: ");
-  Serial.println(adc.available());
-
+  Serial.println(adc_res);
+/*
   if (display.begin())
   {
     __screen_on = true;
@@ -71,16 +75,11 @@ void init_peripherals()
   {
     alert_error("SSD1306 allocation failed", "");
   }
-  
+*/
+
+  Serial.print("i2c.scan");
   i2c.scan();
-  
-  while (1) {
-    i2c.scan();
-    uint8_t val = adc.read();
-    Serial.print("conv: ");
-    Serial.println(val);
-    delay(1000);
-  }
+  Serial.print("i2c.scan complete");
 
   // BME280
   if (i2c.devices.BME280 != PT_NO_DEVICE && bme280.begin(i2c.devices.BME280) != 0)
@@ -187,20 +186,53 @@ void read_sensors() {
     Serial.println("CCS811 is not available");
   }
 
-  if (fc28.available()) {
-    sensors[FC28SL_WATR].value = ads1115.readADC_SingleEnded(3);
+  // if (fc28.available()) {
+  //   sensors[FC28SL_WATR].value = ads1115.readADC_SingleEnded(3);
+  // }
+  // else {
+  //   sensors[FC28SL_WATR].value = -1;
+  // }
+
+
+  if (adc.available()) {
+    sensors[ADC081_SOIL].value = adc.read();
   }
   else {
-    sensors[FC28SL_WATR].value = -1;
+    sensors[ADC081_SOIL].value = -1;
   }
 }
 
+void test_sleep() {
+  pinMode(WROOM_IO5, OUTPUT);
+  digitalWrite(WROOM_IO5, LOW);
+  Serial.println("Started.");
+  Serial.print("Started. Sleep in... ");
+
+  int i = 10;
+  while (i > 0) {
+    Serial.print(i, DEC);
+    Serial.print(", ");
+    delay(1000);
+    i--;
+  }
+
+  Serial.println("Sleep...");
+  digitalWrite(WROOM_IO5, HIGH);
+  Serial.print("Am I sleeping?");
+  while(true) {
+    Serial.print(i, DEC);
+    Serial.print(", ");
+    delay(1000);
+    i++;
+  }
+}
 
 /**********************************   STARTUP    **********************************/
 /**********************************   STARTUP    **********************************/
 /**********************************   STARTUP    **********************************/
 void setup()
 {
+  i2c.init();
   Serial.begin(115200);
   Serial.setTimeout(2000);
 #ifdef DEBUG_LOOP
@@ -208,8 +240,10 @@ void setup()
   delay(1000);
 #endif
 
+  test_sleep();
+
   init_peripherals();
-  wdt_enable(5000);
+  //dt_enable(5000);
 
 #ifdef DEBUG_LOOP
   Serial.println("Setup complete, running in 5s...");
@@ -229,7 +263,6 @@ void setup()
 /**********************************  MAIN LOOP   **********************************/
 void loop()
 {
-
 #ifndef DEBUG_LOOP
   process_loop();
 #else
@@ -251,15 +284,18 @@ void loop()
 
 
 int output_value;
-int sensor_pin = D2;
 
 void debug_loop() {
   Serial.println("DEBUG LOOP...");
-  while (true) {
-    read_sensors();
-    display.readings(sensors, KNOWN_SENSORS_COUNT);
-    iot.wait(5000);
+  read_sensors();
+
+  for( unsigned int a = 0; a < KNOWN_SENSORS_COUNT; a = a + 1 ) {
+    Serial.print(SENSOR_NAMES_U[a]);
+    Serial.println(sensors[a].value);
   }
+
+  // display.readings(sensors, KNOWN_SENSORS_COUNT);
+  // iot.wait(5000);
 }
 
 void debug_leds_loop() {
@@ -274,24 +310,39 @@ void debug_leds_loop() {
     }
     else {
       for (uint8_t led = 0; led < 6; led++) {
-        leds.brightness(led, 0x40);
+        leds.brightness(led, 0x60);
       }
-      leds.color(0, 0xff, 0, 0);
-      leds.color(1, 0, 0xff, 0);
-      leds.color(2, 0, 0, 0xff);
-      leds.color(3, 0xff, 0xff, 0);
-      leds.color(4, 0, 0xff, 0xff);
-      leds.color(5, 0xff, 0, 0xff);
+      leds.color(0, 0, 0, 0);
+      leds.color(1, 0, 0, 0);
+      leds.color(2, 0, 0, 0);
+      leds.color(3, 0, 0, 0);
+      leds.color(4, 0, 0, 0);
+      leds.color(5, 0, 0, 0);
 
+      // leds 4 and 5 blue won't lit up :(
+
+      leds.color(0, 0xff, 0x0, 0x00);
       delay(2000);
-
-      leds.color(0, 0xff, 0x80, 0);
-      leds.color(1, 0, 0xff, 0x80);
-      leds.color(2, 0x80, 0, 0xff);
-      leds.color(3, 0x80, 0xff, 0);
-      leds.color(4, 0, 0x80, 0xff);
-      leds.color(5, 0xff, 0, 0x80);
-
+      leds.color(0, 0, 0, 0);
+      
+      leds.color(1, 0x00, 0x0, 0xff);
+      delay(2000);
+      leds.color(1, 0, 0, 0);
+      
+      leds.color(0, 0xff, 0x0, 0x00);
+      leds.color(1, 0x00, 0x0, 0xff);
+      delay(2000);
+      leds.color(0, 0, 0, 0);
+      leds.color(1, 0, 0, 0);
+      
+      leds.color(0, 0xff, 0x0, 0x00);
+      leds.color(1, 0x00, 0x0, 0xff);
+      leds.color(4, 0, 0xff, 0);
+      delay(2000);
+      leds.color(0, 0, 0, 0);
+      leds.color(1, 0, 0, 0);
+      leds.color(4, 0, 0, 0);
+      
       delay(2000);
     }
   }

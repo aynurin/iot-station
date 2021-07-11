@@ -8,6 +8,7 @@ const char *SENSOR_NAMES[] = {
     [CCS811_TVOC] = "tvoc",
     [CCS811_ECO2] = "eco2",
     [FC28SL_WATR] = "soilMoisture",
+    [ADC081_SOIL] = "soilMoisture",
 };
 
 const char *SENSOR_NAMES_U[] = {
@@ -17,4 +18,5 @@ const char *SENSOR_NAMES_U[] = {
     [CCS811_TVOC] = "V:",
     [CCS811_ECO2] = "C:",
     [FC28SL_WATR] = "S:",
+    [ADC081_SOIL] = "M:",
 };

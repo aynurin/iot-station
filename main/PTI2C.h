@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <Wire.h>
 
-#include "nmcu.h"
+#include "pins.h"
 
 #define PT_CCS811_I2C_ADDRESS 0x5A
 #define PT_BME280_I2C_ADDRESS 0x76
@@ -22,6 +22,7 @@ class PTI2C {
 public:
     PTI2C();
     ~PTI2C();
+    void init();
     void scan();
     TKnownDevices devices;
     void Write(uint8_t DeviceI2C_Address, uint8_t *RawData, uint8_t Length);
