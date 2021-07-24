@@ -43,7 +43,7 @@ Implemented peripherals:
 
 The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/):
 
-|| Milestone || Release Date || Focus ||
+| Milestone | Release Date | Focus |
 |---|---|---|
 | Pigmy Siskin | September 2021 | Hardware design |
 | Pygmy Nuthatch | December 2021 | PoC Cloud and App |
