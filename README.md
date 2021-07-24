@@ -39,3 +39,6 @@ Implemented peripherals:
 * Light sensor
 * LED indicators board driving 18 leds or 6 RGB leds
 
+# Notes
+
+* The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/)
