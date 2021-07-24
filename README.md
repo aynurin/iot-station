@@ -1,47 +1,41 @@
-# NodeMCU-based home climate monitoring
+# Nour Eggboard
 
-The setup consists of the following modules:
+This is a main board of a low-power battery powered IoT device controller based on ESP8266 (ESP-WROOM-02) that drives peripheral devices on I2C bus.
 
-1. NodeMCU (ESP8266)
-2. BME280 Temperature Humidity Barometric Pressure Sensor (I2C Breakout)
-3. CCS811 VOC/eCO2 Sensor (I2C Breakout)
-4. SSD1306 0.96" Serial 128X64 OLED LCD Display (SPI Breakout)
-5. FC-28 Soil Moisture Sensor
+Currenly the project is under development and you can help in the following way:
 
-## Useful links and Credits
+* Suggest new features and report bugs
+* Submit pull requests
+* Help fund the development by [donating via PayPal](https://www.paypal.com/donate?business=M5DEYMX2BZ4MJ&no_recurring=0&item_name=Help+support+Nour+Eggboard+development&currency_code=USD)
 
-I heavily relied on all these resources and re-used much of the code from many of them. So the special thank you goes to the authors of the follosing pages:
+# How is this helpful
 
-1. NodeMCU: https://www.instructables.com/id/NodeMCU-ESP8266-Details-and-Pinout/
-2. Screen info
-    * Interfacing with NodeMCU: https://circuitdigest.com/microcontroller-projects/interfacing-ssd1306-oled-display-with-esp8266-nodemcu 
-    * Info: https://components101.com/oled-display-ssd1306
-    * Specification: https://www.vishay.com/docs/37902/oled128o064dbpp3n00000.pdf
-3. BME280: https://www.instructables.com/id/ESP8266-NodeMCU-With-BME280-Gauges-Chart/
-4. CCS811: https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor/
-5. NodeMCU I2C/SPI pins: https://steve.fi/hardware/nodemcu/default-pins/
-6. Screen code sample: https://github.com/jandelgado/arduino/blob/master/ssd1306_sample_adafruit/ssd1306_sample_adafruit.ino
-7. Lots of helpful I2C info (and a nice I2S scanner): http://www.gammon.com.au/forum/?id=10896
-8. Similar projects:
-    * https://wemakethings.net/chirp/
-    * https://simple-circuit.com/esp8266-nodemcu-bme280-weather-station/
-9. Good read on power consumption: https://tinker.yeoman.com.au/2016/05/29/running-nodemcu-on-a-battery-esp8266-low-power-consumption-revisited/
-10. Azure IoT hub: 
-    * IoT Hub setup: https://docs.microsoft.com/en-us/learn/modules/manage-iot-devices/ 
-    * Time Series Insights setup: https://docs.microsoft.com/en-us/learn/modules/explore-analyze-time-series-insights/ 
-    * This doc describes auto-provisioning: https://docs.microsoft.com/en-us/azure/iot-dps/quick-create-simulated-device-x509
-        * But the code won't compile in Arduino IDE. I should try a custom compiled Azure IoT SDK.
-        * Here is one guy trying to do that: https://github.com/Azure/azure-iot-sdk-c/issues/1229
-11. Soil moisture sensor FC-28: http://www.circuitstoday.com/arduino-soil-moisture-sensor
-12. Power management: 
-    * https://www.youtube.com/watch?v=wf_msvWv1jk
-    * https://www.youtube.com/watch?v=oC2JlYIqQUk
+Most prototyping boards are exactly what they say - designed for prototyping and difficult to apply in a production device or if you are a hardcore hobbyist. Unlike those projects, the Eggboard is intended to be a final solution that lets you hook your peripherals to an I2C bus and enjoy a low-power battery operation, wireless charging, and WiFi connectivity out of the box.
 
-## State
+Features:
 
-Uploading seems OK
-After uploading goes crazy - probably ESP is flooding CP2102 with errors and it resets.
-Todo: Compare schematics to
-* NodeMCU: https://github.com/nodemcu/nodemcu-devkit-v1.0/blob/master/NODEMCU_DEVKIT_V1.0.PDF
-* CP2102-MINIEK: https://www.silabs.com/documents/public/user-guides/ug254-cp2102n-miniek.pdf
-* Tinker board: https://vivonomicon.com/2019/10/25/simple-usb-serial-communication-with-the-cp2102n/
+* WiFi capability via ESP8266
+* Own I2C port that allows I2C communication, sleep power line, ability to operate when host sleeps, and a host wakeup channel
+* Customizable (via resistance change) sleep timer that drives the host and all of the peripherals
+* Battery operation
+* Wireless and USB-C charging
+* USB-C programming via esptool or Arduino IDE (and other compatible IDEs and methods)
+
+# Nour Egg Plant station
+
+The example implementation is a Nour Egg plant ecosystem controller that is under development. This device is going to be commercially available for purchase in 2022 along with free downloadable app and a cloud-based analytics platform.
+
+Key features of the Nour Egg:
+
+* Monitor air quality, soil moisture, and lighting conditions of your home plant
+* Low-power operation that runs for months on a single charge, and wireless charging
+* WiFi connectivity to report statistics to the cloud and Nour Egg app
+* Appealing look and feel in a nice shell and beautiful RGB light indicators
+
+Implemented peripherals:
+
+* Soil moisture sensor based on capacitance sensing using a coplanar capacitor probe
+* Air quality sensor
+* Light sensor
+* LED indicators board driving 18 leds or 6 RGB leds
+
