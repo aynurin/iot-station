@@ -39,6 +39,14 @@ Implemented peripherals:
 * Light sensor
 * LED indicators board driving 18 leds or 6 RGB leds
 
-# Notes
+# Milestones and timeline
 
-* The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/)
+The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/):
+
+|| Milestone || Release Date || Focus ||
+|---|---|---|
+| Pigmy Siskin | September 2021 | Hardware design |
+| Pygmy Nuthatch | December 2021 | PoC Cloud and App |
+| Winter Wren | March 2022 | Production feasible enclosure |
+| Hutton's Vireo | June 2022 | Production feasible hardware, test board production |
+
