@@ -8,7 +8,11 @@ Currenly the project is under development and you can help in the following way:
 * Submit pull requests
 * Help fund the development by [donating via PayPal](https://www.paypal.com/donate?business=M5DEYMX2BZ4MJ&no_recurring=0&item_name=Help+support+Nour+Eggboard+development&currency_code=USD)
 
-# How is this helpful
+## LICENSE
+
+Currently this project is licensed as  [GNU AGPLv3](./LICENSE). This is intended to be changed to Apache or MIT when I get a better feel of the project and see how it moves forward. I would accept suggestions of a qualified lawyer as I need help figuring out how to move forward.
+
+## How is this helpful
 
 Most prototyping boards are exactly what they say - designed for prototyping and difficult to apply in a production device or if you are a hardcore hobbyist. Unlike those projects, the Eggboard is intended to be a final solution that lets you hook your peripherals to an I2C bus and enjoy a low-power battery operation, wireless charging, and WiFi connectivity out of the box.
 
@@ -21,7 +25,7 @@ Features:
 * Wireless and USB-C charging
 * USB-C programming via esptool or Arduino IDE (and other compatible IDEs and methods)
 
-# Nour Egg Plant station
+## Nour Egg Plant station
 
 The example implementation is a Nour Egg plant ecosystem controller that is under development. This device is going to be commercially available for purchase in 2022 along with free downloadable app and a cloud-based analytics platform.
 
@@ -39,7 +43,7 @@ Implemented peripherals:
 * Light sensor
 * LED indicators board driving 18 leds or 6 RGB leds
 
-# Milestones and timeline
+## Milestones and timeline
 
 The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/):
 
