@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name LocalsLib)(type Legacy)(uri ${KIPRJMOD}/libs/LocalsLib.lib)(options "")(descr ""))
+  (lib (name HDC2010YPAT)(type Legacy)(uri ${KIPRJMOD}/libs/HDC2010YPAT.lib)(options "")(descr ""))
+  (lib (name plant_station_v3-rescue)(type Legacy)(uri ${KIPRJMOD}/libs/plant_station-rescue.lib)(options "")(descr ""))
+)

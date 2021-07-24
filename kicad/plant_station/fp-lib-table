@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name LocalsLib)(type KiCad)(uri ${KIPRJMOD}/LocalsLib.pretty)(options "")(descr ""))
-)
