@@ -43,14 +43,14 @@ Implemented peripherals:
 * Light sensor
 * LED indicators board driving 18 leds or 6 RGB leds
 
-## Milestones and timeline
+## Roadmap
 
 The versioning works by bird names, e.g. see [WhatBird.com NA Birds by Size](https://www.whatbird.com/browse/attribute/birds_na_147/51/Size/):
 
 | Milestone | Release Date | Focus |
 |---|---|---|
-| Pigmy Siskin | September 2021 | Hardware design |
-| Pygmy Nuthatch | December 2021 | PoC Cloud and App |
-| Winter Wren | March 2022 | Production feasible enclosure |
-| Hutton's Vireo | June 2022 | Production feasible hardware, test board production |
+| [Pine Siskin](https://github.com/aynurin/iot-station/milestone/1) | September 2021 | Hardware design |
+| [Pygmy Nuthatch](https://github.com/aynurin/iot-station/milestone/2) | December 2021 | PoC Cloud and App |
+| [Winter Wren](https://github.com/aynurin/iot-station/milestone/3) | March 2022 | Production feasible enclosure |
+| [Hutton's Vireo](https://github.com/aynurin/iot-station/milestone/4) | June 2022 | Production feasible hardware, test board production |
 
