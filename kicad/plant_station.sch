@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -13,50 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 611E169D
-P 10550 800
-F 0 "#FLG0101" H 10550 875 50  0001 C CNN
-F 1 "PWR_FLAG" H 10550 973 50  0000 C CNN
-F 2 "" H 10550 800 50  0001 C CNN
-F 3 "~" H 10550 800 50  0001 C CNN
-	1    10550 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0102
-U 1 1 611E1B09
-P 10950 800
-F 0 "#FLG0102" H 10950 875 50  0001 C CNN
-F 1 "PWR_FLAG" H 10950 973 50  0000 C CNN
-F 2 "" H 10950 800 50  0001 C CNN
-F 3 "~" H 10950 800 50  0001 C CNN
-	1    10950 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0134
-U 1 1 611E3051
-P 10950 800
-F 0 "#PWR0134" H 10950 550 50  0001 C CNN
-F 1 "GND" H 10955 627 50  0000 C CNN
-F 2 "" H 10950 800 50  0001 C CNN
-F 3 "" H 10950 800 50  0001 C CNN
-	1    10950 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0133
-U 1 1 611E24F6
-P 10550 800
-F 0 "#PWR0133" H 10550 650 50  0001 C CNN
-F 1 "+3V3" H 10565 973 50  0000 C CNN
-F 2 "" H 10550 800 50  0001 C CNN
-F 3 "" H 10550 800 50  0001 C CNN
-	1    10550 800 
-	-1   0    0    1   
-$EndComp
 Text Notes 2200 1650 0    50   ~ 0
 usb breakout\n+tantalum decouplers\n+fix the probe\nleds board + ambient leds\nsensor board\noscillator???\n-look for a different humidity sensor\nstack boards\n+power schematics\n+analog VCC on ADC\n+sleep/wake bus
 Text Label 7700 2350 2    50   ~ 0
@@ -71,50 +27,50 @@ F3 "SCL" O R 8600 2350 50
 F4 "ALL_EN" B L 7700 2450 50 
 F5 "HOST_WAKE_UP" I L 7700 2350 50 
 $EndSheet
-Text Label 850  7050 1    50   ~ 0
+Text Label 1200 5850 1    50   ~ 0
 SDA
-Text Label 950  7050 1    50   ~ 0
+Text Label 1300 5850 1    50   ~ 0
 SCL
 $Comp
 L power:GND #PWR0140
 U 1 1 5FCFC642
-P 1150 7050
-F 0 "#PWR0140" H 1150 6800 50  0001 C CNN
-F 1 "GND" V 1150 6850 50  0000 C CNN
-F 2 "" H 1150 7050 50  0001 C CNN
-F 3 "" H 1150 7050 50  0001 C CNN
-	1    1150 7050
+P 1500 5850
+F 0 "#PWR0140" H 1500 5600 50  0001 C CNN
+F 1 "GND" V 1500 5650 50  0000 C CNN
+F 2 "" H 1500 5850 50  0001 C CNN
+F 3 "" H 1500 5850 50  0001 C CNN
+	1    1500 5850
 	-1   0    0    1   
 $EndComp
 Text Label 8600 2350 0    50   ~ 0
 SCL
 Text Label 8600 2250 0    50   ~ 0
 SDA
-Text Label 1400 7050 1    50   ~ 0
+Text Label 1750 5850 1    50   ~ 0
 SDA
-Text Label 1500 7050 1    50   ~ 0
+Text Label 1850 5850 1    50   ~ 0
 SCL
 $Comp
 L power:GND #PWR0138
 U 1 1 5FB01C12
-P 1700 7050
-F 0 "#PWR0138" H 1700 6800 50  0001 C CNN
-F 1 "GND" V 1700 6850 50  0000 C CNN
-F 2 "" H 1700 7050 50  0001 C CNN
-F 3 "" H 1700 7050 50  0001 C CNN
-	1    1700 7050
+P 2050 5850
+F 0 "#PWR0138" H 2050 5600 50  0001 C CNN
+F 1 "GND" V 2050 5650 50  0000 C CNN
+F 2 "" H 2050 5850 50  0001 C CNN
+F 3 "" H 2050 5850 50  0001 C CNN
+	1    2050 5850
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J10
 U 1 1 5FAF3653
-P 1600 7250
-F 0 "J10" V 1600 6850 50  0000 L CNN
-F 1 "I2C HOST" V 1750 7000 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 1600 7250 50  0001 C CNN
-F 3 "~" H 1600 7250 50  0001 C CNN
-F 4 "Samtec SLW-104-01-T-S" V 1600 7250 50  0001 C CNN "Field4"
-	1    1600 7250
+P 1950 6050
+F 0 "J10" V 1950 5650 50  0000 L CNN
+F 1 "I2C HOST" V 2100 5800 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 1950 6050 50  0001 C CNN
+F 3 "~" H 1950 6050 50  0001 C CNN
+F 4 "Samtec SLW-104-01-T-S" V 1950 6050 50  0001 C CNN "Field4"
+	1    1950 6050
 	0    1    1    0   
 $EndComp
 $Sheet
@@ -269,57 +225,35 @@ $EndComp
 $Comp
 L power:VDD #PWR012
 U 1 1 5FA09D29
-P 1600 7050
-F 0 "#PWR012" H 1600 6900 50  0001 C CNN
-F 1 "VDD" V 1600 7250 50  0000 C CNN
-F 2 "" H 1600 7050 50  0001 C CNN
-F 3 "" H 1600 7050 50  0001 C CNN
-	1    1600 7050
+P 1950 5850
+F 0 "#PWR012" H 1950 5700 50  0001 C CNN
+F 1 "VDD" V 1950 6050 50  0000 C CNN
+F 2 "" H 1950 5850 50  0001 C CNN
+F 3 "" H 1950 5850 50  0001 C CNN
+	1    1950 5850
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5FAB0070
-P 10150 800
-F 0 "#FLG01" H 10150 875 50  0001 C CNN
-F 1 "PWR_FLAG" H 10150 973 50  0000 C CNN
-F 2 "" H 10150 800 50  0001 C CNN
-F 3 "~" H 10150 800 50  0001 C CNN
-	1    10150 800 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VDD #PWR027
-U 1 1 5FAB03BE
-P 10150 800
-F 0 "#PWR027" H 10150 650 50  0001 C CNN
-F 1 "VDD" H 10165 973 50  0000 C CNN
-F 2 "" H 10150 800 50  0001 C CNN
-F 3 "" H 10150 800 50  0001 C CNN
-	1    10150 800 
-	-1   0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J9
 U 1 1 5FCFC63C
-P 1050 7250
-F 0 "J9" V 1050 6850 50  0000 L CNN
-F 1 "I2C SCREEN" V 1200 6950 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 1050 7250 50  0001 C CNN
-F 3 "~" H 1050 7250 50  0001 C CNN
-F 4 "Samtec SLW-104-01-T-S" V 1050 7250 50  0001 C CNN "Field4"
-	1    1050 7250
+P 1400 6050
+F 0 "J9" V 1400 5650 50  0000 L CNN
+F 1 "I2C SCREEN" V 1550 5750 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 1400 6050 50  0001 C CNN
+F 3 "~" H 1400 6050 50  0001 C CNN
+F 4 "Samtec SLW-104-01-T-S" V 1400 6050 50  0001 C CNN "Field4"
+	1    1400 6050
 	0    1    1    0   
 $EndComp
 $Comp
 L power:VDD #PWR02
 U 1 1 5FAB4B8A
-P 1050 7050
-F 0 "#PWR02" H 1050 6900 50  0001 C CNN
-F 1 "VDD" V 1050 7250 50  0000 C CNN
-F 2 "" H 1050 7050 50  0001 C CNN
-F 3 "" H 1050 7050 50  0001 C CNN
-	1    1050 7050
+P 1400 5850
+F 0 "#PWR02" H 1400 5700 50  0001 C CNN
+F 1 "VDD" V 1400 6050 50  0000 C CNN
+F 2 "" H 1400 5850 50  0001 C CNN
+F 3 "" H 1400 5850 50  0001 C CNN
+	1    1400 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -509,6 +443,10 @@ NoConn ~ 2400 4350
 NoConn ~ 2400 4250
 NoConn ~ 2400 2450
 NoConn ~ 2400 2350
-Text Notes 4700 950  0    50   ~ 0
-VDD - Always powered 3v3\n3v3 - Timer-backed power source, this should be used to make sure the component is not powered when the device is sleeping\nVA - Only used in Soil Moisture Sensor for power filtered by Ferrite Beads
+$Sheet
+S 1550 6850 900  550 
+U 610543CF
+F0 "charger" 50
+F1 "charger.sch" 50
+$EndSheet
 $EndSCHEMATC

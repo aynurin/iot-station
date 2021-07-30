@@ -1,3 +1,4 @@
 (fp_lib_table
-  (lib (name LocalsLib)(type KiCad)(uri ${KIPRJMOD}/LocalsLib.pretty)(options "")(descr ""))
+  (lib (name Parts)(type KiCad)(uri ${KIPRJMOD}/../kicad-libs/Parts.pretty)(options "")(descr ""))
+  (lib (name SamacSys_Parts)(type KiCad)(uri ${KIPRJMOD}/../kicad-libs/SamacSys_Parts.pretty)(options "")(descr ""))
 )
