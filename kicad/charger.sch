@@ -14,22 +14,831 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L SamacSys_Parts:BQ24079RGTR IC?
-U 1 1 61055A5C
-P 5450 3550
-F 0 "IC?" H 6694 3446 50  0000 L CNN
-F 1 "BQ24079RGTR" H 6694 3355 50  0000 L CNN
-F 2 "SamacSys_Parts:QFN50P300X300X100-17N-D" H 6500 4050 50  0001 L CNN
-F 3 "http://www.ti.com/lit/gpn/bq24079" H 6500 3950 50  0001 L CNN
-F 4 "1.5A USB-Friendly Li-Ion Battery Charger and Power-Path Management IC with 4.1 VBAT" H 6500 3850 50  0001 L CNN "Description"
-F 5 "1" H 6500 3750 50  0001 L CNN "Height"
-F 6 "Texas Instruments" H 6500 3650 50  0001 L CNN "Manufacturer_Name"
-F 7 "BQ24079RGTR" H 6500 3550 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "595-BQ24079RGTR" H 6500 3450 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ24079RGTR?qs=O3wcJz4o8IeSGngDo2TyhA%3D%3D" H 6500 3350 50  0001 L CNN "Mouser Price/Stock"
-F 10 "BQ24079RGTR" H 6500 3250 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/bq24079rgtr/texas-instruments" H 6500 3150 50  0001 L CNN "Arrow Price/Stock"
-	1    5450 3550
+L power:VCC #PWR?
+U 1 1 61073620
+P 4800 1000
+F 0 "#PWR?" H 4800 850 50  0001 C CNN
+F 1 "VCC" H 4815 1173 50  0000 C CNN
+F 2 "" H 4800 1000 50  0001 C CNN
+F 3 "" H 4800 1000 50  0001 C CNN
+	1    4800 1000
 	1    0    0    -1  
 $EndComp
+Text Notes 8050 6300 0    50   ~ 0
+Battery fuel gauge
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 610A6C7A
+P 4850 3450
+F 0 "#PWR?" H 4850 3250 50  0001 C CNN
+F 1 "GNDPWR" H 4854 3296 50  0000 C CNN
+F 2 "" H 4850 3400 50  0001 C CNN
+F 3 "" H 4850 3400 50  0001 C CNN
+	1    4850 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 2200 3900 0    50   ~ 0
+Battery pack
+Wire Wire Line
+	2450 3350 2750 3350
+Connection ~ 2450 3350
+Wire Wire Line
+	2450 3350 2450 3450
+Wire Wire Line
+	2450 2750 2750 2750
+Connection ~ 2450 2750
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61092904
+P 2450 3450
+AR Path="/5F48275C/61092904" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61092904" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 3250 50  0001 C CNN
+F 1 "GNDPWR" H 2454 3296 50  0000 C CNN
+F 2 "" H 2450 3400 50  0001 C CNN
+F 3 "" H 2450 3400 50  0001 C CNN
+	1    2450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3350 2450 3350
+Wire Wire Line
+	2150 2750 2450 2750
+Wire Wire Line
+	2750 3350 2750 3250
+Wire Wire Line
+	2150 3250 2150 3350
+Wire Wire Line
+	2150 2750 2150 2850
+Wire Wire Line
+	2750 2850 2750 2750
+$Comp
+L Device:Battery BT?
+U 1 1 610928F8
+P 2750 3050
+AR Path="/5F48275C/610928F8" Ref="BT?"  Part="1" 
+AR Path="/610543CF/610928F8" Ref="BT?"  Part="1" 
+F 0 "BT?" H 2858 3096 50  0000 L CNN
+F 1 "Battery" H 2858 3005 50  0000 L CNN
+F 2 "" V 2750 3110 50  0001 C CNN
+F 3 "~" V 2750 3110 50  0001 C CNN
+	1    2750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 610928F2
+P 2150 3050
+AR Path="/5F48275C/610928F2" Ref="BT?"  Part="1" 
+AR Path="/610543CF/610928F2" Ref="BT?"  Part="1" 
+F 0 "BT?" H 2258 3096 50  0000 L CNN
+F 1 "Battery" H 2258 3005 50  0000 L CNN
+F 2 "" V 2150 3110 50  0001 C CNN
+F 3 "~" V 2150 3110 50  0001 C CNN
+	1    2150 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2150 3350
+Wire Wire Line
+	1750 3350 2150 3350
+Wire Wire Line
+	2450 2350 3350 2350
+Wire Wire Line
+	2450 2350 2450 2750
+Wire Wire Line
+	1750 2250 1750 2900
+$Comp
+L Device:Thermistor_NTC TH?
+U 1 1 610BEF24
+P 1750 3050
+F 0 "TH?" H 1450 3100 50  0000 L CNN
+F 1 "10K Thermistor_NTC" H 1000 3000 50  0000 L CNN
+F 2 "" H 1750 3100 50  0001 C CNN
+F 3 "~" H 1750 3100 50  0001 C CNN
+	1    1750 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3200 1750 3350
+$Comp
+L Device:C C?
+U 1 1 610DDB5A
+P 3350 3050
+F 0 "C?" H 3465 3096 50  0000 L CNN
+F 1 "4.7uF" H 3465 3005 50  0000 L CNN
+F 2 "" H 3388 2900 50  0001 C CNN
+F 3 "~" H 3350 3050 50  0001 C CNN
+	1    3350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 610DF29C
+P 3350 3450
+AR Path="/5F48275C/610DF29C" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/610DF29C" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3350 3250 50  0001 C CNN
+F 1 "GNDPWR" H 3354 3296 50  0000 C CNN
+F 2 "" H 3350 3400 50  0001 C CNN
+F 3 "" H 3350 3400 50  0001 C CNN
+	1    3350 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3200 3350 3450
+Wire Wire Line
+	3350 2350 3350 2450
+Connection ~ 3350 2350
+Connection ~ 3350 2450
+Wire Wire Line
+	3350 2450 3350 2900
+Wire Wire Line
+	3350 2450 4000 2450
+Wire Wire Line
+	3350 2350 4000 2350
+Wire Wire Line
+	4000 2250 1750 2250
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 611144B3
+P 3900 3450
+F 0 "#PWR?" H 3900 3250 50  0001 C CNN
+F 1 "GNDPWR" H 3904 3296 50  0000 C CNN
+F 2 "" H 3900 3400 50  0001 C CNN
+F 3 "" H 3900 3400 50  0001 C CNN
+	1    3900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:BQ24079RGTR IC?
+U 1 1 61055A5C
+P 4000 2250
+F 0 "IC?" H 5050 2650 50  0000 L CNN
+F 1 "BQ24079RGTR" H 5050 2550 50  0000 L CNN
+F 2 "SamacSys_Parts:QFN50P300X300X100-17N-D" H 5050 2750 50  0001 L CNN
+F 3 "http://www.ti.com/lit/gpn/bq24079" H 5050 2650 50  0001 L CNN
+F 4 "1.5A USB-Friendly Li-Ion Battery Charger and Power-Path Management IC with 4.1 VBAT" H 5050 2550 50  0001 L CNN "Description"
+F 5 "1" H 5050 2450 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 5050 2350 50  0001 L CNN "Manufacturer_Name"
+F 7 "BQ24079RGTR" H 5050 2250 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-BQ24079RGTR" H 5050 2150 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ24079RGTR?qs=O3wcJz4o8IeSGngDo2TyhA%3D%3D" H 5050 2050 50  0001 L CNN "Mouser Price/Stock"
+F 10 "BQ24079RGTR" H 5050 1950 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/bq24079rgtr/texas-instruments" H 5050 1850 50  0001 L CNN "Arrow Price/Stock"
+	1    4000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1000 4800 1550
+Wire Wire Line
+	3900 3400 3900 3450
+$Comp
+L power:VCC #PWR?
+U 1 1 61153622
+P 3900 3000
+F 0 "#PWR?" H 3900 2850 50  0001 C CNN
+F 1 "VCC" H 3915 3173 50  0000 C CNN
+F 2 "" H 3900 3000 50  0001 C CNN
+F 3 "" H 3900 3000 50  0001 C CNN
+	1    3900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3000 3900 3100
+$Comp
+L Device:C C?
+U 1 1 610B77A6
+P 3900 3250
+F 0 "C?" H 3785 3178 50  0000 R CNN
+F 1 "1uF" H 3785 3269 50  0000 R CNN
+F 2 "" H 3938 3100 50  0001 C CNN
+F 3 "~" H 3900 3250 50  0001 C CNN
+F 4 "CH IN DEC" H 3785 3341 25  0000 R CNB "Note"
+	1    3900 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 61155E61
+P 5900 2550
+F 0 "D?" H 5850 2400 50  0000 R CNN
+F 1 "LED" H 5900 2650 50  0001 R CNN
+F 2 "" H 5900 2550 50  0001 C CNN
+F 3 "~" H 5900 2550 50  0001 C CNN
+F 4 "Charging" H 6050 2400 25  0000 R CNB "Note"
+	1    5900 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4600 3250 3    50   Input ~ 0
+CH_PGOOD
+Text GLabel 5550 2900 0    50   Input ~ 0
+CH_PGOOD
+$Comp
+L Device:R R?
+U 1 1 612038A8
+P 6300 2550
+F 0 "R?" V 6400 2550 50  0000 C CNN
+F 1 "1.5K" V 6300 2550 50  0000 C CNN
+F 2 "" V 6230 2550 50  0001 C CNN
+F 3 "~" H 6300 2550 50  0001 C CNN
+	1    6300 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61203E46
+P 6300 2900
+F 0 "R?" V 6200 2900 50  0000 C CNN
+F 1 "1.5K" V 6300 2900 50  0000 C CNN
+F 2 "" V 6230 2900 50  0001 C CNN
+F 3 "~" H 6300 2900 50  0001 C CNN
+	1    6300 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 6117EF4D
+P 5900 2900
+F 0 "D?" H 5850 3000 50  0000 R CNN
+F 1 "LED" V 5850 2800 50  0001 R CNN
+F 2 "" H 5900 2900 50  0001 C CNN
+F 3 "~" H 5900 2900 50  0001 C CNN
+F 4 "Power" H 6000 3000 25  0000 R CNB "Note"
+	1    5900 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 1550 1    50   Input ~ 0
+CH_TMR
+Text GLabel 4600 1550 1    50   Input ~ 0
+CH_SYSOFF
+Text GLabel 4500 1550 1    50   Input ~ 0
+CH_ISET
+Text GLabel 4400 3250 3    50   Input ~ 0
+CH_EN2
+Text GLabel 4500 3250 3    50   Input ~ 0
+CH_EN1
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 612484BC
+P 3950 1700
+F 0 "#PWR?" H 3950 1500 50  0001 C CNN
+F 1 "GNDPWR" H 3954 1546 50  0000 C CNN
+F 2 "" H 3950 1650 50  0001 C CNN
+F 3 "" H 3950 1650 50  0001 C CNN
+	1    3950 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1550 4400 1500
+Wire Wire Line
+	4400 1500 3950 1500
+Wire Wire Line
+	3950 1500 3950 1700
+Text GLabel 10000 2400 0    50   Input ~ 0
+CH_TMR
+Text GLabel 10000 3150 0    50   Input ~ 0
+CH_SYSOFF
+Text GLabel 10000 2900 0    50   Input ~ 0
+CH_ISET
+Text GLabel 1300 6650 0    50   Input ~ 0
+CH_EN2
+Text GLabel 1300 6550 0    50   Input ~ 0
+CH_EN1
+$Comp
+L Device:R R?
+U 1 1 61264CC6
+P 10300 2900
+F 0 "R?" V 10200 2900 50  0000 C CNN
+F 1 "1.19K" V 10300 2900 50  0000 C CNN
+F 2 "" V 10230 2900 50  0001 C CNN
+F 3 "~" H 10300 2900 50  0001 C CNN
+	1    10300 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 6126FBDB
+P 10600 3300
+F 0 "#PWR?" H 10600 3100 50  0001 C CNN
+F 1 "GNDPWR" H 10604 3146 50  0000 C CNN
+F 2 "" H 10600 3250 50  0001 C CNN
+F 3 "" H 10600 3250 50  0001 C CNN
+	1    10600 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 3150 10600 3300
+Text GLabel 5200 2250 2    50   Input ~ 0
+CH_ILIM
+Text GLabel 10000 2650 0    50   Input ~ 0
+CH_ILIM
+Wire Wire Line
+	4700 3250 4700 3350
+Wire Wire Line
+	4700 3350 4850 3350
+Wire Wire Line
+	4850 3350 4850 3450
+Wire Wire Line
+	10000 3150 10600 3150
+$Comp
+L Device:R R?
+U 1 1 612F74FF
+P 10300 2650
+F 0 "R?" V 10200 2650 50  0000 C CNN
+F 1 "1.1K" V 10300 2650 50  0000 C CNN
+F 2 "" V 10230 2650 50  0001 C CNN
+F 3 "~" H 10300 2650 50  0001 C CNN
+	1    10300 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10000 2900 10150 2900
+Wire Wire Line
+	10000 2650 10150 2650
+Wire Wire Line
+	10450 2650 10600 2650
+Wire Wire Line
+	10600 2650 10600 2900
+Connection ~ 10600 3150
+Wire Wire Line
+	10450 2900 10600 2900
+Connection ~ 10600 2900
+Wire Wire Line
+	10600 2900 10600 3150
+$Comp
+L Device:R R?
+U 1 1 6132475A
+P 10300 2400
+F 0 "R?" V 10200 2400 50  0000 C CNN
+F 1 "37.5K" V 10300 2400 50  0000 C CNN
+F 2 "" V 10230 2400 50  0001 C CNN
+F 3 "~" H 10300 2400 50  0001 C CNN
+	1    10300 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10000 2400 10150 2400
+Wire Wire Line
+	10450 2400 10600 2400
+Wire Wire Line
+	10600 2400 10600 2650
+Connection ~ 10600 2650
+Text Notes 2800 4800 0    50   ~ 0
+3.3v or 5v regulated. Does VBUS count?.. \nDo I need it if the device is BATT powered?
+Wire Wire Line
+	3350 6350 3650 6350
+Wire Wire Line
+	1750 6850 1650 6850
+Wire Wire Line
+	1650 6850 1650 7200
+Wire Wire Line
+	1650 7200 3450 7200
+Wire Wire Line
+	3450 7200 3450 6650
+Wire Wire Line
+	3450 6650 3350 6650
+Wire Wire Line
+	3450 6650 3450 6450
+Wire Wire Line
+	3450 6450 3350 6450
+Connection ~ 3450 6650
+Wire Wire Line
+	1750 6750 1550 6750
+Wire Wire Line
+	1550 6750 1550 7300
+Wire Wire Line
+	1550 7300 3550 7300
+Wire Wire Line
+	3550 7300 3550 6250
+Wire Wire Line
+	3550 6250 3350 6250
+Wire Wire Line
+	1300 6650 1750 6650
+Wire Wire Line
+	3350 6850 3650 6850
+Wire Wire Line
+	3650 6750 3650 6850
+Wire Wire Line
+	3650 6750 3350 6750
+Wire Wire Line
+	3650 6150 3650 6350
+Wire Wire Line
+	3650 6150 3350 6150
+$Comp
+L Device:C C?
+U 1 1 61370DA1
+P 3700 5450
+F 0 "C?" V 3448 5450 50  0000 C CNN
+F 1 "0.1uF" V 3539 5450 50  0000 C CNN
+F 2 "" H 3738 5300 50  0001 C CNN
+F 3 "~" H 3700 5450 50  0001 C CNN
+	1    3700 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 5950 3450 5950
+Wire Wire Line
+	3350 5450 3450 5450
+$Comp
+L power:VCC #PWR?
+U 1 1 6135D700
+P 4000 5100
+F 0 "#PWR?" H 4000 4950 50  0001 C CNN
+F 1 "VCC" H 4015 5273 50  0000 C CNN
+F 2 "" H 4000 5100 50  0001 C CNN
+F 3 "" H 4000 5100 50  0001 C CNN
+	1    4000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:SN74LV00ARGYR U?
+U 1 1 61339F6B
+P 3350 6850
+F 0 "U?" H 4150 5011 60  0000 C CNN
+F 1 "SN74LV00ARGYR" H 4150 5117 60  0000 C CNN
+F 2 "Parts:SN74LV00ARGYR" H 4150 7090 60  0001 C CNN
+F 3 "" H 3350 6850 60  0000 C CNN
+F 4 "https://circuitverse.org/users/87847/projects/cp2102n-to-bq2407x-usb-modes" H 4150 5196 25  0000 C CNN "Note"
+	1    3350 6850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3350 5650 4000 5650
+Wire Wire Line
+	3450 5450 3450 5950
+Connection ~ 3450 5950
+Wire Wire Line
+	3550 5450 3450 5450
+Wire Wire Line
+	3850 5450 4000 5450
+Connection ~ 3450 5450
+Connection ~ 4000 5450
+Wire Wire Line
+	4000 5450 4000 5650
+Wire Wire Line
+	4000 5100 4000 5450
+Text GLabel 3900 6750 2    50   Input ~ 0
+USB_CHR1
+Text GLabel 3900 6550 2    50   Input ~ 0
+USB_CHR0
+Text GLabel 3900 6350 2    50   Input ~ 0
+USB_CHREN
+Wire Wire Line
+	3450 5950 4000 5950
+Wire Wire Line
+	4000 5950 4000 6050
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 613625D7
+P 4000 6050
+F 0 "#PWR?" H 4000 5850 50  0001 C CNN
+F 1 "GNDPWR" H 4004 5896 50  0000 C CNN
+F 2 "" H 4000 6000 50  0001 C CNN
+F 3 "" H 4000 6000 50  0001 C CNN
+	1    4000 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 6350 3650 6350
+Connection ~ 3650 6350
+Wire Wire Line
+	3900 6550 3350 6550
+Wire Wire Line
+	3900 6750 3650 6750
+Connection ~ 3650 6750
+Wire Wire Line
+	1300 6550 1750 6550
+Text GLabel 4000 2550 0    50   Input ~ 0
+CH_PGOOD
+Wire Notes Line
+	3150 2700 950  2700
+Wire Notes Line
+	950  3400 3150 3400
+Text Notes 1000 2800 0    50   ~ 0
+BATT +
+Wire Notes Line
+	3150 2700 3150 3400
+Wire Notes Line
+	950  2700 950  3400
+Wire Wire Line
+	5200 2550 5750 2550
+Wire Wire Line
+	5550 2900 5750 2900
+Wire Wire Line
+	6450 2900 6650 2900
+Wire Wire Line
+	6450 2550 6650 2550
+Wire Wire Line
+	6650 2350 6850 2350
+Connection ~ 6650 2350
+Wire Wire Line
+	6650 2450 6650 2350
+Wire Wire Line
+	6650 2450 6850 2450
+Connection ~ 6650 2450
+Connection ~ 6650 2550
+Wire Wire Line
+	6650 2550 6650 2450
+Wire Wire Line
+	6650 2900 6650 3000
+Connection ~ 6650 2900
+Wire Wire Line
+	6650 2550 6650 2900
+$Comp
+L Device:C C?
+U 1 1 61104A4B
+P 6650 3150
+F 0 "C?" H 6765 3223 50  0000 L CNN
+F 1 "4.7uF" H 6765 3132 50  0000 L CNN
+F 2 "" H 6688 3000 50  0001 C CNN
+F 3 "~" H 6650 3150 50  0001 C CNN
+F 4 "CH OUT DEC" H 6765 3059 25  0000 L CNB "Note"
+	1    6650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61104A51
+P 6650 3450
+AR Path="/5F48275C/61104A51" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61104A51" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6650 3250 50  0001 C CNN
+F 1 "GNDPWR" H 6654 3296 50  0000 C CNN
+F 2 "" H 6650 3400 50  0001 C CNN
+F 3 "" H 6650 3400 50  0001 C CNN
+	1    6650 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3300 6650 3450
+Wire Wire Line
+	7150 2750 7150 3450
+Wire Wire Line
+	7750 3150 7750 3450
+Wire Wire Line
+	8100 2950 8100 3450
+Text Notes 7300 3900 0    50   ~ 0
+3V3 Regulator
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61071CA1
+P 8100 3450
+AR Path="/5F48275C/61071CA1" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61071CA1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8100 3250 50  0001 C CNN
+F 1 "GNDPWR" H 8104 3296 50  0000 C CNN
+F 2 "" H 8100 3400 50  0001 C CNN
+F 3 "" H 8100 3400 50  0001 C CNN
+	1    8100 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61071C9B
+P 7750 3450
+AR Path="/5F48275C/61071C9B" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61071C9B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7750 3250 50  0001 C CNN
+F 1 "GNDPWR" H 7754 3296 50  0000 C CNN
+F 2 "" H 7750 3400 50  0001 C CNN
+F 3 "" H 7750 3400 50  0001 C CNN
+	1    7750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61071C6A
+P 7150 3450
+AR Path="/5F48275C/61071C6A" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61071C6A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7150 3250 50  0001 C CNN
+F 1 "GNDPWR" H 7154 3296 50  0000 C CNN
+F 2 "" H 7150 3400 50  0001 C CNN
+F 3 "" H 7150 3400 50  0001 C CNN
+	1    7150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:SPX3819M5-L U?
+U 1 1 61071C5C
+P 7150 2450
+AR Path="/5F48275C/61071C5C" Ref="U?"  Part="1" 
+AR Path="/610543CF/61071C5C" Ref="U?"  Part="1" 
+F 0 "U?" H 7150 2792 50  0000 C CNN
+F 1 "SPX3819M5-L" H 7150 2701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7150 2775 50  0001 C CNN
+F 3 "https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819" H 7150 2450 50  0001 C CNN
+	1    7150 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61071C74
+P 8100 2800
+AR Path="/5F48275C/61071C74" Ref="C?"  Part="1" 
+AR Path="/610543CF/61071C74" Ref="C?"  Part="1" 
+F 0 "C?" H 8218 2846 50  0000 L CNN
+F 1 "2.2uF" H 8218 2755 50  0000 L CNN
+F 2 "" H 8138 2650 50  0001 C CNN
+F 3 "~" H 8100 2800 50  0001 C CNN
+F 4 "Tantalum (asked for Electrolytic)" H 8100 2800 50  0001 C CNN "Description"
+	1    8100 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61071C7A
+P 8300 2350
+AR Path="/5F48275C/61071C7A" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61071C7A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8300 2200 50  0001 C CNN
+F 1 "+3V3" V 8315 2478 50  0000 L CNN
+F 2 "" H 8300 2350 50  0001 C CNN
+F 3 "" H 8300 2350 50  0001 C CNN
+	1    8300 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61071C80
+P 7750 3000
+AR Path="/5F48275C/61071C80" Ref="R?"  Part="1" 
+AR Path="/610543CF/61071C80" Ref="R?"  Part="1" 
+F 0 "R?" H 7820 3046 50  0000 L CNN
+F 1 "R" H 7820 2955 50  0000 L CNN
+F 2 "" V 7680 3000 50  0001 C CNN
+F 3 "~" H 7750 3000 50  0001 C CNN
+	1    7750 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61071C86
+P 7750 2600
+AR Path="/5F48275C/61071C86" Ref="R?"  Part="1" 
+AR Path="/610543CF/61071C86" Ref="R?"  Part="1" 
+F 0 "R?" H 7820 2646 50  0000 L CNN
+F 1 "R" H 7820 2555 50  0000 L CNN
+F 2 "" V 7680 2600 50  0001 C CNN
+F 3 "~" H 7750 2600 50  0001 C CNN
+	1    7750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2350 7750 2350
+Wire Wire Line
+	7750 2350 7750 2450
+Wire Wire Line
+	7450 2550 7450 2800
+Wire Wire Line
+	7450 2800 7750 2800
+Wire Wire Line
+	7750 2800 7750 2750
+Wire Wire Line
+	7750 2850 7750 2800
+Connection ~ 7750 2800
+Wire Wire Line
+	7750 2350 8100 2350
+Connection ~ 7750 2350
+Connection ~ 8100 2350
+Wire Wire Line
+	8100 2350 8300 2350
+Wire Wire Line
+	8100 2350 8100 2650
+Text Notes 7550 2250 0    25   ~ 0
+See assets/SPX3819 Calculation.gnumeric\nfor R values
+Wire Wire Line
+	5200 2350 6650 2350
+Wire Wire Line
+	5200 2450 6650 2450
+Wire Wire Line
+	6050 2550 6150 2550
+Wire Wire Line
+	6150 2900 6050 2900
+$Comp
+L Parts:BQ27421YZFR-G1A U?
+U 1 1 6158B376
+P 8850 5300
+F 0 "U?" H 8850 5986 60  0000 C CNN
+F 1 "BQ27421YZFR-G1A" H 8850 5880 60  0000 C CNN
+F 2 "Parts:BQ27421YZFR-G1A" H 8850 5240 60  0001 C CNN
+F 3 "" H 8850 5300 60  0000 C CNN
+	1    8850 5300
+	1    0    0    -1  
+$EndComp
+Text GLabel 8150 5300 0    50   Input ~ 0
+SDA
+Text GLabel 8150 5200 0    50   Input ~ 0
+SCL
+Text Label 2450 2550 2    50   ~ 0
+BATT
+Text Label 9550 5300 0    50   ~ 0
+BATT
+Text GLabel 8150 5500 0    50   Input ~ 0
+BATT_GAUGE_SHDN
+$Comp
+L Device:C C?
+U 1 1 615B1409
+P 7000 5300
+F 0 "C?" H 6800 5350 50  0000 L CNN
+F 1 "0.47uF" H 6650 5250 50  0000 L CNN
+F 2 "" H 7038 5150 50  0001 C CNN
+F 3 "~" H 7000 5300 50  0001 C CNN
+	1    7000 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5000 7250 5000
+Wire Wire Line
+	7000 5000 7000 5150
+Text Label 1750 2550 0    50   ~ 0
+BATT_T
+Text Label 8050 5650 2    50   ~ 0
+BATT_T
+Wire Wire Line
+	8150 5600 8100 5600
+Wire Wire Line
+	8100 5600 8100 5650
+Text Notes 7350 6100 0    50   ~ 0
+BIN: If OperationConfiguration bit [BIE]= 1 (default), \na logic low on the pin is detected as battery insertion
+$Comp
+L Device:R R?
+U 1 1 615D69DB
+P 7250 5300
+F 0 "R?" H 7320 5346 50  0000 L CNN
+F 1 "1.8M" H 7320 5255 50  0000 L CNN
+F 2 "" V 7180 5300 50  0001 C CNN
+F 3 "~" H 7250 5300 50  0001 C CNN
+	1    7250 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 5650 7250 5450
+Wire Wire Line
+	7250 5650 8100 5650
+Wire Wire Line
+	7250 5150 7250 5000
+Connection ~ 7250 5000
+Wire Wire Line
+	7250 5000 7000 5000
+Wire Wire Line
+	9550 5500 9800 5500
+Wire Wire Line
+	9800 5500 9800 5600
+Wire Wire Line
+	9550 5600 9800 5600
+Connection ~ 9800 5600
+Wire Wire Line
+	9800 5600 9800 5850
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 615EF401
+P 9800 5850
+AR Path="/5F48275C/615EF401" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/615EF401" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9800 5650 50  0001 C CNN
+F 1 "GNDPWR" H 9804 5696 50  0000 C CNN
+F 2 "" H 9800 5800 50  0001 C CNN
+F 3 "" H 9800 5800 50  0001 C CNN
+	1    9800 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 615F3656
+P 7000 5900
+AR Path="/5F48275C/615F3656" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/615F3656" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7000 5700 50  0001 C CNN
+F 1 "GNDPWR" H 7004 5746 50  0000 C CNN
+F 2 "" H 7000 5850 50  0001 C CNN
+F 3 "" H 7000 5850 50  0001 C CNN
+	1    7000 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 5450 7000 5900
+$Comp
+L power:VCC #PWR?
+U 1 1 61603FE1
+P 9800 4650
+AR Path="/5F48275C/61603FE1" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61603FE1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9800 4500 50  0001 C CNN
+F 1 "VCC" H 9815 4823 50  0000 C CNN
+F 2 "" H 9800 4650 50  0001 C CNN
+F 3 "" H 9800 4650 50  0001 C CNN
+	1    9800 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 4650 9800 5000
+Wire Wire Line
+	9800 5000 9550 5000
+Text Notes 4350 3950 0    50   ~ 0
+Battery charger
+Text Notes 2100 7550 0    50   ~ 0
+USB Power Mode Logic
+Text Notes 9700 3900 0    50   ~ 0
+Battery Charger Config
 $EndSCHEMATC

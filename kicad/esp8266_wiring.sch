@@ -671,4 +671,6 @@ Wire Wire Line
 	6700 5700 6750 5700
 Text Label 7250 5200 0    50   ~ 0
 ALL_EN
+Text GLabel 4900 3250 0    50   Input ~ 0
+BATT_GAUGE_SHDN
 $EndSCHEMATC
