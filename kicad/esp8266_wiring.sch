@@ -16,661 +16,537 @@ $EndDescr
 $Comp
 L RF_Module:ESP-WROOM-02 U4
 U 1 1 5F56E2A3
-P 4550 2150
-F 0 "U4" V 4450 2200 50  0000 C CNN
-F 1 "ESP-WROOM-02" V 4650 2150 50  0000 C CNN
-F 2 "RF_Module:ESP-WROOM-02" H 5150 1600 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf" H 4600 3650 50  0001 C CNN
-	1    4550 2150
+P 4900 2400
+F 0 "U4" V 4800 2450 50  0000 C CNN
+F 1 "ESP-WROOM-02" V 5000 2400 50  0000 C CNN
+F 2 "RF_Module:ESP-WROOM-02" H 5500 1850 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf" H 4950 3900 50  0001 C CNN
+	1    4900 2400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR0145
 U 1 1 5F58E4CD
-P 4550 1550
-F 0 "#PWR0145" H 4550 1400 50  0001 C CNN
-F 1 "+3V3" H 4565 1723 50  0000 C CNN
-F 2 "" H 4550 1550 50  0001 C CNN
-F 3 "" H 4550 1550 50  0001 C CNN
-	1    4550 1550
+P 4900 1700
+F 0 "#PWR0145" H 4900 1550 50  0001 C CNN
+F 1 "+3V3" H 4915 1873 50  0000 C CNN
+F 2 "" H 4900 1700 50  0001 C CNN
+F 3 "" H 4900 1700 50  0001 C CNN
+	1    4900 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0150
 U 1 1 5F5BD3EE
-P 4550 2750
-F 0 "#PWR0150" H 4550 2500 50  0001 C CNN
-F 1 "GND" H 4555 2577 50  0000 C CNN
-F 2 "" H 4550 2750 50  0001 C CNN
-F 3 "" H 4550 2750 50  0001 C CNN
-	1    4550 2750
+P 4900 3100
+F 0 "#PWR0150" H 4900 2850 50  0001 C CNN
+F 1 "GND" H 4905 2927 50  0000 C CNN
+F 2 "" H 4900 3100 50  0001 C CNN
+F 3 "" H 4900 3100 50  0001 C CNN
+	1    4900 3100
 	1    0    0    -1  
 $EndComp
-Text Label 4050 1850 2    50   ~ 0
-ESP_RST
-Text Label 5050 1750 0    50   ~ 0
-GPIO0
-Text Label 5050 1850 0    50   ~ 0
-SDA
-Text Label 5050 2050 0    50   ~ 0
+Text Label 5400 2300 0    50   ~ 0
 READY_TO_SLEEP
-Text Label 5050 2150 0    50   ~ 0
-GPIO12
-Text Label 5050 2250 0    50   ~ 0
+Text Label 5400 2500 0    50   ~ 0
 GPIO13
-Text Label 5050 2350 0    50   ~ 0
-SCL
-Text Label 5050 2450 0    50   ~ 0
+Text Label 5400 2700 0    50   ~ 0
 GPIO15
-Text Label 4050 2250 2    50   ~ 0
-USB_TXD
-Text Label 4050 2350 2    50   ~ 0
-USB_RXD
-$Comp
-L power:GND #PWR026
-U 1 1 5FC8A458
-P 1900 2200
-F 0 "#PWR026" H 1900 1950 50  0001 C CNN
-F 1 "GND" V 1875 2100 50  0000 R CNN
-F 2 "" H 1900 2200 50  0001 C CNN
-F 3 "" H 1900 2200 50  0001 C CNN
-	1    1900 2200
-	0    1    1    0   
-$EndComp
-Text Label 1900 2600 2    50   ~ 0
-USB_RXD
-Text Label 1900 2500 2    50   ~ 0
-USB_TXD
-$Comp
-L power:+3V3 #PWR023
-U 1 1 5FE1428B
-P 7500 2100
-F 0 "#PWR023" H 7500 1950 50  0001 C CNN
-F 1 "+3V3" V 7500 2300 50  0000 C CNN
-F 2 "" H 7500 2100 50  0001 C CNN
-F 3 "" H 7500 2100 50  0001 C CNN
-	1    7500 2100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6900 2100 7200 2100
-Text Label 6900 2100 0    50   ~ 0
+Text Label 2150 2150 0    50   ~ 0
 ESP_RST
-$Comp
-L power:GND #PWR?
-U 1 1 5FE14285
-P 6600 2100
-AR Path="/60DE59F5/5FE14285" Ref="#PWR?"  Part="1" 
-AR Path="/5FE14285" Ref="#PWR?"  Part="1" 
-AR Path="/5F564838/5FE14285" Ref="#PWR020"  Part="1" 
-F 0 "#PWR020" H 6600 1850 50  0001 C CNN
-F 1 "GND" V 6600 1900 50  0000 C CNN
-F 2 "" H 6600 2100 50  0001 C CNN
-F 3 "" H 6600 2100 50  0001 C CNN
-	1    6600 2100
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:C C?
 U 1 1 5FE1427F
-P 6750 2100
+P 1850 2150
 AR Path="/60DE59F5/5FE1427F" Ref="C?"  Part="1" 
 AR Path="/5FE1427F" Ref="C?"  Part="1" 
 AR Path="/5F564838/5FE1427F" Ref="C6"  Part="1" 
-F 0 "C6" V 6850 2150 50  0000 L CNN
-F 1 "0.1μF" V 6650 2150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6788 1950 50  0001 C CNN
-F 3 "~" H 6750 2100 50  0001 C CNN
-	1    6750 2100
+F 0 "C6" V 2000 2200 50  0000 L CNN
+F 1 "0.1μF" V 1900 2200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 1888 2000 50  0001 C CNN
+F 3 "~" H 1850 2150 50  0001 C CNN
+	1    1850 2150
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R10
 U 1 1 5FE14279
-P 7350 2100
-F 0 "R10" V 7250 2150 50  0000 L CNN
-F 1 "10K" V 7450 2150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 7280 2100 50  0001 C CNN
-F 3 "~" H 7350 2100 50  0001 C CNN
-	1    7350 2100
+P 2700 2150
+F 0 "R10" V 2600 2050 50  0000 L CNN
+F 1 "10K" V 2700 2050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 2150 50  0001 C CNN
+F 3 "~" H 2700 2150 50  0001 C CNN
+	1    2700 2150
 	0    1    1    0   
 $EndComp
-Text Notes 6700 3000 0    50   ~ 0
-Config and pull
+Text Notes 2150 3450 0    50   ~ 0
+Config
+Text Label 5400 2200 0    50   ~ 0
+ALL_EN
+$Comp
+L Device:R R?
+U 1 1 6033FDF8
+P 1850 2550
+AR Path="/6033FDF8" Ref="R?"  Part="1" 
+AR Path="/5F564838/6033FDF8" Ref="R12"  Part="1" 
+F 0 "R12" V 1950 2500 50  0000 L CNN
+F 1 "10K" V 1850 2500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1780 2550 50  0001 C CNN
+F 3 "~" H 1850 2550 50  0001 C CNN
+	1    1850 2550
+	0    -1   -1   0   
+$EndComp
+Text Label 2000 2550 0    50   ~ 0
+GPIO15
+$Comp
+L Device:R R?
+U 1 1 5F2D9143
+P 2700 2400
+AR Path="/5F2D9143" Ref="R?"  Part="1" 
+AR Path="/5F564838/5F2D9143" Ref="R13"  Part="1" 
+F 0 "R13" V 2600 2300 50  0000 L CNN
+F 1 "10K" V 2700 2300 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 2400 50  0001 C CNN
+F 3 "~" H 2700 2400 50  0001 C CNN
+	1    2700 2400
+	0    1    1    0   
+$EndComp
+Text Label 2550 2400 2    50   ~ 0
+GPIO0
+$Comp
+L Device:CP C10
+U 1 1 5F49AC3D
+P 2300 1900
+F 0 "C10" V 2045 1900 50  0000 C CNN
+F 1 "220uF" V 2136 1900 50  0000 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 2338 1750 50  0001 C CNN
+F 3 "~" H 2300 1900 50  0001 C CNN
+	1    2300 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5F53A6CA
+P 1850 2800
+F 0 "R7" V 1950 2800 50  0000 L CNN
+F 1 "10K" V 1850 2750 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1780 2800 50  0001 C CNN
+F 3 "~" H 1850 2800 50  0001 C CNN
+	1    1850 2800
+	0    -1   -1   0   
+$EndComp
+Text Label 5400 2800 0    50   ~ 0
+GPIO16
+Text Label 9400 2100 2    50   ~ 0
+SCL
+Text Label 9400 2300 2    50   ~ 0
+ALL_EN
+Text Label 9400 2200 2    50   ~ 0
+HOST_WAKE_UP
+Text Label 2000 2800 0    50   ~ 0
+WAKE_UP
+$Comp
+L Device:C Cdec?
+U 1 1 5F5944DB
+P 7100 2800
+AR Path="/60DE59F5/5F5944DB" Ref="Cdec?"  Part="1" 
+AR Path="/5F5944DB" Ref="Cdec?"  Part="1" 
+AR Path="/5F564838/5F5944DB" Ref="C9"  Part="1" 
+F 0 "C9" V 6950 2650 50  0000 L CNN
+F 1 "0.1μF" V 7050 2500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 7138 2650 50  0001 C CNN
+F 3 "~" H 7100 2800 50  0001 C CNN
+	1    7100 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 5F58F54F
+P 7600 2050
+F 0 "R17" V 7500 2000 50  0000 L CNN
+F 1 "10K" V 7600 2000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7530 2050 50  0001 C CNN
+F 3 "~" H 7600 2050 50  0001 C CNN
+	1    7600 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:DMG2301L Q4
+U 1 1 5F96E6B6
+P 7250 2400
+F 0 "Q4" H 7200 2650 50  0000 C CNN
+F 1 "DMG2301L" H 7050 2550 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7450 2325 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf" H 7250 2400 50  0001 L CNN
+	1    7250 2400
+	1    0    0    -1  
+$EndComp
+Text HLabel 9400 2200 2    50   Input ~ 0
+HOST_WAKE_UP
+Text HLabel 9400 2300 2    50   Output ~ 0
+ALL_EN
+Text Label 7450 2800 0    50   ~ 0
+SYS_EN
+NoConn ~ 4400 2300
+$Comp
+L power:GND #PWR?
+U 1 1 618B8B9F
+P 1500 3100
+F 0 "#PWR?" H 1500 2850 50  0001 C CNN
+F 1 "GND" H 1505 2927 50  0000 C CNN
+F 2 "" H 1500 3100 50  0001 C CNN
+F 3 "" H 1500 3100 50  0001 C CNN
+	1    1500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 618B9C58
+P 3050 1700
+F 0 "#PWR?" H 3050 1550 50  0001 C CNN
+F 1 "+3V3" H 3065 1873 50  0000 C CNN
+F 2 "" H 3050 1700 50  0001 C CNN
+F 3 "" H 3050 1700 50  0001 C CNN
+	1    3050 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2150 2550 2150
+Wire Wire Line
+	2850 2150 3050 2150
+Wire Wire Line
+	2450 1900 3050 1900
+Wire Wire Line
+	1500 1900 2150 1900
+Wire Wire Line
+	1700 2150 1500 2150
+Wire Wire Line
+	1700 2550 1500 2550
+Wire Wire Line
+	1700 2800 1500 2800
+Wire Wire Line
+	2850 2400 3050 2400
+Connection ~ 3050 2400
+Wire Wire Line
+	3050 2400 3050 2150
+Connection ~ 1500 2550
+Wire Wire Line
+	1500 2550 1500 2800
+Connection ~ 1500 2150
+Wire Wire Line
+	1500 2150 1500 2550
+Connection ~ 3050 2150
+Wire Wire Line
+	1500 1900 1500 2150
+Connection ~ 3050 1900
+Wire Wire Line
+	3050 1900 3050 2150
+Wire Wire Line
+	3050 1700 3050 1900
+Text Label 5400 2600 0    50   ~ 0
+SCL
+Text HLabel 9400 2100 2    50   Output ~ 0
+SCL
+Text Label 9400 2000 2    50   ~ 0
+SDA
+Text HLabel 9400 2700 2    50   Input ~ 0
+UART_TXD
+Text HLabel 9400 2800 2    50   Output ~ 0
+UART_RXD
+Text HLabel 9400 2600 2    50   Input ~ 0
+CHIP_RESET
+Text HLabel 9400 2500 2    50   Input ~ 0
+BOOT_MODE
+Text HLabel 9400 2400 2    50   Output ~ 0
+BATT_GAUGE_SHDN
+Wire Wire Line
+	7450 2800 7350 2800
+Wire Wire Line
+	7350 2800 7350 2600
+Wire Wire Line
+	7450 2050 7350 2050
+Wire Wire Line
+	7350 2050 7350 2200
+Wire Wire Line
+	7350 2800 7250 2800
+Connection ~ 7350 2800
+Wire Wire Line
+	6950 2800 6850 2800
+$Comp
+L power:GND #PWR?
+U 1 1 61A7D518
+P 6850 3100
+F 0 "#PWR?" H 6850 2850 50  0001 C CNN
+F 1 "GND" H 6855 2927 50  0000 C CNN
+F 2 "" H 6850 3100 50  0001 C CNN
+F 3 "" H 6850 3100 50  0001 C CNN
+	1    6850 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 2050 7850 2050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 619FACAE
+P 7850 1700
+F 0 "#PWR?" H 7850 1550 50  0001 C CNN
+F 1 "+3V3" H 7865 1873 50  0000 C CNN
+F 2 "" H 7850 1700 50  0001 C CNN
+F 3 "" H 7850 1700 50  0001 C CNN
+	1    7850 1700
+	1    0    0    -1  
+$EndComp
+Text Notes 6850 3550 0    50   ~ 0
+System Enable Driver block\n(Active High)
+Text Label 6850 2400 2    50   ~ 0
+SYS_EN_DRV
+Wire Wire Line
+	7050 2400 6850 2400
 $Comp
 L Device:R R?
 U 1 1 5F95CF4F
-P 9300 2250
+P 2700 2650
 AR Path="/5F95CF4F" Ref="R?"  Part="1" 
 AR Path="/5F564838/5F95CF4F" Ref="R3"  Part="1" 
-F 0 "R3" V 9200 2200 50  0000 L CNN
-F 1 "4K7" V 9300 2150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9230 2250 50  0001 C CNN
-F 3 "~" H 9300 2250 50  0001 C CNN
-	1    9300 2250
+F 0 "R3" V 2600 2550 50  0000 L CNN
+F 1 "4K7" V 2700 2550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 2650 50  0001 C CNN
+F 3 "~" H 2700 2650 50  0001 C CNN
+	1    2700 2650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 5F95CF55
-P 9300 2550
+P 2700 2900
 AR Path="/5F95CF55" Ref="R?"  Part="1" 
 AR Path="/5F564838/5F95CF55" Ref="R9"  Part="1" 
-F 0 "R9" V 9200 2500 50  0000 L CNN
-F 1 "4K7" V 9300 2450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9230 2550 50  0001 C CNN
-F 3 "~" H 9300 2550 50  0001 C CNN
-	1    9300 2550
+F 0 "R9" V 2600 2800 50  0000 L CNN
+F 1 "4K7" V 2700 2800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 2900 50  0001 C CNN
+F 3 "~" H 2700 2900 50  0001 C CNN
+	1    2700 2900
 	0    1    1    0   
 $EndComp
-Text Label 9150 2250 2    50   ~ 0
+Text Label 2550 2650 2    50   ~ 0
 SDA
-Text Label 9150 2550 2    50   ~ 0
+Text Label 2550 2900 2    50   ~ 0
 SCL
-Text Label 4050 1750 2    50   ~ 0
-ALL_EN
-$Comp
-L Device:R R?
-U 1 1 6033FDF8
-P 6600 2500
-AR Path="/6033FDF8" Ref="R?"  Part="1" 
-AR Path="/5F564838/6033FDF8" Ref="R12"  Part="1" 
-F 0 "R12" V 6500 2450 50  0000 L CNN
-F 1 "10K" V 6600 2400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 6530 2500 50  0001 C CNN
-F 3 "~" H 6600 2500 50  0001 C CNN
-	1    6600 2500
-	0    -1   -1   0   
-$EndComp
-Text Label 6750 2500 0    50   ~ 0
-GPIO15
-$Comp
-L power:GND #PWR025
-U 1 1 603430DA
-P 6450 2500
-F 0 "#PWR025" H 6450 2250 50  0001 C CNN
-F 1 "GND" V 6455 2372 50  0000 R CNN
-F 2 "" H 6450 2500 50  0001 C CNN
-F 3 "" H 6450 2500 50  0001 C CNN
-	1    6450 2500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5F2D9143
-P 7450 2500
-AR Path="/5F2D9143" Ref="R?"  Part="1" 
-AR Path="/5F564838/5F2D9143" Ref="R13"  Part="1" 
-F 0 "R13" V 7350 2450 50  0000 L CNN
-F 1 "10K" V 7450 2400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 7380 2500 50  0001 C CNN
-F 3 "~" H 7450 2500 50  0001 C CNN
-	1    7450 2500
-	0    1    1    0   
-$EndComp
-Text Label 7300 2500 2    50   ~ 0
-GPIO0
-Text Label 1900 2700 2    50   ~ 0
-ESP_RST
-Text Label 1900 2300 2    50   ~ 0
-GPIO0
-$Comp
-L Device:CP C10
-U 1 1 5F49AC3D
-P 7050 1700
-F 0 "C10" V 6795 1700 50  0000 C CNN
-F 1 "220uF" V 6886 1700 50  0000 C CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3216-18_Kemet-A" H 7088 1550 50  0001 C CNN
-F 3 "~" H 7050 1700 50  0001 C CNN
-	1    7050 1700
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR045
-U 1 1 5F49F5F7
-P 7500 1700
-F 0 "#PWR045" H 7500 1550 50  0001 C CNN
-F 1 "+3V3" V 7500 1800 50  0000 L CNN
-F 2 "" H 7500 1700 50  0001 C CNN
-F 3 "" H 7500 1700 50  0001 C CNN
-	1    7500 1700
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR044
-U 1 1 5F4A0110
-P 6600 1700
-F 0 "#PWR044" H 6600 1450 50  0001 C CNN
-F 1 "GND" V 6605 1572 50  0000 R CNN
-F 2 "" H 6600 1700 50  0001 C CNN
-F 3 "" H 6600 1700 50  0001 C CNN
-	1    6600 1700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	6900 1700 6600 1700
+	3050 2900 2850 2900
 Wire Wire Line
-	7200 1700 7500 1700
-$Comp
-L Device:R R7
-U 1 1 5F53A6CA
-P 9300 1650
-F 0 "R7" V 9200 1600 50  0000 L CNN
-F 1 "10K" V 9300 1600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 9230 1650 50  0001 C CNN
-F 3 "~" H 9300 1650 50  0001 C CNN
-	1    9300 1650
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR046
-U 1 1 5F582364
-P 7600 2500
-F 0 "#PWR046" H 7600 2350 50  0001 C CNN
-F 1 "+3V3" V 7600 2600 50  0000 L CNN
-F 2 "" H 7600 2500 50  0001 C CNN
-F 3 "" H 7600 2500 50  0001 C CNN
-	1    7600 2500
-	0    1    1    0   
-$EndComp
-Text Notes 8750 1900 0    50   ~ 0
-Host Wake Up (active high)
-$Comp
-L Connector_Generic:Conn_01x06 J8
-U 1 1 5FE42DD1
-P 2100 2400
-F 0 "J8" H 1900 2750 50  0000 L CNN
-F 1 "UART" H 2000 2750 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2100 2400 50  0001 C CNN
-F 3 "~" H 2100 2400 50  0001 C CNN
-	1    2100 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR049
-U 1 1 5F730FED
-P 9450 1650
-F 0 "#PWR049" H 9450 1400 50  0001 C CNN
-F 1 "GND" V 9455 1522 50  0000 R CNN
-F 2 "" H 9450 1650 50  0001 C CNN
-F 3 "" H 9450 1650 50  0001 C CNN
-	1    9450 1650
-	0    -1   -1   0   
-$EndComp
-Text Notes 9050 2800 0    50   ~ 0
-I2C Pull Up
-$Comp
-L power:VDD #PWR033
-U 1 1 5F9EDF20
-P 1900 2400
-F 0 "#PWR033" H 1900 2250 50  0001 C CNN
-F 1 "VDD" V 1915 2527 50  0000 L CNN
-F 2 "" H 1900 2400 50  0001 C CNN
-F 3 "" H 1900 2400 50  0001 C CNN
-	1    1900 2400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VDD #PWR047
-U 1 1 5FAC159B
-P 9450 2250
-F 0 "#PWR047" H 9450 2100 50  0001 C CNN
-F 1 "VDD" V 9465 2378 50  0000 L CNN
-F 2 "" H 9450 2250 50  0001 C CNN
-F 3 "" H 9450 2250 50  0001 C CNN
-	1    9450 2250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VDD #PWR048
-U 1 1 5FAC1EA4
-P 9450 2550
-F 0 "#PWR048" H 9450 2400 50  0001 C CNN
-F 1 "VDD" V 9465 2678 50  0000 L CNN
-F 2 "" H 9450 2550 50  0001 C CNN
-F 3 "" H 9450 2550 50  0001 C CNN
-	1    9450 2550
-	0    1    1    0   
-$EndComp
-Text Label 5050 2550 0    50   ~ 0
-GPIO16
-Text Label 9350 3150 2    50   ~ 0
-SDA
-Text Label 9350 3250 2    50   ~ 0
-SCL
-Text Label 9350 3450 2    50   ~ 0
-ALL_EN
-Text Label 9350 3350 2    50   ~ 0
-WAKE_UP
-Text Label 9150 1650 2    50   ~ 0
-WAKE_UP
-Text Label 7300 2750 2    50   ~ 0
-ALL_EN
-$Comp
-L Device:R R11
-U 1 1 60FB0412
-P 7450 2750
-F 0 "R11" V 7350 2700 50  0000 L CNN
-F 1 "10K" V 7450 2700 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 7380 2750 50  0001 C CNN
-F 3 "~" H 7450 2750 50  0001 C CNN
-	1    7450 2750
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR03
-U 1 1 60FB2890
-P 7600 2750
-F 0 "#PWR03" H 7600 2600 50  0001 C CNN
-F 1 "+3V3" V 7600 2850 50  0000 L CNN
-F 2 "" H 7600 2750 50  0001 C CNN
-F 3 "" H 7600 2750 50  0001 C CNN
-	1    7600 2750
-	0    1    1    0   
-$EndComp
-Text Notes 6750 5300 0    50   ~ 0
-DRV is \nACTIVE LOW
+	2850 2650 3050 2650
 Wire Wire Line
-	7550 4600 7550 4700
-Text Label 8800 4800 0    50   ~ 0
-ALL_EN
+	3050 2400 3050 2650
 Wire Wire Line
-	8050 4700 8500 4700
-Wire Wire Line
-	7250 4800 7550 4800
-Text Notes 6650 3950 0    50   ~ 0
-Questions:\nShould we drive ESP_EN using the timer, \nor the entire power plane?\nWhat if we ground a pulled up ALL_EN?\nWhat is the power consumption of a single resistor? \nI.e., VDD - R - GND scheme if we pull down ALL_EN using the timer
-Text Notes 4250 4600 0    50   ~ 0
-TODO: Figure out how to do that. \nSee TPL5110 7.5.2.2 for details.\n\n1. Avoid dirty current on DELAY/M_DRV \nto ensure clean reading of the resistance.\n2. See if we need to convert a driven up \nWAKE_UP to a short impulse? I don't \nthink it's necessary.\n\nGPIO16 can be connected to WAKE_UP.\nIf uC wants to stay awake - it pulls it \nso the timer keeps driving power.\nUseful for e.g. setting up or OTA.
-Wire Wire Line
-	5150 4700 5350 4700
-Wire Wire Line
-	5150 4900 5150 4700
-Wire Wire Line
-	5150 5450 5450 5450
-Wire Wire Line
-	5150 5300 5150 5450
-$Comp
-L Transistor_BJT:DTC113Z Q2
-U 1 1 60F12921
-P 5050 5100
-F 0 "Q2" H 4750 5400 50  0000 L CNN
-F 1 "DTC113Z" H 4750 5300 50  0000 L CNN
-F 2 "" H 5050 5100 50  0001 L CNN
-F 3 "" H 5050 5100 50  0001 L CNN
-	1    5050 5100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 5450 5450 5900
-Wire Wire Line
-	6700 5000 6700 5350
-Wire Wire Line
-	6950 5000 6700 5000
-Text Label 8050 4500 0    50   ~ 0
-GPIO16
-$Comp
-L power:GND #PWR?
-U 1 1 5F59F761
-P 9300 4800
-AR Path="/60DE59F5/5F59F761" Ref="#PWR?"  Part="1" 
-AR Path="/5F59F761" Ref="#PWR?"  Part="1" 
-AR Path="/5F564838/5F59F761" Ref="#PWR0147"  Part="1" 
-F 0 "#PWR0147" H 9300 4550 50  0001 C CNN
-F 1 "GND" V 9300 4600 50  0000 C CNN
-F 2 "" H 9300 4800 50  0001 C CNN
-F 3 "" H 9300 4800 50  0001 C CNN
-	1    9300 4800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C Cdec?
-U 1 1 5F5944DB
-P 9150 4800
-AR Path="/60DE59F5/5F5944DB" Ref="Cdec?"  Part="1" 
-AR Path="/5F5944DB" Ref="Cdec?"  Part="1" 
-AR Path="/5F564838/5F5944DB" Ref="C9"  Part="1" 
-F 0 "C9" V 9250 4850 50  0000 L CNN
-F 1 "0.1μF" V 9050 4850 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9188 4650 50  0001 C CNN
-F 3 "~" H 9150 4800 50  0001 C CNN
-	1    9150 4800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8500 4800 8500 4900
-Wire Wire Line
-	8500 4700 8500 4800
-Connection ~ 8500 4800
-$Comp
-L Device:R R17
-U 1 1 5F58F54F
-P 8650 4800
-F 0 "R17" V 8550 4750 50  0000 L CNN
-F 1 "10K" V 8650 4750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 8580 4800 50  0001 C CNN
-F 3 "~" H 8650 4800 50  0001 C CNN
-	1    8650 4800
-	0    1    1    0   
-$EndComp
-Text Label 6750 5700 0    50   ~ 0
+	3050 2650 3050 2900
+Connection ~ 3050 2650
+Text Label 4400 6200 0    50   ~ 0
 READY_TO_SLEEP
-Text Label 8050 5000 0    50   ~ 0
-ALL_EN
-$Comp
-L power:+3V3 #PWR042
-U 1 1 5F7D8743
-P 8050 4600
-F 0 "#PWR042" H 8050 4450 50  0001 C CNN
-F 1 "+3V3" V 8065 4728 50  0000 L CNN
-F 2 "" H 8050 4600 50  0001 C CNN
-F 3 "" H 8050 4600 50  0001 C CNN
-	1    8050 4600
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR043
-U 1 1 5F863AFE
-P 8050 4800
-F 0 "#PWR043" H 8050 4650 50  0001 C CNN
-F 1 "+3V3" V 8065 4928 50  0000 L CNN
-F 2 "" H 8050 4800 50  0001 C CNN
-F 3 "" H 8050 4800 50  0001 C CNN
-	1    8050 4800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VDD #PWR040
-U 1 1 5F88FAB9
-P 7550 4600
-F 0 "#PWR040" H 7550 4450 50  0001 C CNN
-F 1 "VDD" V 7565 4727 50  0000 L CNN
-F 2 "" H 7550 4600 50  0001 C CNN
-F 3 "" H 7550 4600 50  0001 C CNN
-	1    7550 4600
-	0    -1   -1   0   
-$EndComp
+Text Label 2350 5600 2    50   ~ 0
+HOST_WAKE_UP
+Text Label 4400 5500 0    50   ~ 0
+SYS_EN_DRV
+Text Notes 3200 6900 0    50   ~ 0
+System Sleep Timer
 Wire Wire Line
-	8050 4900 8500 4900
+	4400 5500 4250 5500
 Wire Wire Line
-	9000 4800 8800 4800
+	4250 6200 4400 6200
 Wire Wire Line
-	7550 4900 7550 5000
+	2900 5950 3050 5950
+Connection ~ 2900 5950
 Wire Wire Line
-	7550 4900 7550 4800
-Connection ~ 7550 4900
-Connection ~ 7550 4800
-Connection ~ 7550 4600
-$Comp
-L Connector_Generic:Conn_02x08_Odd_Even J1
-U 1 1 5FCFF381
-P 7750 4800
-F 0 "J1" H 7800 5317 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 7800 5226 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 7750 4800 50  0001 C CNN
-F 3 "~" H 7750 4800 50  0001 C CNN
-	1    7750 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 5350 6600 5350
-Wire Wire Line
-	4950 5900 4850 5900
-$Comp
-L Transistor_FET:DMG2301L Q4
-U 1 1 5F96E6B6
-P 7150 5000
-F 0 "Q4" H 7100 5250 50  0000 C CNN
-F 1 "DMG2301L" H 6950 5150 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 7350 4925 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/DMG2301L.pdf" H 7150 5000 50  0001 L CNN
-	1    7150 5000
-	1    0    0    -1  
-$EndComp
+	2700 5950 2900 5950
 $Comp
 L Timer:TPL5110 U5
 U 1 1 5F7D3440
-P 6100 5350
-F 0 "U5" H 5700 5850 50  0000 C CNN
-F 1 "TPL5110" H 5800 5750 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6100 5350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tpl5110.pdf" H 5900 4950 50  0001 C CNN
-	1    6100 5350
+P 3650 5850
+F 0 "U5" H 3250 6350 50  0000 C CNN
+F 1 "TPL5110" H 3350 6250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3650 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tpl5110.pdf" H 3450 5450 50  0001 C CNN
+	1    3650 5850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4950 5900 4950 6000
-Connection ~ 4950 5900
+	3650 6350 3650 6450
 Wire Wire Line
-	4950 5800 4950 5900
+	2900 6050 2900 5950
+Connection ~ 2700 5950
 Wire Wire Line
-	5350 4700 5350 5350
-Text Label 7550 4500 2    50   ~ 0
-WAKE_UP
+	2700 5950 2700 6050
 $Comp
-L power:VDD #PWR034
-U 1 1 5F880E88
-P 6100 4450
-F 0 "#PWR034" H 6100 4300 50  0001 C CNN
-F 1 "VDD" H 6115 4623 50  0000 C CNN
-F 2 "" H 6100 4450 50  0001 C CNN
-F 3 "" H 6100 4450 50  0001 C CNN
-	1    6100 4450
+L power:+3V3 #PWR?
+U 1 1 619FA10B
+P 3650 4950
+F 0 "#PWR?" H 3650 4800 50  0001 C CNN
+F 1 "+3V3" H 3665 5123 50  0000 C CNN
+F 2 "" H 3650 4950 50  0001 C CNN
+F 3 "" H 3650 4950 50  0001 C CNN
+	1    3650 4950
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R6
-U 1 1 5F850A50
-P 5100 6000
-F 0 "R6" V 5000 6000 50  0000 C CNN
-F 1 "97.6K" V 5100 6000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 6000 50  0001 C CNN
-F 3 "~" H 5100 6000 50  0001 C CNN
-F 4 "Short Traces" V 5200 6000 50  0000 C CNN "Note"
-	1    5100 6000
-	0    1    1    0   
-$EndComp
-Text Notes 4350 6650 0    50   ~ 0
-Tip=20s, Rext=14.41K (16.9 / 97.6)\nTip=20m, Rext=77.57K (140.0 / 174.0)\n\nuC must drive GPIO5 UP when it finishes \nand ready to go to sleep (DS 8.3.2)
-Connection ~ 5450 5450
 Wire Wire Line
-	5450 5450 5500 5450
+	4250 5950 4250 6200
 Wire Wire Line
-	5250 5900 5250 6000
-Wire Wire Line
-	5250 5800 5250 5900
-Connection ~ 5250 5900
-Wire Wire Line
-	5250 5900 5450 5900
-Text Label 4800 5100 2    50   ~ 0
-WAKE_UP
-$Comp
-L Device:R R2
-U 1 1 5F800035
-P 5100 5800
-F 0 "R2" V 5000 5800 50  0000 C CNN
-F 1 "16.9K" V 5100 5800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 5030 5800 50  0001 C CNN
-F 3 "~" H 5100 5800 50  0001 C CNN
-F 4 "Short Traces" V 4900 5800 50  0000 C CNN "Note"
-	1    5100 5800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR031
-U 1 1 5F7FBED9
-P 4850 5900
-F 0 "#PWR031" H 4850 5650 50  0001 C CNN
-F 1 "GND" V 4855 5772 50  0000 R CNN
-F 2 "" H 4850 5900 50  0001 C CNN
-F 3 "" H 4850 5900 50  0001 C CNN
-	1    4850 5900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5350 5350 5500 5350
-Connection ~ 5350 4700
-Wire Wire Line
-	6100 4700 5350 4700
-Wire Wire Line
-	6400 4450 6400 4700
-$Comp
-L power:GND #PWR038
-U 1 1 5F7ECA85
-P 6400 4450
-F 0 "#PWR038" H 6400 4200 50  0001 C CNN
-F 1 "GND" H 6405 4277 50  0000 C CNN
-F 2 "" H 6400 4450 50  0001 C CNN
-F 3 "" H 6400 4450 50  0001 C CNN
-	1    6400 4450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6100 4700 6100 4950
-Connection ~ 6100 4700
-Wire Wire Line
-	6100 4450 6100 4700
-$Comp
-L Device:C C8
-U 1 1 5F7DFB68
-P 6250 4700
-F 0 "C8" V 6000 4700 50  0000 C CNN
-F 1 "0.1uF" V 6100 4700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 6288 4550 50  0001 C CNN
-F 3 "~" H 6250 4700 50  0001 C CNN
-F 4 "Short Traces" V 6400 4800 50  0000 C CNN "Note"
-	1    6250 4700
-	0    1    1    0   
-$EndComp
+	4150 5950 4250 5950
 $Comp
 L power:GND #PWR036
 U 1 1 5F7D7D75
-P 6100 5850
-F 0 "#PWR036" H 6100 5600 50  0001 C CNN
-F 1 "GND" H 6105 5677 50  0000 C CNN
-F 2 "" H 6100 5850 50  0001 C CNN
-F 3 "" H 6100 5850 50  0001 C CNN
-	1    6100 5850
+P 3650 6450
+F 0 "#PWR036" H 3650 6200 50  0001 C CNN
+F 1 "GND" H 3655 6277 50  0000 C CNN
+F 2 "" H 3650 6450 50  0001 C CNN
+F 3 "" H 3650 6450 50  0001 C CNN
+	1    3650 6450
 	1    0    0    -1  
 $EndComp
-Text GLabel 4050 2050 0    25   Input ~ 0
-BATT_SENS
-Text HLabel 9350 3350 2    50   Input ~ 0
-HOST_WAKE_UP
-Text HLabel 9350 3250 2    50   Output ~ 0
-SCL
-Text HLabel 9350 3450 2    50   BiDi ~ 0
-ALL_EN
-Text HLabel 9350 3150 2    50   BiDi ~ 0
+$Comp
+L Device:C C8
+U 1 1 5F7DFB68
+P 3800 5200
+F 0 "C8" V 3550 5200 50  0000 C CNN
+F 1 "0.1uF" V 3650 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3838 5050 50  0001 C CNN
+F 3 "~" H 3800 5200 50  0001 C CNN
+F 4 "Short Traces" V 3950 5300 50  0000 C CNN "Note"
+	1    3800 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 4950 3650 5200
+Connection ~ 3650 5200
+Wire Wire Line
+	3650 5200 3650 5450
+$Comp
+L power:GND #PWR038
+U 1 1 5F7ECA85
+P 3950 4950
+F 0 "#PWR038" H 3950 4700 50  0001 C CNN
+F 1 "GND" H 3955 4777 50  0000 C CNN
+F 2 "" H 3950 4950 50  0001 C CNN
+F 3 "" H 3950 4950 50  0001 C CNN
+	1    3950 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 4950 3950 5200
+Wire Wire Line
+	3650 5200 2900 5200
+Connection ~ 2900 5200
+Wire Wire Line
+	2900 5850 3050 5850
+$Comp
+L power:GND #PWR031
+U 1 1 5F7FBED9
+P 2800 6450
+F 0 "#PWR031" H 2800 6200 50  0001 C CNN
+F 1 "GND" V 2805 6322 50  0000 R CNN
+F 2 "" H 2800 6450 50  0001 C CNN
+F 3 "" H 2800 6450 50  0001 C CNN
+	1    2800 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F800035
+P 2700 6200
+F 0 "R2" H 2600 6350 50  0000 C CNN
+F 1 "16.9K" V 2700 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2630 6200 50  0001 C CNN
+F 3 "~" H 2700 6200 50  0001 C CNN
+F 4 "Short Traces" V 2500 6200 50  0000 C CNN "Note"
+	1    2700 6200
+	1    0    0    -1  
+$EndComp
+Text Notes 2650 7500 0    50   ~ 0
+Tip=20s, Rext=14.41K (16.9 / 97.6)\nTip=20m, Rext=77.57K (140.0 / 174.0)\n\nuC must drive GPIO5 UP when it finishes \nand ready to go to sleep (DS 8.3.2)
+$Comp
+L Device:R R6
+U 1 1 5F850A50
+P 2900 6200
+F 0 "R6" H 2800 6350 50  0000 C CNN
+F 1 "97.6K" V 2900 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2830 6200 50  0001 C CNN
+F 3 "~" H 2900 6200 50  0001 C CNN
+F 4 "Short Traces" V 3000 6200 50  0000 C CNN "Note"
+	1    2900 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 5200 2900 5850
+Wire Wire Line
+	2700 6350 2800 6350
+Connection ~ 2800 6350
+Wire Wire Line
+	2800 6350 2900 6350
+Wire Wire Line
+	2800 6350 2800 6450
+Wire Wire Line
+	4250 5850 4150 5850
+Wire Wire Line
+	4250 5500 4250 5850
+$Comp
+L Transistor_BJT:DTC113Z Q2
+U 1 1 60F12921
+P 2600 5600
+F 0 "Q2" H 2300 5900 50  0000 L CNN
+F 1 "DTC113Z" H 2300 5800 50  0000 L CNN
+F 2 "" H 2600 5600 50  0001 L CNN
+F 3 "" H 2600 5600 50  0001 L CNN
+	1    2600 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5800 2700 5950
+Wire Wire Line
+	2700 5400 2700 5200
+Wire Wire Line
+	2700 5200 2900 5200
+Text Notes 1800 5100 0    50   ~ 0
+TODO: Figure out how to do that. \nSee TPL5110 7.5.2.2 for details.\n\n1. Avoid dirty current on DELAY/M_DRV \nto ensure clean reading of the resistance.\n2. See if we need to convert a driven up \nWAKE_UP to a short impulse? I don't \nthink it's necessary.\n\nGPIO16 can be connected to WAKE_UP.\nIf uC wants to stay awake - it pulls it \nso the timer keeps driving power.\nUseful for e.g. setting up or OTA.
+Text Notes 4250 4450 0    50   ~ 0
+Questions:\nShould we drive ESP_EN using the timer, \nor the entire power plane?\nWhat if we ground a pulled up ALL_EN?\nWhat is the power consumption of a single resistor? \nI.e., VDD - R - GND scheme if we pull down ALL_EN using the timer
+Text Notes 4300 5800 0    50   ~ 0
+DRV is \nACTIVE LOW
+Text Notes 4700 3450 0    50   ~ 0
+ESP8266
+Wire Wire Line
+	4900 1700 4900 1800
+Wire Wire Line
+	4900 3000 4900 3100
+Wire Wire Line
+	1500 2800 1500 3100
+Connection ~ 1500 2800
+Wire Wire Line
+	7850 1700 7850 2050
+Wire Wire Line
+	6850 2800 6850 3100
+Text Label 4400 2000 2    50   ~ 0
+SYS_EN
+Text HLabel 9400 2000 2    50   BiDi ~ 0
 SDA
-Wire Wire Line
-	6600 5450 6700 5450
-Wire Wire Line
-	6700 5450 6700 5700
-Wire Wire Line
-	6700 5700 6750 5700
-Text Label 7250 5200 0    50   ~ 0
-ALL_EN
-Text GLabel 4900 3250 0    50   Input ~ 0
+Text Label 5400 2100 0    50   ~ 0
+SDA
+Text Label 9400 2500 2    50   ~ 0
+BOOT_MODE
+Text Label 5400 2000 0    50   ~ 0
+BOOT_MODE
+Text Label 4400 2100 2    50   ~ 0
+CHIP_RESET
+Text Label 9400 2600 2    50   ~ 0
+CHIP_RESET
+Text Label 9400 2700 2    50   ~ 0
+UART_TXD
+Text Label 4400 2500 2    50   ~ 0
+UART_TXD
+Text Label 9400 2800 2    50   ~ 0
+UART_RXD
+Text Label 4400 2600 2    50   ~ 0
+UART_RXD
+Text Label 9400 2400 2    50   ~ 0
+BATT_GAUGE_SHDN
+Text Label 5400 2400 0    50   ~ 0
 BATT_GAUGE_SHDN
 $EndSCHEMATC

@@ -47,19 +47,6 @@ Wire Wire Line
 Wire Wire Line
 	2450 2750 2750 2750
 Connection ~ 2450 2750
-$Comp
-L power:GNDPWR #PWR?
-U 1 1 61092904
-P 2450 3450
-AR Path="/5F48275C/61092904" Ref="#PWR?"  Part="1" 
-AR Path="/610543CF/61092904" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2450 3250 50  0001 C CNN
-F 1 "GNDPWR" H 2454 3296 50  0000 C CNN
-F 2 "" H 2450 3400 50  0001 C CNN
-F 3 "" H 2450 3400 50  0001 C CNN
-	1    2450 3450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2150 3350 2450 3350
 Wire Wire Line
@@ -229,10 +216,6 @@ F 4 "Charging" H 6050 2400 25  0000 R CNB "Note"
 	1    5900 2550
 	1    0    0    -1  
 $EndComp
-Text GLabel 4600 3250 3    50   Input ~ 0
-CH_PGOOD
-Text GLabel 5550 2900 0    50   Input ~ 0
-CH_PGOOD
 $Comp
 L Device:R R?
 U 1 1 612038A8
@@ -267,16 +250,6 @@ F 4 "Power" H 6000 3000 25  0000 R CNB "Note"
 	1    5900 2900
 	1    0    0    -1  
 $EndComp
-Text GLabel 4700 1550 1    50   Input ~ 0
-CH_TMR
-Text GLabel 4600 1550 1    50   Input ~ 0
-CH_SYSOFF
-Text GLabel 4500 1550 1    50   Input ~ 0
-CH_ISET
-Text GLabel 4400 3250 3    50   Input ~ 0
-CH_EN2
-Text GLabel 4500 3250 3    50   Input ~ 0
-CH_EN1
 $Comp
 L power:GNDPWR #PWR?
 U 1 1 612484BC
@@ -294,16 +267,6 @@ Wire Wire Line
 	4400 1500 3950 1500
 Wire Wire Line
 	3950 1500 3950 1700
-Text GLabel 10000 2400 0    50   Input ~ 0
-CH_TMR
-Text GLabel 10000 3150 0    50   Input ~ 0
-CH_SYSOFF
-Text GLabel 10000 2900 0    50   Input ~ 0
-CH_ISET
-Text GLabel 1300 6650 0    50   Input ~ 0
-CH_EN2
-Text GLabel 1300 6550 0    50   Input ~ 0
-CH_EN1
 $Comp
 L Device:R R?
 U 1 1 61264CC6
@@ -328,10 +291,6 @@ F 3 "" H 10600 3250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10600 3150 10600 3300
-Text GLabel 5200 2250 2    50   Input ~ 0
-CH_ILIM
-Text GLabel 10000 2650 0    50   Input ~ 0
-CH_ILIM
 Wire Wire Line
 	4700 3250 4700 3350
 Wire Wire Line
@@ -477,12 +436,6 @@ Wire Wire Line
 	4000 5450 4000 5650
 Wire Wire Line
 	4000 5100 4000 5450
-Text GLabel 3900 6750 2    50   Input ~ 0
-USB_CHR1
-Text GLabel 3900 6550 2    50   Input ~ 0
-USB_CHR0
-Text GLabel 3900 6350 2    50   Input ~ 0
-USB_CHREN
 Wire Wire Line
 	3450 5950 4000 5950
 Wire Wire Line
@@ -508,8 +461,6 @@ Wire Wire Line
 Connection ~ 3650 6750
 Wire Wire Line
 	1300 6550 1750 6550
-Text GLabel 4000 2550 0    50   Input ~ 0
-CH_PGOOD
 Wire Notes Line
 	3150 2700 950  2700
 Wire Notes Line
@@ -646,19 +597,6 @@ F 4 "Tantalum (asked for Electrolytic)" H 8100 2800 50  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 61071C7A
-P 8300 2350
-AR Path="/5F48275C/61071C7A" Ref="#PWR?"  Part="1" 
-AR Path="/610543CF/61071C7A" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 8300 2200 50  0001 C CNN
-F 1 "+3V3" V 8315 2478 50  0000 L CNN
-F 2 "" H 8300 2350 50  0001 C CNN
-F 3 "" H 8300 2350 50  0001 C CNN
-	1    8300 2350
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 61071C80
 P 7750 3000
@@ -700,13 +638,10 @@ Connection ~ 7750 2800
 Wire Wire Line
 	7750 2350 8100 2350
 Connection ~ 7750 2350
-Connection ~ 8100 2350
-Wire Wire Line
-	8100 2350 8300 2350
 Wire Wire Line
 	8100 2350 8100 2650
-Text Notes 7550 2250 0    25   ~ 0
-See assets/SPX3819 Calculation.gnumeric\nfor R values
+Text Notes 7500 2300 0    25   ~ 0
+./assets/SPX3819 Calculation.gnumeric
 Wire Wire Line
 	5200 2350 6650 2350
 Wire Wire Line
@@ -726,16 +661,10 @@ F 3 "" H 8850 5300 60  0000 C CNN
 	1    8850 5300
 	1    0    0    -1  
 $EndComp
-Text GLabel 8150 5300 0    50   Input ~ 0
-SDA
-Text GLabel 8150 5200 0    50   Input ~ 0
-SCL
 Text Label 2450 2550 2    50   ~ 0
 BATT
 Text Label 9550 5300 0    50   ~ 0
 BATT
-Text GLabel 8150 5500 0    50   Input ~ 0
-BATT_GAUGE_SHDN
 $Comp
 L Device:C C?
 U 1 1 615B1409
@@ -841,4 +770,104 @@ Text Notes 2100 7550 0    50   ~ 0
 USB Power Mode Logic
 Text Notes 9700 3900 0    50   ~ 0
 Battery Charger Config
+Text Label 4500 1550 1    50   ~ 0
+CH_ISET
+Text Label 4600 1550 1    50   ~ 0
+CH_SYSOFF
+Text Label 4700 1550 1    50   ~ 0
+CH_TMR
+Text Label 4500 3250 3    50   ~ 0
+CH_EN1
+Text Label 4400 3250 3    50   ~ 0
+CH_EN2
+Text Label 4600 3250 3    50   ~ 0
+CH_PGOOD
+Text Label 5200 2250 0    50   ~ 0
+CH_ILIM
+Text Label 4000 2550 2    50   ~ 0
+CH_PGOOD
+Text Label 5550 2900 2    50   ~ 0
+CH_PGOOD
+Text Label 10000 2900 2    50   ~ 0
+CH_ISET
+Text Label 10000 3150 2    50   ~ 0
+CH_SYSOFF
+Text Label 10000 2400 2    50   ~ 0
+CH_TMR
+Text Label 10000 2650 2    50   ~ 0
+CH_ILIM
+Text Label 1300 6550 2    50   ~ 0
+CH_EN1
+Text Label 1300 6650 2    50   ~ 0
+CH_EN2
+Text HLabel 8150 5200 0    50   Input ~ 0
+SCL
+Text HLabel 8150 5300 0    50   BiDi ~ 0
+SDA
+Text HLabel 8150 5500 0    50   Input ~ 0
+BATT_GAUGE_SHDN
+Text HLabel 3900 6350 2    50   Input ~ 0
+USB_CHREN
+Text HLabel 3900 6550 2    50   Input ~ 0
+USB_CHR0
+Text HLabel 3900 6750 2    50   Input ~ 0
+USB_CHR1
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 6170A4CF
+P 8750 2300
+F 0 "#FLG?" H 8750 2375 50  0001 C CNN
+F 1 "PWR_FLAG" H 8750 2500 50  0000 C CNN
+F 2 "" H 8750 2300 50  0001 C CNN
+F 3 "~" H 8750 2300 50  0001 C CNN
+	1    8750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61745A48
+P 8800 2350
+F 0 "#PWR?" H 8800 2200 50  0001 C CNN
+F 1 "+3V3" V 8815 2478 50  0000 L CNN
+F 2 "" H 8800 2350 50  0001 C CNN
+F 3 "" H 8800 2350 50  0001 C CNN
+	1    8800 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 61092904
+P 2450 3450
+AR Path="/5F48275C/61092904" Ref="#PWR?"  Part="1" 
+AR Path="/610543CF/61092904" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 3250 50  0001 C CNN
+F 1 "GNDPWR" H 2454 3296 50  0000 C CNN
+F 2 "" H 2450 3400 50  0001 C CNN
+F 3 "" H 2450 3400 50  0001 C CNN
+	1    2450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 61852947
+P 8350 2150
+AR Path="/5F48275C/61852947" Ref="J?"  Part="1" 
+AR Path="/610543CF/61852947" Ref="J?"  Part="1" 
+F 0 "J?" V 8600 2150 50  0000 R CNN
+F 1 "Ammeter_Jumper" V 8500 2400 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8350 2150 50  0001 C CNN
+F 3 "~" H 8350 2150 50  0001 C CNN
+	1    8350 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8350 2350 8100 2350
+Connection ~ 8100 2350
+Wire Wire Line
+	8450 2350 8750 2350
+Wire Wire Line
+	8750 2300 8750 2350
+Connection ~ 8750 2350
+Wire Wire Line
+	8750 2350 8800 2350
 $EndSCHEMATC
