@@ -1,5 +1,4 @@
 (fp_lib_table
   (lib (name Parts)(type KiCad)(uri ${KIPRJMOD}/../kicad-libs/Parts.pretty)(options "")(descr ""))
   (lib (name SamacSys_Parts)(type KiCad)(uri ${KIPRJMOD}/../kicad-libs/SamacSys_Parts.pretty)(options "")(descr ""))
-  (lib (name footprints)(type KiCad)(uri /home/shav/Downloads/ul_SSM6L40TU/KiCAD/2021-08-02_17-06-49/footprints.pretty)(options "")(descr ""))
 )
