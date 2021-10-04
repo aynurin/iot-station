@@ -15,13 +15,13 @@ Comment4 ""
 $EndDescr
 Wire Wire Line
 	6350 3700 6300 3700
-Text Notes 7700 3000 0    50   ~ 0
+Text Notes 7700 3100 0    50   ~ 0
 Light
 Text Label 7350 3550 2    50   ~ 0
 SDA
 Text Label 7350 3250 2    50   ~ 0
 SCL
-Text Notes 7500 3100 0    50   ~ 0
+Text Notes 7500 3850 0    50   ~ 0
 I2C ADDR 0x10
 $Comp
 L SamacSys_Parts:VEML7700-TT IC?
@@ -29,7 +29,7 @@ U 1 1 605F5D4E
 P 7350 3250
 AR Path="/605F5D4E" Ref="IC?"  Part="1" 
 AR Path="/605E9160/605F5D4E" Ref="IC3"  Part="1" 
-F 0 "IC3" V 7900 3150 50  0000 R CNN
+F 0 "IC3" H 7950 3100 50  0000 R CNN
 F 1 "VEML7700-TT" H 8050 2800 50  0000 R CNN
 F 2 "SamacSys_Parts:VEML7700" H 8100 3350 50  0001 L CNN
 F 3 "https://www.arrow.com/en/products/veml7700-tt/vishay" H 8100 3250 50  0001 L CNN
@@ -99,30 +99,14 @@ Connection ~ 6350 3350
 Wire Wire Line
 	6350 3350 6500 3350
 NoConn ~ 5700 2950
-Text Notes 4850 2550 0    50   ~ 0
+Text Notes 4850 2600 0    50   ~ 0
 Weather
 Text Label 4300 3150 2    50   ~ 0
 SCL
 Text Label 4300 3250 2    50   ~ 0
 SDA
-Text Notes 4700 2800 0    50   ~ 0
+Text Notes 4700 3750 0    50   ~ 0
 I2C ADDR 0x40
-$Comp
-L Parts:HDC2010YPAT U?
-U 1 1 605F5D91
-P 5000 3050
-AR Path="/605F5D91" Ref="U?"  Part="1" 
-AR Path="/605E9160/605F5D91" Ref="U4"  Part="1" 
-F 0 "U4" H 5000 3000 50  0000 C CNN
-F 1 "HDC2010YPAT" H 5050 2800 50  0000 C CNN
-F 2 "Parts:BGA6C100X50P2X3_146X146X67" H 5000 3050 50  0001 L BNN
-F 3 "Texas Instruments" H 5000 3050 50  0001 L BNN
-F 4 "0.675 mm" H 5000 3050 50  0001 L BNN "Field4"
-F 5 "C" H 5000 3050 50  0001 L BNN "Field5"
-F 6 "IPC 7351B" H 5000 3050 50  0001 L BNN "Field6"
-	1    5000 3050
-	1    0    0    -1  
-$EndComp
 Text Label 6300 3700 2    50   ~ 0
 ALL_EN
 Wire Wire Line
@@ -188,7 +172,7 @@ F 3 "~" H 6200 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4300 2950 2    50   ~ 0
-GNDA
+GND_S
 $Comp
 L power:+3.3V #PWR045
 U 1 1 6115FE3E
@@ -249,4 +233,20 @@ F 3 "~" H 6700 3450 50  0001 C CNN
 $EndComp
 Text Label 5900 3450 0    50   ~ 0
 GND_S
+$Comp
+L Parts:HDC2010YPAT U?
+U 1 1 605F5D91
+P 5000 3050
+AR Path="/605F5D91" Ref="U?"  Part="1" 
+AR Path="/605E9160/605F5D91" Ref="U4"  Part="1" 
+F 0 "U4" H 5000 3000 50  0000 C CNN
+F 1 "HDC2010YPAT" H 5000 2500 50  0000 C CNN
+F 2 "Parts:BGA6C100X50P2X3_146X146X67" H 5000 3050 50  0001 L BNN
+F 3 "Texas Instruments" H 5000 3050 50  0001 L BNN
+F 4 "0.675 mm" H 5000 3050 50  0001 L BNN "Field4"
+F 5 "C" H 5000 3050 50  0001 L BNN "Field5"
+F 6 "IPC 7351B" H 5000 3050 50  0001 L BNN "Field6"
+	1    5000 3050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
